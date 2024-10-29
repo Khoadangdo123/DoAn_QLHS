@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3EFE97D2-17A1-4736-A36E-903A4532C912}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GUI_CSharp</RootNamespace>
+    <AssemblyName>GUI_CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.9.0.0-rc.2.24473.5\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=112.1.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.112.1.0\lib\net471\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.CodeDom, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.CodeDom.9.0.0-rc.2.24473.5\lib\net462\System.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.IO.Pipelines, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.9.0.0-rc.2.24473.5\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.9.0.0-rc.2.24473.5\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.9.0.0-rc.2.24473.5\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dangnhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dangnhap.Designer.cs">
+      <DependentUpon>Dangnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SuaDiemMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaDiemMon.Designer.cs">
+      <DependentUpon>SuaDiemMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuaDiemTongKet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaDiemTongKet.Designer.cs">
+      <DependentUpon>SuaDiemTongKet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuaGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaGV.Designer.cs">
+      <DependentUpon>SuaGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuaHS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaHS.Designer.cs">
+      <DependentUpon>SuaHS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuaLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaLop.Designer.cs">
+      <DependentUpon>SuaLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuaPhanCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaPhanCong.Designer.cs">
+      <DependentUpon>SuaPhanCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemGV.Designer.cs">
+      <DependentUpon>ThemGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemHanhKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemHanhKiem.Designer.cs">
+      <DependentUpon>ThemHanhKiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemHocLuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemHocLuc.Designer.cs">
+      <DependentUpon>ThemHocLuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemHS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemHS.Designer.cs">
+      <DependentUpon>ThemHS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemLop.Designer.cs">
+      <DependentUpon>ThemLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemPhanCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemPhanCong.Designer.cs">
+      <DependentUpon>ThemPhanCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemTT.Designer.cs">
+      <DependentUpon>ThemTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemVP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemVP.Designer.cs">
+      <DependentUpon>ThemVP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trangchu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trangchu.Designer.cs">
+      <DependentUpon>Trangchu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dangnhap.resx">
+      <DependentUpon>Dangnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaDiemMon.resx">
+      <DependentUpon>SuaDiemMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaDiemTongKet.resx">
+      <DependentUpon>SuaDiemTongKet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaGV.resx">
+      <DependentUpon>SuaGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaHS.resx">
+      <DependentUpon>SuaHS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaLop.resx">
+      <DependentUpon>SuaLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaPhanCong.resx">
+      <DependentUpon>SuaPhanCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemGV.resx">
+      <DependentUpon>ThemGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemHanhKiem.resx">
+      <DependentUpon>ThemHanhKiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemHocLuc.resx">
+      <DependentUpon>ThemHocLuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemHS.resx">
+      <DependentUpon>ThemHS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemLop.resx">
+      <DependentUpon>ThemLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemPhanCong.resx">
+      <DependentUpon>ThemPhanCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemTT.resx">
+      <DependentUpon>ThemTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemVP.resx">
+      <DependentUpon>ThemVP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trangchu.resx">
+      <DependentUpon>Trangchu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z4921825054191_0ecdac4bc39f94e26a0c0c28562657cb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timkiem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\namhoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ketqua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thoat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monhoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hocsinh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giaovien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data-processing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{e4bae21b-6e8f-4be1-82ac-f3f76fb832e5}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{6ef2dd3b-a91e-47a2-aa54-e2e8c83c4ab4}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
