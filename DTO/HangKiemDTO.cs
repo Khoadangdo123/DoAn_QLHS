@@ -2,7 +2,7 @@
 
 namespace GUI_CSharp.DTO
 {
-    internal class HanhKiemDTO
+    public class HanhKiemDTO
     {
         // Fields
         private string maHanhKiem;   // Corresponds to MaHanhKiem VARCHAR(6)

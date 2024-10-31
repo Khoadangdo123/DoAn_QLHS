@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GUI_CSharp.DTO
 {
-    internal class LoaiNguoiDungDTO
+    public class LoaiNguoiDungDTO
     {
         // Properties to match the SQL table columns
         public string MaLoai { get; set; }  // Corresponds to MaLoai VARCHAR(6)

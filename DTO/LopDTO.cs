@@ -2,7 +2,7 @@
 
 namespace GUI_CSharp.DTO
 {
-    internal class LopDTO
+    public class LopDTO
     {
         // Fields
         private string maLop;

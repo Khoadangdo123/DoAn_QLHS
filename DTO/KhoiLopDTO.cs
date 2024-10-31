@@ -2,7 +2,7 @@
 
 namespace GUI_CSharp.DTO
 {
-    internal class KhoiLopDTO
+    public class KhoiLopDTO
     {
         // Fields
         private string maKhoiLop;   // Corresponds to MaKhoiLop VARCHAR(6)

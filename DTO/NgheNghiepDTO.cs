@@ -2,7 +2,7 @@
 
 namespace GUI_CSharp.DTO
 {
-    internal class NgheNghiepDTO
+    public class NgheNghiepDTO
     {
         // Fields
         private string maNghe;
