@@ -2,7 +2,7 @@
 
 namespace GUI_CSharp.DTO
 {
-    internal class HocSinhDTO
+    public class HocSinhDTO
     {
         // Fields
         private string maHocSinh;
@@ -55,11 +55,15 @@ namespace GUI_CSharp.DTO
             set { maDanToc = value; }
         }
 
+        public string TenDanToc { get; set; }
+
         public string MaTonGiao
         {
             get { return maTonGiao; }
             set { maTonGiao = value; }
         }
+
+        public string TenTonGiao { get; set; }
 
         public string HoTenCha
         {
@@ -73,6 +77,8 @@ namespace GUI_CSharp.DTO
             set { maNgheCha = value; }
         }
 
+        public string TenNgheCha { get; set; }
+
         public string HoTenMe
         {
             get { return hoTenMe; }
@@ -84,6 +90,8 @@ namespace GUI_CSharp.DTO
             get { return maNgheMe; }
             set { maNgheMe = value; }
         }
+
+        public string TenNgheMe { get; set; }
 
         public string Email
         {
@@ -108,6 +116,11 @@ namespace GUI_CSharp.DTO
             this.hoTenMe = hoTenMe;
             this.maNgheMe = maNgheMe;
             this.email = email;
+        }
+
+        public string convertGioiTinh
+        {
+            get { return GioiTinh == 0 ? "Nam" : "Nữ"; }
         }
     }
 }

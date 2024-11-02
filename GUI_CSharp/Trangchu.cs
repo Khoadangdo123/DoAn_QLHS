@@ -10,16 +10,116 @@ using System.Windows.Forms;
 using MaterialSkin.Controls;
 using MaterialSkin;
 using System.Runtime.CompilerServices;
+using BLL;
+using GUI_CSharp.DTO;
 
 namespace GUI_CSharp
 {
     public partial class Trangchu : MaterialForm
     {
+        private HocSinhBLL hocSinhBLL = new HocSinhBLL();
+        private PhanLopBLL phanLopBLL = new PhanLopBLL();
         public Trangchu()
         {
             InitializeComponent();
             this.materialTabControl1.Selected += new TabControlEventHandler(this.MaterialTabControl_Selected);
+            LoadDataTableHocSinh();
+            LoadDanhSachNamHoc();
+            LoadDanhSachHocKy();
+            LoadDanhSachKhoiLop();
+            LoadDanhSachLop();
         }
+
+        //Load -- Hoc Sinh
+        private void LoadDataTableHocSinh()
+        {
+            List<HocSinhDTO> listHocSinh = hocSinhBLL.GetAllHocSinh();
+
+            listHS.Items.Clear();
+
+            foreach (var hs in listHocSinh)
+            {
+                ListViewItem item = new ListViewItem(hs.MaHocSinh);
+
+                item.SubItems.Add(hs.HoTen);
+                item.SubItems.Add(hs.convertGioiTinh);
+                item.SubItems.Add(hs.NgaySinh.ToShortDateString());
+                item.SubItems.Add(hs.DiaChi);
+                item.SubItems.Add(hs.TenDanToc);
+                item.SubItems.Add(hs.TenTonGiao);
+                item.SubItems.Add(hs.HoTenCha);
+                item.SubItems.Add(hs.TenNgheCha);
+                item.SubItems.Add(hs.HoTenMe);
+                item.SubItems.Add(hs.TenNgheMe);
+                item.SubItems.Add(hs.Email);
+
+                listHS.Items.Add(item);
+            }
+
+            listHS.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+        }
+
+        //Load -- Phan Lop
+        private void LoadDanhSachNamHoc()
+        {
+            List<KeyValuePair<string, string>> namHocList = phanLopBLL.LayDanhSachNamHoc();
+
+            // Old
+            cbNamhoc_Phanlop.DataSource = new BindingSource(namHocList, null);
+            cbNamhoc_Phanlop.DisplayMember = "Value";
+            cbNamhoc_Phanlop.ValueMember = "Key";
+
+            // New
+            cbNamhoc_Phanlop2.DataSource = new BindingSource(namHocList, null);
+            cbNamhoc_Phanlop2.DisplayMember = "Value";
+            cbNamhoc_Phanlop2.ValueMember = "Key";
+        }
+
+        private void LoadDanhSachHocKy()
+        {
+            List<KeyValuePair<string, string>> hocKyList = phanLopBLL.LayDanhSachHocKy();
+
+            // Old
+            cbHocky_Phanlop.DataSource = new BindingSource(hocKyList, null);
+            cbHocky_Phanlop.DisplayMember = "Value";
+            cbHocky_Phanlop.ValueMember = "Key";
+
+            // New
+            cbHocky_Phanlop2.DataSource = new BindingSource(hocKyList, null);
+            cbHocky_Phanlop2.DisplayMember = "Value";
+            cbHocky_Phanlop2.ValueMember = "Key";
+        }
+
+        private void LoadDanhSachKhoiLop()
+        {
+            List<KeyValuePair<string, string>> khoiLopList = phanLopBLL.LayDanhSachKhoiLop();
+
+            // Old
+            cbKhoilop_Phanlop.DataSource = new BindingSource(khoiLopList, null);
+            cbKhoilop_Phanlop.DisplayMember = "Value";
+            cbKhoilop_Phanlop.ValueMember = "Key";
+
+            // New
+            cbKhoilop_Phanlop2.DataSource = new BindingSource(khoiLopList, null);
+            cbKhoilop_Phanlop2.DisplayMember = "Value";
+            cbKhoilop_Phanlop2.ValueMember = "Key";
+        }
+
+        private void LoadDanhSachLop()
+        {
+            List<KeyValuePair<string, string>> lopList = phanLopBLL.LayDanhSachLop();
+
+            // Old
+            cbLop_Phanlop.DataSource = new BindingSource(lopList, null);
+            cbLop_Phanlop.DisplayMember = "Value";
+            cbLop_Phanlop.ValueMember = "Key";
+
+            // New
+            cbLop_Phanlop2.DataSource = new BindingSource(lopList, null);
+            cbLop_Phanlop2.DisplayMember = "Value";
+            cbLop_Phanlop2.ValueMember = "Key";
+        }
+
 
         private void MaterialTabControl_Selected(object sender, TabControlEventArgs e)
         {
@@ -86,7 +186,7 @@ namespace GUI_CSharp
             }
 
         }
-        
+
         // Lớp học
         private void btnThemlop_Click_1(object sender, EventArgs e)
         {
@@ -241,14 +341,26 @@ namespace GUI_CSharp
         }
         private void btnThemHS_Click(object sender, EventArgs e)
         {
-            ThemHS a = new ThemHS();
-            a.Show();
+            ThemHS themHSForm = new ThemHS();
+            themHSForm.Show();
+            LoadDataTableHocSinh();
+
         }
 
         private void btnSuaHS_Click(object sender, EventArgs e)
         {
-            SuaHS a = new SuaHS();
-            a.Show();
+            if (listHS.SelectedItems.Count > 0)
+            {
+
+                string maHocSinh = listHS.SelectedItems[0].SubItems[0].Text;
+                SuaHS suaHSForm = new SuaHS(maHocSinh);
+                suaHSForm.Show();
+                LoadDataTableHocSinh();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một học sinh để sửa.");
+            }
         }
 
         private void button1_MouseEnter(object sender, EventArgs e)
@@ -275,14 +387,46 @@ namespace GUI_CSharp
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string maNamHoc = cbNamhoc_Phanlop.SelectedValue.ToString();
+            string maHocKy = cbHocky_Phanlop.SelectedValue.ToString();
+            string maKhoiLop = cbKhoilop_Phanlop.SelectedValue.ToString();
+            string maLop = cbLop_Phanlop.SelectedValue.ToString();
 
+            List<HocSinhDTO> danhSachHocSinh = phanLopBLL.LayDanhSachHocSinh(maNamHoc, maHocKy, maKhoiLop, maLop);
+
+            listPhanlop2.Items.Clear();
+            foreach (var hocSinh in danhSachHocSinh)
+            {
+                ListViewItem item = new ListViewItem(hocSinh.MaHocSinh);
+                item.SubItems.Add(hocSinh.HoTen);
+                listPhanlop2.Items.Add(item);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            string maNamHoc = cbNamhoc_Phanlop2.SelectedValue.ToString();
+            string maHocKy = cbHocky_Phanlop2.SelectedValue.ToString();
+            string maKhoiLop = cbKhoilop_Phanlop2.SelectedValue.ToString();
+            string maLop = cbLop_Phanlop2.SelectedValue.ToString();
 
+            List<string> maHocSinhList = new List<string>();
+            foreach (ListViewItem item in listPhanlop2.SelectedItems)
+            {
+                maHocSinhList.Add(item.Text);
+            }
+
+            if (maHocSinhList.Count > 0)
+            {
+                phanLopBLL.CapNhatPhanLop(maHocSinhList, maNamHoc, maHocKy, maKhoiLop, maLop);
+                MessageBox.Show("Cập nhật phân lớp thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật phân lớp thất bại!");
+            }
         }
-        
+
 
         // Nội quy
         private void btnThemTT_Click(object sender, EventArgs e)
@@ -339,6 +483,105 @@ namespace GUI_CSharp
         private void btnQLThongKe_Click(object sender, EventArgs e)
         {
             this.materialTabControl1.SelectedTab = this.materialTabControl1.TabPages[6];
+        }
+
+        private void listHS_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXoaHS_Click(object sender, EventArgs e)
+        {
+            if (listHS.SelectedItems.Count > 0)
+            {
+                string maHocSinh = listHS.SelectedItems[0].SubItems[0].Text;
+
+                var confirmResult = MessageBox.Show("Bạn có chắc chắn muốn xóa học sinh mã " + maHocSinh + " không?",
+                                                     "Xác nhận xóa",
+                                                     MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    if (hocSinhBLL.DeleteHocSinh(maHocSinh))
+                    {
+                        MessageBox.Show("Xóa học sinh mã " + maHocSinh + " thành công!");
+                        LoadDataTableHocSinh();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa học sinh mã " + maHocSinh + " thất bại!");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một học sinh để xóa.");
+            }
+        }
+
+        private void btnLoadListHS_Click(object sender, EventArgs e)
+        {
+            LoadDataTableHocSinh();
+        }
+
+        private void txTimkiemHS_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTimkiemHS_Click(object sender, EventArgs e)
+        {
+            string searchTerm = txTimkiemHS.Text.Trim();
+            var results = hocSinhBLL.SearchHocSinh(searchTerm);
+
+            listHS.Items.Clear();
+
+            if (results.Count > 0)
+            {
+                foreach (var hocSinh in results)
+                {
+                    ListViewItem item = new ListViewItem(hocSinh.MaHocSinh);
+                    item.SubItems.Add(hocSinh.HoTen);
+                    item.SubItems.Add(hocSinh.GioiTinh == 0 ? "Nam" : "Nữ");
+                    item.SubItems.Add(hocSinh.NgaySinh.ToShortDateString());
+                    item.SubItems.Add(hocSinh.DiaChi);
+                    item.SubItems.Add(hocSinh.MaDanToc);
+                    item.SubItems.Add(hocSinh.MaTonGiao);
+                    item.SubItems.Add(hocSinh.HoTenCha);
+                    item.SubItems.Add(hocSinh.MaNgheCha);
+                    item.SubItems.Add(hocSinh.HoTenMe);
+                    item.SubItems.Add(hocSinh.MaNgheMe);
+                    item.SubItems.Add(hocSinh.Email);
+
+                    listHS.Items.Add(item);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy học sinh nào khớp với yêu cầu tìm kiếm.");
+            }
+        }
+
+        private void cbNamhoc_Phanlop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void search_ThongTinPhanLop_Click(object sender, EventArgs e)
+        {
+            string maNamHoc = cbNamhoc_Phanlop.SelectedValue.ToString();
+            string maHocKy = cbHocky_Phanlop.SelectedValue.ToString();
+            string maKhoiLop = cbKhoilop_Phanlop.SelectedValue.ToString();
+            string maLop = cbLop_Phanlop.SelectedValue.ToString();
+
+            List<HocSinhDTO> danhSachHocSinh = phanLopBLL.LayDanhSachHocSinh(maNamHoc, maHocKy, maKhoiLop, maLop);
+
+            listPhanlop.Items.Clear();
+            foreach (var hocSinh in danhSachHocSinh)
+            {
+                ListViewItem item = new ListViewItem(hocSinh.MaHocSinh);
+                item.SubItems.Add(hocSinh.HoTen);  
+                listPhanlop.Items.Add(item);
+            }
         }
     }
 }

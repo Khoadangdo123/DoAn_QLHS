@@ -13,14 +13,17 @@ namespace GUI_CSharp.DTO
         public string MaLop { get; set; }
         public string MaHocSinh { get; set; }
 
+        public string MaHocKy { get; set; }
+
         public PhanLopDTO() { }
 
-        public PhanLopDTO(string maNamHoc, string maKhoiLop, string maLop, string maHocSinh)
+        public PhanLopDTO(string maNamHoc, string maKhoiLop, string maLop, string maHocSinh, string maHocKy)
         {
             MaNamHoc = maNamHoc;
             MaKhoiLop = maKhoiLop;
             MaLop = maLop;
             MaHocSinh = maHocSinh;
+            MaHocKy = maHocKy;
         }
     }
 

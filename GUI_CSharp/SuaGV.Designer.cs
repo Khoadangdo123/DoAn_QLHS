@@ -1,4 +1,5 @@
-﻿namespace GUI_CSharp
+﻿using MaterialSkin.Controls;
+namespace GUI_CSharp
 {
     partial class SuaGV
     {
