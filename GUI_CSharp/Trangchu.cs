@@ -12,6 +12,10 @@ using MaterialSkin;
 using System.Runtime.CompilerServices;
 using BLL;
 using GUI_CSharp.DTO;
+using OfficeOpenXml;
+using System.IO;
+
+
 
 namespace GUI_CSharp
 {
@@ -19,15 +23,19 @@ namespace GUI_CSharp
     {
         private HocSinhBLL hocSinhBLL = new HocSinhBLL();
         private PhanLopBLL phanLopBLL = new PhanLopBLL();
+        private DiemMonBLL diemMonBLL = new DiemMonBLL();
         public Trangchu()
         {
             InitializeComponent();
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
             this.materialTabControl1.Selected += new TabControlEventHandler(this.MaterialTabControl_Selected);
             LoadDataTableHocSinh();
+            LoadDataTableDiemMon();
             LoadDanhSachNamHoc();
             LoadDanhSachHocKy();
             LoadDanhSachKhoiLop();
             LoadDanhSachLop();
+            LoadDanhSachMonHoc();
         }
 
         //Load -- Hoc Sinh
@@ -59,6 +67,30 @@ namespace GUI_CSharp
             listHS.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
         }
 
+        //Load - Diem Mon Hoc
+        private void LoadDataTableDiemMon()
+        {
+            List<KQ_HocSinh_MonHocDTO> listDiemMon = diemMonBLL.GetTableDiemMon();
+
+            listDiem_Monhoc.Items.Clear();
+
+            foreach (var dm in listDiemMon)
+            {
+                ListViewItem item = new ListViewItem(dm.MaHocSinh);
+
+                item.SubItems.Add(dm.TenHocSinh);
+                item.SubItems.Add(dm.DiemMiengTB.ToString());
+                item.SubItems.Add(dm.Diem15PhutTB.ToString());
+                item.SubItems.Add(dm.Diem45PhutTB.ToString());
+                item.SubItems.Add(dm.DiemThi.ToString());
+                item.SubItems.Add(dm.DiemTBHK.ToString());
+
+                listDiem_Monhoc.Items.Add(item);
+            }
+
+            listDiem_Monhoc.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+        }
+
         //Load -- Phan Lop
         private void LoadDanhSachNamHoc()
         {
@@ -73,6 +105,11 @@ namespace GUI_CSharp
             cbNamhoc_Phanlop2.DataSource = new BindingSource(namHocList, null);
             cbNamhoc_Phanlop2.DisplayMember = "Value";
             cbNamhoc_Phanlop2.ValueMember = "Key";
+
+            // New
+            cbNamhoc_diem.DataSource = new BindingSource(namHocList, null);
+            cbNamhoc_diem.DisplayMember = "Value";
+            cbNamhoc_diem.ValueMember = "Key";
         }
 
         private void LoadDanhSachHocKy()
@@ -88,6 +125,10 @@ namespace GUI_CSharp
             cbHocky_Phanlop2.DataSource = new BindingSource(hocKyList, null);
             cbHocky_Phanlop2.DisplayMember = "Value";
             cbHocky_Phanlop2.ValueMember = "Key";
+
+            cbHocky_diem.DataSource = new BindingSource(hocKyList, null);
+            cbHocky_diem.DisplayMember = "Value";
+            cbHocky_diem.ValueMember = "Key";
         }
 
         private void LoadDanhSachKhoiLop()
@@ -118,6 +159,19 @@ namespace GUI_CSharp
             cbLop_Phanlop2.DataSource = new BindingSource(lopList, null);
             cbLop_Phanlop2.DisplayMember = "Value";
             cbLop_Phanlop2.ValueMember = "Key";
+
+            cbLop_diem.DataSource = new BindingSource(lopList, null);
+            cbLop_diem.DisplayMember = "Value";
+            cbLop_diem.ValueMember = "Key";
+        }
+
+        private void LoadDanhSachMonHoc()
+        {
+            List<KeyValuePair<string, string>> monHocList = diemMonBLL.LayDanhSachMonHoc();
+
+            cbMon_diem.DataSource = new BindingSource(monHocList, null);
+            cbMon_diem.DisplayMember = "Value";
+            cbMon_diem.ValueMember = "Key";
         }
 
 
@@ -262,8 +316,18 @@ namespace GUI_CSharp
         {
             if (listDiem_Monhoc.Visible == true)
             {
-                SuaDiemMon a = new SuaDiemMon();
-                a.Show();
+                if (listDiem_Monhoc.SelectedItems.Count > 0)
+                {
+
+                    string maHocSinh = listDiem_Monhoc.SelectedItems[0].SubItems[0].Text;
+                    SuaDiemMon a = new SuaDiemMon(maHocSinh);
+                    a.Show();
+                    LoadDataTableDiemMon();
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng chọn một học sinh để sửa.");
+                }
             }
             if (listDiemTongKetHK.Visible == true)
             {
@@ -581,6 +645,123 @@ namespace GUI_CSharp
                 ListViewItem item = new ListViewItem(hocSinh.MaHocSinh);
                 item.SubItems.Add(hocSinh.HoTen);  
                 listPhanlop.Items.Add(item);
+            }
+        }
+
+        private void btnLoadListKQ_Click(object sender, EventArgs e)
+        {
+            LoadDataTableDiemMon();
+        }
+
+        private void btnTimkiemKQ_Click(object sender, EventArgs e)
+        {
+            string searchTerm = txTimkiemKQ.Text.Trim();
+            var results = diemMonBLL.SearchDiemMon(searchTerm);
+
+            listDiem_Monhoc.Items.Clear();
+
+            if (results.Count > 0)
+            {
+                foreach (var dm in results)
+                {
+                    ListViewItem item = new ListViewItem(dm.MaHocSinh);
+                    item.SubItems.Add(dm.TenHocSinh);
+                    item.SubItems.Add(dm.DiemMiengTB.ToString());
+                    item.SubItems.Add(dm.Diem15PhutTB.ToString());
+                    item.SubItems.Add(dm.Diem45PhutTB.ToString());
+                    item.SubItems.Add(dm.DiemThi.ToString());
+                    item.SubItems.Add(dm.DiemTBHK.ToString());
+
+                    listDiem_Monhoc.Items.Add(item);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy học sinh nào khớp với yêu cầu tìm kiếm.");
+            }
+        }
+
+        private void btnNhapExcel_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    var fileInfo = new FileInfo(openFileDialog.FileName);
+                    using (var package = new ExcelPackage(fileInfo))
+                    {
+                        // Lấy worksheet đầu tiên
+                        ExcelWorksheet worksheet = package.Workbook.Worksheets.First();
+
+                        // Đảm bảo rằng worksheet có ít nhất một hàng
+                        if (worksheet.Dimension == null || worksheet.Dimension.End.Row < 2)
+                        {
+                            MessageBox.Show("File Excel không có dữ liệu hợp lệ.");
+                            return;
+                        }
+
+                        // Đọc dữ liệu từ hàng thứ 2 (giả sử hàng đầu tiên là tiêu đề)
+                        for (int row = 2; row <= worksheet.Dimension.End.Row; row++) // Bắt đầu từ dòng 2
+                        {
+                            // Đọc dữ liệu từ các cột tương ứng
+                            KQ_HocSinh_MonHocDTO diemMon = new KQ_HocSinh_MonHocDTO
+                            {
+                                MaHocSinh = worksheet.Cells[row, 1].Text,
+                                MaLop = worksheet.Cells[row, 2].Text,
+                                MaNamHoc = worksheet.Cells[row, 3].Text,
+                                MaMonHoc = worksheet.Cells[row, 4].Text,
+                                MaHocKy = worksheet.Cells[row, 5].Text,
+                                DiemMiengTB = Convert.ToDouble(worksheet.Cells[row, 6].Text),
+                                Diem15PhutTB = Convert.ToDouble(worksheet.Cells[row, 7].Text),
+                                Diem45PhutTB = Convert.ToDouble(worksheet.Cells[row, 8].Text),
+                                DiemThi = Convert.ToDouble(worksheet.Cells[row, 9].Text),
+                                DiemTBHK = Convert.ToDouble(worksheet.Cells[row, 10].Text),
+
+                            };
+                            
+                            if (diemMonBLL.AddDiemMon(diemMon))
+                            {
+                                MessageBox.Show("Thêm điểm môn học của học sinh có mã " + diemMon.MaHocSinh + " thành công!");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Thêm điểm môn học của học sinh có mã " + diemMon.MaHocSinh + " thất bại!");
+
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+        private void cardXemdiem_Tongket_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnShowDiem_Click(object sender, EventArgs e)
+        {
+            string maNamHoc = cbNamhoc_diem.SelectedValue.ToString();
+            string maHocKy = cbHocky_diem.SelectedValue.ToString();
+            string maMonHoc = cbMon_diem.SelectedValue.ToString();
+            string maLop = cbLop_diem.SelectedValue.ToString();
+
+            List<KQ_HocSinh_MonHocDTO> danhSachDiemMon = diemMonBLL.GetDiemMonByConditions(maMonHoc, maLop, maNamHoc, maHocKy);
+
+            listDiem_Monhoc.Items.Clear();
+            foreach (var dm in danhSachDiemMon)
+            {
+                ListViewItem item = new ListViewItem(dm.MaHocSinh);
+                item.SubItems.Add(dm.TenHocSinh);
+                item.SubItems.Add(dm.DiemMiengTB.ToString());
+                item.SubItems.Add(dm.Diem15PhutTB.ToString());
+                item.SubItems.Add(dm.Diem45PhutTB.ToString());
+                item.SubItems.Add(dm.DiemThi.ToString());
+                item.SubItems.Add(dm.DiemTBHK.ToString());
+
+                listDiem_Monhoc.Items.Add(item);
             }
         }
     }

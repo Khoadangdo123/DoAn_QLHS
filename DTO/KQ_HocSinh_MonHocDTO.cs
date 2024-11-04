@@ -9,9 +9,11 @@ namespace GUI_CSharp.DTO
     public class KQ_HocSinh_MonHocDTO
     {
         public string MaHocSinh { get; set; }
+        public string TenHocSinh { get; set; }
         public string MaLop { get; set; }
         public string MaNamHoc { get; set; }
         public string MaMonHoc { get; set; }
+        public string TenMonHoc { get; set; }
         public string MaHocKy { get; set; }
         public double DiemMiengTB { get; set; }
         public double Diem15PhutTB { get; set; }

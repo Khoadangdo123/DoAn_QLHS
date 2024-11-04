@@ -1975,7 +1975,7 @@ namespace GUI_CSharp
             this.cardActionKQ.Controls.Add(this.btnLoadListKQ);
             this.cardActionKQ.Depth = 0;
             this.cardActionKQ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cardActionKQ.Location = new System.Drawing.Point(977, 17);
+            this.cardActionKQ.Location = new System.Drawing.Point(741, 17);
             this.cardActionKQ.Margin = new System.Windows.Forms.Padding(19, 17, 19, 17);
             this.cardActionKQ.MouseState = MaterialSkin.MouseState.HOVER;
             this.cardActionKQ.Name = "cardActionKQ";
@@ -2004,6 +2004,7 @@ namespace GUI_CSharp
             this.btnNhapExcel.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnNhapExcel.UseAccentColor = false;
             this.btnNhapExcel.UseVisualStyleBackColor = true;
+            this.btnNhapExcel.Click += new System.EventHandler(this.btnNhapExcel_Click);
             // 
             // btnTimkiemKQ
             // 
@@ -2023,6 +2024,7 @@ namespace GUI_CSharp
             this.btnTimkiemKQ.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnTimkiemKQ.UseAccentColor = false;
             this.btnTimkiemKQ.UseVisualStyleBackColor = true;
+            this.btnTimkiemKQ.Click += new System.EventHandler(this.btnTimkiemKQ_Click);
             // 
             // txTimkiemKQ
             // 
@@ -2086,6 +2088,7 @@ namespace GUI_CSharp
             this.btnLoadListKQ.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnLoadListKQ.UseAccentColor = false;
             this.btnLoadListKQ.UseVisualStyleBackColor = true;
+            this.btnLoadListKQ.Click += new System.EventHandler(this.btnLoadListKQ_Click);
             // 
             // cardListDiem
             // 
@@ -2273,7 +2276,7 @@ namespace GUI_CSharp
             this.cardXemdiem_Tongket.Controls.Add(this.cbLop_Tongket);
             this.cardXemdiem_Tongket.Depth = 0;
             this.cardXemdiem_Tongket.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cardXemdiem_Tongket.Location = new System.Drawing.Point(1467, 23);
+            this.cardXemdiem_Tongket.Location = new System.Drawing.Point(738, 16);
             this.cardXemdiem_Tongket.Margin = new System.Windows.Forms.Padding(19, 17, 19, 17);
             this.cardXemdiem_Tongket.MouseState = MaterialSkin.MouseState.HOVER;
             this.cardXemdiem_Tongket.Name = "cardXemdiem_Tongket";
@@ -2281,6 +2284,7 @@ namespace GUI_CSharp
             this.cardXemdiem_Tongket.Size = new System.Drawing.Size(640, 898);
             this.cardXemdiem_Tongket.TabIndex = 8;
             this.cardXemdiem_Tongket.Visible = false;
+            this.cardXemdiem_Tongket.Paint += new System.Windows.Forms.PaintEventHandler(this.cardXemdiem_Tongket_Paint);
             // 
             // labelCanam
             // 
@@ -2580,6 +2584,7 @@ namespace GUI_CSharp
             this.btnShowDiem.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnShowDiem.UseAccentColor = false;
             this.btnShowDiem.UseVisualStyleBackColor = true;
+            this.btnShowDiem.Click += new System.EventHandler(this.btnShowDiem_Click);
             // 
             // cbNamhoc_diem
             // 

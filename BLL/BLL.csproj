@@ -97,6 +97,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DiemMonBLL.cs" />
     <Compile Include="NgheNghiepBLL.cs" />
     <Compile Include="PhanLopBLL.cs" />
     <Compile Include="TonGiaoBLL.cs" />

@@ -86,7 +86,6 @@ namespace GUI_CSharp
         {
             HocSinhDTO hocSinh = new HocSinhDTO
             {
-
                 MaHocSinh = txMaHS.Text,
                 HoTen = txTenHS.Text,
                 GioiTinh = gioiTinh_nam.Checked ? 0 : 1,

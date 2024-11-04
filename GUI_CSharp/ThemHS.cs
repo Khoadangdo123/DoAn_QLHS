@@ -13,7 +13,6 @@ using BLL;
 using GUI_CSharp.DTO;
 using OfficeOpenXml;
 using System.IO;
-using OfficeOpenXml;
 using System.Globalization;
 
 namespace GUI_CSharp
@@ -27,9 +26,7 @@ namespace GUI_CSharp
         public ThemHS()
         {
             InitializeComponent();
-            // Thay vì chỉ khai báo using, hãy chỉ định rõ ràng
-            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial; // Chỉ định rõ ràng namespace
-
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial; 
             LoadDanhSachDanToc();
             LoadDanhSachTonGiao();
             LoadDanhNgheNghiep();
