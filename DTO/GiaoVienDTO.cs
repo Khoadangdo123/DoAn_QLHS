@@ -1,33 +1,20 @@
 ﻿using System;
+using DTO;
 
 namespace GUI_CSharp.DTO
 {
-    internal class GiaoVienDTO
+    public class GiaoVienDTO : NguoiDTO
     {
         // Fields
-        private string maGiaoVien;
-        private string tenGiaoVien;
-        private string diaChi;
-        private string dienThoai;
-        private string maMonHoc;
+        public string maGiaoVien;
+        public string dienThoai;
+        public string maMonHoc;
 
         // Getters and Setters
         public string MaGiaoVien
         {
             get { return maGiaoVien; }
             set { maGiaoVien = value; }
-        }
-
-        public string TenGiaoVien
-        {
-            get { return tenGiaoVien; }
-            set { tenGiaoVien = value; }
-        }
-
-        public string DiaChi
-        {
-            get { return diaChi; }
-            set { diaChi = value; }
         }
 
         public string DienThoai
@@ -43,13 +30,10 @@ namespace GUI_CSharp.DTO
         }
 
         // Constructor
-        public GiaoVienDTO() { }
-
-        public GiaoVienDTO(string maGiaoVien, string tenGiaoVien, string diaChi, string dienThoai, string maMonHoc)
+        public GiaoVienDTO(string maGiaoVien, string hoTen, string diaChi, string gioiTinh, string dienThoai, string maMonHoc)
+            : base(diaChi, hoTen, gioiTinh)
         {
             this.maGiaoVien = maGiaoVien;
-            this.tenGiaoVien = tenGiaoVien;
-            this.diaChi = diaChi;
             this.dienThoai = dienThoai;
             this.maMonHoc = maMonHoc;
         }

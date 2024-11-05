@@ -37,12 +37,14 @@
             this.cbKhoilop = new MaterialSkin.Controls.MaterialComboBox();
             this.txTenlop = new MaterialSkin.Controls.MaterialTextBox();
             this.txMalop = new MaterialSkin.Controls.MaterialTextBox();
+            this.txHocKy = new MaterialSkin.Controls.MaterialComboBox();
             this.materialCard.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialCard
             // 
             this.materialCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard.Controls.Add(this.txHocKy);
             this.materialCard.Controls.Add(this.txSiso);
             this.materialCard.Controls.Add(this.btnSua);
             this.materialCard.Controls.Add(this.label1);
@@ -69,7 +71,7 @@
             this.txSiso.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txSiso.Hint = "Sĩ số";
             this.txSiso.LeadingIcon = null;
-            this.txSiso.Location = new System.Drawing.Point(75, 336);
+            this.txSiso.Location = new System.Drawing.Point(73, 322);
             this.txSiso.MaxLength = 50;
             this.txSiso.MouseState = MaterialSkin.MouseState.OUT;
             this.txSiso.Multiline = false;
@@ -87,7 +89,7 @@
             this.btnSua.Depth = 0;
             this.btnSua.HighEmphasis = true;
             this.btnSua.Icon = global::GUI_CSharp.Properties.Resources.save;
-            this.btnSua.Location = new System.Drawing.Point(168, 599);
+            this.btnSua.Location = new System.Drawing.Point(167, 640);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSua.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSua.Name = "btnSua";
@@ -100,11 +102,12 @@
             this.btnSua.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnSua.UseAccentColor = false;
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(189, 28);
+            this.label1.Location = new System.Drawing.Point(187, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(234, 23);
             this.label1.TabIndex = 15;
@@ -126,7 +129,7 @@
             this.cbGiaovien.Hint = "Giáo viên ";
             this.cbGiaovien.IntegralHeight = false;
             this.cbGiaovien.ItemHeight = 43;
-            this.cbGiaovien.Location = new System.Drawing.Point(75, 507);
+            this.cbGiaovien.Location = new System.Drawing.Point(73, 493);
             this.cbGiaovien.MaxDropDownItems = 4;
             this.cbGiaovien.MouseState = MaterialSkin.MouseState.OUT;
             this.cbGiaovien.Name = "cbGiaovien";
@@ -149,7 +152,7 @@
             this.cbNamhoc.Hint = "Năm học";
             this.cbNamhoc.IntegralHeight = false;
             this.cbNamhoc.ItemHeight = 43;
-            this.cbNamhoc.Location = new System.Drawing.Point(75, 422);
+            this.cbNamhoc.Location = new System.Drawing.Point(73, 408);
             this.cbNamhoc.MaxDropDownItems = 4;
             this.cbNamhoc.MouseState = MaterialSkin.MouseState.OUT;
             this.cbNamhoc.Name = "cbNamhoc";
@@ -172,7 +175,7 @@
             this.cbKhoilop.Hint = "Khối lớp";
             this.cbKhoilop.IntegralHeight = false;
             this.cbKhoilop.ItemHeight = 43;
-            this.cbKhoilop.Location = new System.Drawing.Point(75, 250);
+            this.cbKhoilop.Location = new System.Drawing.Point(73, 236);
             this.cbKhoilop.MaxDropDownItems = 4;
             this.cbKhoilop.MouseState = MaterialSkin.MouseState.OUT;
             this.cbKhoilop.Name = "cbKhoilop";
@@ -188,7 +191,7 @@
             this.txTenlop.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txTenlop.Hint = "Tên lớp ";
             this.txTenlop.LeadingIcon = null;
-            this.txTenlop.Location = new System.Drawing.Point(75, 164);
+            this.txTenlop.Location = new System.Drawing.Point(73, 150);
             this.txTenlop.MaxLength = 50;
             this.txTenlop.MouseState = MaterialSkin.MouseState.OUT;
             this.txTenlop.Multiline = false;
@@ -207,7 +210,7 @@
             this.txMalop.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txMalop.Hint = "Mã lớp";
             this.txMalop.LeadingIcon = null;
-            this.txMalop.Location = new System.Drawing.Point(75, 86);
+            this.txMalop.Location = new System.Drawing.Point(73, 72);
             this.txMalop.MaxLength = 50;
             this.txMalop.MouseState = MaterialSkin.MouseState.OUT;
             this.txMalop.Multiline = false;
@@ -216,6 +219,29 @@
             this.txMalop.TabIndex = 1;
             this.txMalop.Text = "";
             this.txMalop.TrailingIcon = null;
+            // 
+            // txHocKy
+            // 
+            this.txHocKy.AutoResize = false;
+            this.txHocKy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txHocKy.Depth = 0;
+            this.txHocKy.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.txHocKy.DropDownHeight = 174;
+            this.txHocKy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txHocKy.DropDownWidth = 121;
+            this.txHocKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.txHocKy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txHocKy.FormattingEnabled = true;
+            this.txHocKy.Hint = "Học Kỳ";
+            this.txHocKy.IntegralHeight = false;
+            this.txHocKy.ItemHeight = 43;
+            this.txHocKy.Location = new System.Drawing.Point(73, 571);
+            this.txHocKy.MaxDropDownItems = 4;
+            this.txHocKy.MouseState = MaterialSkin.MouseState.OUT;
+            this.txHocKy.Name = "txHocKy";
+            this.txHocKy.Size = new System.Drawing.Size(460, 49);
+            this.txHocKy.StartIndex = 0;
+            this.txHocKy.TabIndex = 18;
             // 
             // SuaLop
             // 
@@ -245,5 +271,6 @@
         private MaterialSkin.Controls.MaterialTextBox txTenlop;
         private MaterialSkin.Controls.MaterialTextBox txMalop;
         private MaterialSkin.Controls.MaterialTextBox txSiso;
+        private MaterialSkin.Controls.MaterialComboBox txHocKy;
     }
 }

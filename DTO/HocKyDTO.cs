@@ -2,12 +2,12 @@
 
 namespace GUI_CSharp.DTO
 {
-    internal class HocKyDTO
+    public class HocKyDTO
     {
         // Fields
-        private string maHocKy;   // Corresponds to MaHocKy VARCHAR(3)
-        private string tenHocKy;  // Corresponds to TenHocKy NVARCHAR(30)
-        private int heSo;         // Corresponds to HeSo INT
+        public string maHocKy;   // Corresponds to MaHocKy VARCHAR(3)
+        public string tenHocKy;  // Corresponds to TenHocKy NVARCHAR(30)
+        public int heSo;         // Corresponds to HeSo INT
 
         // Getters and Setters
         public string MaHocKy

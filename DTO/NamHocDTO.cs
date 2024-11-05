@@ -2,11 +2,11 @@
 
 namespace GUI_CSharp.DTO
 {
-    internal class NamHocDTO
+    public class NamHocDTO
     {
         // Fields
-        private string maNamHoc;   // Corresponds to MaNamHoc VARCHAR(6)
-        private string tenNamHoc;  // Corresponds to TenNamHoc NVARCHAR(30)
+        public string maNamHoc;   // Corresponds to MaNamHoc VARCHAR(6)
+        public string tenNamHoc;  // Corresponds to TenNamHoc NVARCHAR(30)
 
         // Getters and Setters
         public string MaNamHoc

@@ -8,5 +8,9 @@ namespace BLL
 {
     public class Class1
     {
+        public void Main()
+        { 
+            Console.Write("oke");
+        }
     }
 }

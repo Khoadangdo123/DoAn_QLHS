@@ -1,7 +1,12 @@
-﻿namespace GUI_CSharp
+﻿
+
+using BLL;
+
+namespace GUI_CSharp
 {
     partial class Dangnhap
     {
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -31,8 +36,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dangnhap));
             this.btnDangnhap = new MaterialSkin.Controls.MaterialButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txMatkhau = new MaterialSkin.Controls.MaterialTextBox();
-            this.txTaikhoan = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtMatkhau = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtTaikhoan = new MaterialSkin.Controls.MaterialTextBox();
             this.check_matKhau = new MaterialSkin.Controls.MaterialCheckbox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -71,46 +76,47 @@
             this.pictureBox1.TabIndex = 103;
             this.pictureBox1.TabStop = false;
             // 
-            // txMatkhau
+            // txtMatkhau
             // 
-            this.txMatkhau.AnimateReadOnly = false;
-            this.txMatkhau.BackColor = System.Drawing.Color.White;
-            this.txMatkhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txMatkhau.Depth = 0;
-            this.txMatkhau.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txMatkhau.Hint = "Mật khẩu";
-            this.txMatkhau.LeadingIcon = null;
-            this.txMatkhau.Location = new System.Drawing.Point(72, 247);
-            this.txMatkhau.Margin = new System.Windows.Forms.Padding(2);
-            this.txMatkhau.MaxLength = 50;
-            this.txMatkhau.MouseState = MaterialSkin.MouseState.OUT;
-            this.txMatkhau.Multiline = false;
-            this.txMatkhau.Name = "txMatkhau";
-            this.txMatkhau.Password = true;
-            this.txMatkhau.Size = new System.Drawing.Size(375, 50);
-            this.txMatkhau.TabIndex = 109;
-            this.txMatkhau.Text = "";
-            this.txMatkhau.TrailingIcon = null;
+            this.txtMatkhau.AnimateReadOnly = false;
+            this.txtMatkhau.BackColor = System.Drawing.Color.White;
+            this.txtMatkhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMatkhau.Depth = 0;
+            this.txtMatkhau.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtMatkhau.Hint = "Mật khẩu";
+            this.txtMatkhau.LeadingIcon = null;
+            this.txtMatkhau.Location = new System.Drawing.Point(72, 247);
+            this.txtMatkhau.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMatkhau.MaxLength = 50;
+            this.txtMatkhau.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtMatkhau.Multiline = false;
+            this.txtMatkhau.Name = "txtMatkhau";
+            this.txtMatkhau.Password = true;
+            this.txtMatkhau.Size = new System.Drawing.Size(375, 50);
+            this.txtMatkhau.TabIndex = 109;
+            this.txtMatkhau.Text = "";
+            this.txtMatkhau.TrailingIcon = null;
             // 
-            // txTaikhoan
+            // txtTaikhoan
             // 
-            this.txTaikhoan.AnimateReadOnly = false;
-            this.txTaikhoan.BackColor = System.Drawing.Color.White;
-            this.txTaikhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txTaikhoan.Depth = 0;
-            this.txTaikhoan.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txTaikhoan.Hint = "Tài khoản";
-            this.txTaikhoan.LeadingIcon = null;
-            this.txTaikhoan.Location = new System.Drawing.Point(72, 183);
-            this.txTaikhoan.Margin = new System.Windows.Forms.Padding(2);
-            this.txTaikhoan.MaxLength = 50;
-            this.txTaikhoan.MouseState = MaterialSkin.MouseState.OUT;
-            this.txTaikhoan.Multiline = false;
-            this.txTaikhoan.Name = "txTaikhoan";
-            this.txTaikhoan.Size = new System.Drawing.Size(375, 50);
-            this.txTaikhoan.TabIndex = 109;
-            this.txTaikhoan.Text = "";
-            this.txTaikhoan.TrailingIcon = null;
+            this.txtTaikhoan.AnimateReadOnly = false;
+            this.txtTaikhoan.BackColor = System.Drawing.Color.White;
+            this.txtTaikhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTaikhoan.Depth = 0;
+            this.txtTaikhoan.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtTaikhoan.Hint = "Tài khoản";
+            this.txtTaikhoan.LeadingIcon = null;
+            this.txtTaikhoan.Location = new System.Drawing.Point(72, 183);
+            this.txtTaikhoan.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTaikhoan.MaxLength = 50;
+            this.txtTaikhoan.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtTaikhoan.Multiline = false;
+            this.txtTaikhoan.Name = "txtTaikhoan";
+            this.txtTaikhoan.Size = new System.Drawing.Size(375, 50);
+            this.txtTaikhoan.TabIndex = 109;
+            this.txtTaikhoan.Text = "";
+            this.txtTaikhoan.TrailingIcon = null;
+            this.txtTaikhoan.TextChanged += new System.EventHandler(this.txTaikhoan_TextChanged);
             // 
             // check_matKhau
             // 
@@ -136,8 +142,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(525, 429);
             this.Controls.Add(this.check_matKhau);
-            this.Controls.Add(this.txTaikhoan);
-            this.Controls.Add(this.txMatkhau);
+            this.Controls.Add(this.txtTaikhoan);
+            this.Controls.Add(this.txtMatkhau);
             this.Controls.Add(this.btnDangnhap);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -157,11 +163,11 @@
         }
 
         #endregion
-        private MaterialSkin.Controls.MaterialButton btnDangnhap;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private MaterialSkin.Controls.MaterialTextBox txMatkhau;
-        private MaterialSkin.Controls.MaterialTextBox txTaikhoan;
-        private MaterialSkin.Controls.MaterialCheckbox check_matKhau;
+        public MaterialSkin.Controls.MaterialButton btnDangnhap;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public MaterialSkin.Controls.MaterialTextBox txtMatkhau;
+        public MaterialSkin.Controls.MaterialTextBox txtTaikhoan;
+        public MaterialSkin.Controls.MaterialCheckbox check_matKhau;
     }
 }
 
