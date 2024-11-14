@@ -98,7 +98,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DiemMonDAL.cs" />
+    <Compile Include="GiaoVienDAL.cs" />
+    <Compile Include="MonHocDAL.cs" />
     <Compile Include="NgheNghiepDAL.cs" />
+    <Compile Include="PhanCongDAL.cs" />
     <Compile Include="PhanLopDAL.cs" />
     <Compile Include="TonGiaoDAL.cs" />
     <Compile Include="DanTocDAL.cs" />

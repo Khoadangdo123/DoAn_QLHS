@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GUI_CSharp.DTO
 {
-    internal class PhanCongDTO
+    public class PhanCongDTO
     {
         public int STT { get; set; }
         public string MaNamHoc { get; set; }

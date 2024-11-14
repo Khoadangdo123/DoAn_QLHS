@@ -1,4 +1,5 @@
 ﻿using MaterialSkin.Controls;
+using System;
 
 
 namespace GUI_CSharp
@@ -995,6 +996,8 @@ namespace GUI_CSharp
             // 
             // btnTimkiemGV
             // 
+
+
             this.btnTimkiemGV.AutoSize = false;
             this.btnTimkiemGV.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnTimkiemGV.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
@@ -1011,6 +1014,8 @@ namespace GUI_CSharp
             this.btnTimkiemGV.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnTimkiemGV.UseAccentColor = false;
             this.btnTimkiemGV.UseVisualStyleBackColor = true;
+            this.btnTimkiemGV.Click += new System.EventHandler(this.btnTimkiemGV_Click);
+            //this.btnTimkiemGV.Click += new System.EventHandler(this.btnTimkiemPC_Click);
             // 
             // txTimkiemGV
             // 
@@ -1030,6 +1035,7 @@ namespace GUI_CSharp
             this.txTimkiemGV.TabIndex = 10;
             this.txTimkiemGV.Text = "";
             this.txTimkiemGV.TrailingIcon = null;
+
             // 
             // btnSuaGV
             // 
@@ -1074,6 +1080,8 @@ namespace GUI_CSharp
             this.btnLoadListGV.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnLoadListGV.UseAccentColor = false;
             this.btnLoadListGV.UseVisualStyleBackColor = true;
+            btnLoadListGV.Click += new EventHandler(btnLoadListGV_Click);
+            btnLoadListGV.Click += new EventHandler(btnLoadListPhanCong_Click);
             // 
             // btnThemGV
             // 
@@ -1119,6 +1127,7 @@ namespace GUI_CSharp
             this.btnXoaGV.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnXoaGV.UseAccentColor = false;
             this.btnXoaGV.UseVisualStyleBackColor = true;
+            btnXoaGV.Click += new EventHandler(btnXoaGV_Click);
             // 
             // tabPage1
             // 
@@ -3335,6 +3344,7 @@ namespace GUI_CSharp
             this.btnThemVP.UseAccentColor = false;
             this.btnThemVP.UseVisualStyleBackColor = true;
             this.btnThemVP.Click += new System.EventHandler(this.btnThemVP_Click);
+
             // 
             // listVP
             // 

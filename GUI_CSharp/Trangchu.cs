@@ -24,6 +24,8 @@ namespace GUI_CSharp
         private HocSinhBLL hocSinhBLL = new HocSinhBLL();
         private PhanLopBLL phanLopBLL = new PhanLopBLL();
         private DiemMonBLL diemMonBLL = new DiemMonBLL();
+        private GiaoVienBLL giaoVienBLL = new GiaoVienBLL();
+        private PhanCongBLL phanCongBLL = new PhanCongBLL();
         public Trangchu()
         {
             InitializeComponent();
@@ -173,6 +175,41 @@ namespace GUI_CSharp
             cbMon_diem.DisplayMember = "Value";
             cbMon_diem.ValueMember = "Key";
         }
+        private void LoadGiaoVienList()
+        {
+            List<GiaoVienDTO> giaoVienList = giaoVienBLL.GetAllGiaoVien();
+            listGV.Items.Clear();
+            foreach (var gv in giaoVienList)
+            {
+                ListViewItem item = new ListViewItem(gv.MaGiaoVien);
+                item.SubItems.Add(gv.TenGiaoVien);
+                item.SubItems.Add(gv.DiaChi);
+                item.SubItems.Add(gv.MaMonHoc);
+                item.SubItems.Add(gv.DienThoai);
+                listGV.Items.Add(item);
+            }
+        }
+        private void LoadPhanCongList()
+        {
+            List<PhanCongDTO> phanCongList = phanCongBLL.GetAllPhanCong();
+            listPhancong.Items.Clear();
+            foreach (var pc in phanCongList)
+            {
+
+                string tenNamHoc = cbNamhoc_Phanlop.SelectedValue.ToString();
+                string tenLop = phanLopBLL.LayDanhSachLop().FirstOrDefault(l => l.Key == pc.MaLop).Value;
+                string tenMonHoc = diemMonBLL.LayDanhSachMonHoc().FirstOrDefault(mh => mh.Key == pc.MaMonHoc).Value;
+                string tenGiaoVien = giaoVienBLL.GetAllGiaoVien().FirstOrDefault(gv => gv.MaGiaoVien == pc.MaGiaoVien).TenGiaoVien;
+
+                ListViewItem item = new ListViewItem(pc.STT.ToString());
+                item.SubItems.Add(tenNamHoc);
+                item.SubItems.Add(tenLop);
+                item.SubItems.Add(tenMonHoc);
+                item.SubItems.Add(tenGiaoVien);
+                listPhancong.Items.Add(item);
+            }
+        }
+
 
 
         private void MaterialTabControl_Selected(object sender, TabControlEventArgs e)
@@ -204,6 +241,7 @@ namespace GUI_CSharp
             {
                 cardListGV.Visible = true;
                 cardListPhancong.Visible = false;
+                LoadGiaoVienList();
             }
 
 
@@ -346,6 +384,7 @@ namespace GUI_CSharp
         {
             cardListGV.Visible = true;
             cardListPhancong.Visible = false;
+            LoadGiaoVienList();
 
         }
 
@@ -353,6 +392,7 @@ namespace GUI_CSharp
         {
             cardListPhancong.Visible = true;
             cardListGV.Visible = false;
+            LoadPhanCongList();
 
         }
         private void btnThemGV_Click(object sender, EventArgs e)
@@ -371,16 +411,51 @@ namespace GUI_CSharp
 
         private void btnSuaGV_Click(object sender, EventArgs e)
         {
-            if (cardListGV.Visible == true)
+            if (listGV.SelectedItems.Count > 0)
             {
-                SuaGV a = new SuaGV();
-                a.Show();
+                EditGiaoVien();
+            }
+            else if (listPhancong.SelectedItems.Count > 0)
+            {
+                EditPhanCong();
             }
             else
             {
-                SuaPhanCong a = new SuaPhanCong();
-                a.Show();
+                MessageBox.Show("Vui lòng chọn một giáo viên hoặc một phân công để sửa.");
             }
+        }
+
+        private void EditGiaoVien()
+        {
+            string maGiaoVien = listGV.SelectedItems[0].SubItems[0].Text;
+            SuaGV suaGVForm = new SuaGV(maGiaoVien);
+            suaGVForm.Show();
+            LoadGiaoVienList();
+        }
+
+        private void EditPhanCong()
+        {
+            string sttString = listPhancong.SelectedItems[0].SubItems[0].Text; // Assuming the STT is in the first subitem
+            int stt;
+            if (int.TryParse(sttString, out stt))
+            {
+                SuaPhanCong suaPhanCongForm = new SuaPhanCong(stt);
+                suaPhanCongForm.Show();
+                LoadPhanCongList();
+            }
+            else
+            {
+                MessageBox.Show("STT không hợp lệ.");
+            }
+        }
+
+        private void btnLoadListGV_Click(object sender, EventArgs e)
+        {
+            LoadGiaoVienList();
+        }
+        private void btnLoadListPhanCong_Click(object sender, EventArgs e)
+        {
+            LoadPhanCongList();
         }
 
 
@@ -426,6 +501,122 @@ namespace GUI_CSharp
                 MessageBox.Show("Vui lòng chọn một học sinh để sửa.");
             }
         }
+
+        private void btnXoaGV_Click(object sender, EventArgs e)
+        {
+            if (listGV.SelectedItems.Count > 0)
+            {
+                DeleteGiaoVien();
+            }
+            else if (listPhancong.SelectedItems.Count > 0)
+            {
+                DeletePhanCong();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một giáo viên hoặc một phân công để xóa.");
+            }
+        }
+
+        private void DeleteGiaoVien()
+        {
+            string maGiaoVien = listGV.SelectedItems[0].SubItems[0].Text;
+            var result = MessageBox.Show("Bạn có chắc chắn muốn xóa giáo viên này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                bool isDeleted = giaoVienBLL.DeleteGiaoVien(maGiaoVien);
+                if (isDeleted)
+                {
+                    MessageBox.Show("Xóa giáo viên thành công.");
+                    LoadGiaoVienList();
+                }
+                else
+                {
+                    MessageBox.Show("Xóa giáo viên thất bại.");
+                }
+            }
+        }
+        private void btnTimkiemGV_Click(object sender, EventArgs e)
+        {
+            string searchTerm = txTimkiemGV.Text.Trim();
+            var results = giaoVienBLL.SearchGiaoVien(searchTerm);
+
+            listGV.Items.Clear();
+
+            if (results.Count > 0)
+            {
+                foreach (var giaoVien in results)
+                {
+                    ListViewItem item = new ListViewItem(giaoVien.MaGiaoVien);
+                    item.SubItems.Add(giaoVien.TenGiaoVien);
+                    item.SubItems.Add(giaoVien.DiaChi);
+                    item.SubItems.Add(giaoVien.DienThoai);
+                    item.SubItems.Add(giaoVien.MaMonHoc);
+
+                    listGV.Items.Add(item);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy giáo viên nào khớp với yêu cầu tìm kiếm.");
+            }
+        }
+        //private void btnTimkiemPC_Click(object sender, EventArgs e)
+        //{
+        //    string searchTerm = txTimkiemGV.Text.Trim();
+        //    var results = phanCongBLL.SearchPhanCong(searchTerm);
+
+        //    listPhancong.Items.Clear();
+
+        //    if (results.Count > 0)
+        //    {
+        //        foreach (var phanCong in results)
+        //        {
+        //            ListViewItem item = new ListViewItem(phanCong.MaGiaoVien);
+        //            item.SubItems.Add(phanCong.MaNamHoc);
+        //            item.SubItems.Add(phanCong.MaLop);
+        //            item.SubItems.Add(phanCong.MaMonHoc);
+
+        //            listPhancong.Items.Add(item);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Không tìm thấy phân công nào khớp với yêu cầu tìm kiếm.");
+        //    }
+        //}
+
+
+
+        private void DeletePhanCong()
+        {
+            string sttString = listPhancong.SelectedItems[0].SubItems[0].Text; // Assuming the STT is in the first subitem
+            int stt;
+            if (int.TryParse(sttString, out stt))
+            {
+                var result = MessageBox.Show("Bạn có chắc chắn muốn xóa phân công này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    bool isDeleted = phanCongBLL.DeletePhanCong(stt);
+                    if (isDeleted)
+                    {
+                        MessageBox.Show("Xóa phân công thành công.");
+                        LoadPhanCongList();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa phân công thất bại.");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("STT không hợp lệ.");
+            }
+        }
+
+
+
 
         private void button1_MouseEnter(object sender, EventArgs e)
         {
