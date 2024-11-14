@@ -96,6 +96,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="PhanCongBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThoiKhoaBieuBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

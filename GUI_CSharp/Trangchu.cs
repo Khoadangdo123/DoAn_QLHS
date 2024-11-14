@@ -19,6 +19,7 @@ namespace GUI_CSharp
         {
             InitializeComponent();
             this.materialTabControl1.Selected += new TabControlEventHandler(this.MaterialTabControl_Selected);
+            generate_ListTKB();
         }
 
         private void MaterialTabControl_Selected(object sender, TabControlEventArgs e)
@@ -200,7 +201,8 @@ namespace GUI_CSharp
             }
             else
             {
-                ThemPhanCong a = new ThemPhanCong();
+                //ThemPhanCong a = new ThemPhanCong();
+                ThemPhanCong_mul a = new ThemPhanCong_mul();
                 a.Show();
             }
         }
@@ -340,5 +342,47 @@ namespace GUI_CSharp
         {
             this.materialTabControl1.SelectedTab = this.materialTabControl1.TabPages[6];
         }
+
+        private void listTKB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void generate_ListTKB()
+        {
+            // Đặt thuộc tính của ListView
+            listTKB.View = View.Details;
+            listTKB.FullRowSelect = true;
+            listTKB.GridLines = true;
+
+            // Thêm các cột vào ListView, đảm bảo rằng ListView đã có 7 cột (Thứ 2 - Chủ Nhật)
+            string[] columns = { "Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7", "Chủ Nhật" };
+            foreach (string columnName in columns)
+            {
+                listTKB.Columns.Add(columnName, -2, HorizontalAlignment.Center);
+            }
+
+            // Thêm 11 dòng vào ListView
+            for (int i = 1; i <= 11; i++)
+            {
+                // Cột đầu tiên luôn chứa số từ 1 đến 11
+                ListViewItem item = new ListViewItem(i.ToString());
+
+                // Thêm dữ liệu cho các cột còn lại
+                for (int j = 1; j < columns.Length; j++)
+                {
+                    if (i == 6)
+                    {
+                        item.SubItems.Add(" "); // Nếu là dòng thứ 6 thì để trống
+                    }
+                    else
+                    {
+                        item.SubItems.Add(i.ToString()); // Thêm số vào các cột còn lại
+                    }
+                }
+                listTKB.Items.Add(item); // Thêm dòng vào listTKB
+            }
+        }
+
     }
 }

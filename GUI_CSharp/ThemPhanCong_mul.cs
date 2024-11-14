@@ -12,14 +12,20 @@ using MaterialSkin;
 
 namespace GUI_CSharp
 {
-    public partial class ThemPhanCong : MaterialForm
+    public partial class ThemPhanCong_mul : MaterialForm
     {
-        public ThemPhanCong()
+        public ThemPhanCong_mul()
         {
+            
             InitializeComponent();
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
+        private void cardPhanCongMul_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ThemPhanCong_Click(object sender, EventArgs e)
         {
 
         }

@@ -200,6 +200,12 @@
     <Compile Include="ThemLop.Designer.cs">
       <DependentUpon>ThemLop.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemPhanCong_mul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemPhanCong_mul.Designer.cs">
+      <DependentUpon>ThemPhanCong_mul.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemPhanCong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThemLop.resx">
       <DependentUpon>ThemLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemPhanCong_mul.resx">
+      <DependentUpon>ThemPhanCong_mul.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemPhanCong.resx">
       <DependentUpon>ThemPhanCong.cs</DependentUpon>
