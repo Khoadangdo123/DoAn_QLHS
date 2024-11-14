@@ -98,7 +98,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DiemMonBLL.cs" />
+    <Compile Include="GiaoVienBLL.cs" />
+    <Compile Include="MonHocBLL.cs" />
     <Compile Include="NgheNghiepBLL.cs" />
+    <Compile Include="PhanCongBLL.cs" />
     <Compile Include="PhanLopBLL.cs" />
     <Compile Include="TonGiaoBLL.cs" />
     <Compile Include="DanTocBLL.cs" />

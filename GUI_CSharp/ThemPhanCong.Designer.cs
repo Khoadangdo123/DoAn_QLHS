@@ -216,6 +216,7 @@
             this.Text = "ThemPhanCong";
             this.cardPhancong.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
 
         }
 

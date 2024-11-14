@@ -2,7 +2,7 @@
 
 namespace GUI_CSharp.DTO
 {
-    internal class GiaoVienDTO
+    public class GiaoVienDTO  // Change 'internal' to 'public'
     {
         // Fields
         private string maGiaoVien;

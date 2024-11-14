@@ -182,6 +182,7 @@
             this.cbPhancongMonhoc.Size = new System.Drawing.Size(460, 49);
             this.cbPhancongMonhoc.StartIndex = 0;
             this.cbPhancongMonhoc.TabIndex = 13;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // txSttPhancong
             // 
@@ -201,6 +202,7 @@
             this.txSttPhancong.TabIndex = 7;
             this.txSttPhancong.Text = "";
             this.txSttPhancong.TrailingIcon = null;
+
             // 
             // SuaPhanCong
             // 

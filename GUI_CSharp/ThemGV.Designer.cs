@@ -20,6 +20,8 @@
             base.Dispose(disposing);
         }
 
+
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -201,6 +203,8 @@
             this.Text = "ThemGiaoVien";
             this.cardGV.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+
 
         }
 
