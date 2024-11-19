@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using MaterialSkin.Controls;
 using MaterialSkin;
 using BLL;
+using GUI_CSharp.DTO;
+using System.Globalization;
 
 namespace GUI_CSharp
 {
@@ -21,10 +23,12 @@ namespace GUI_CSharp
 
         }
 
+        
+
         public SuaLop(string malop, string tenlop, 
             string khoilop, string siso,
-            string namhoc, string giaovien,
-            string hocky
+            string namhoc, string hocky,
+            string giaovien
         )
         {
             InitializeComponent();
@@ -33,28 +37,32 @@ namespace GUI_CSharp
             QuanLyLopHocBLL list = new QuanLyLopHocBLL();
 
             // Add items to the combo box
+
+
             
-            //cbKhoilop.Items.Add("KHOI10");
-            //cbKhoilop.Items.Add("KHOI11");
-            //cbKhoilop.Items.Add("KHOI12");
 
             cbKhoilop.DataSource = list.getKhoiLopList();
             cbKhoilop.DisplayMember = "TenKhoiLop";
             cbKhoilop.ValueMember = "MaKhoiLop";
+            int indexKhoiLop = list.getKhoiLopList().FindIndex(kl => kl.TenKhoiLop == khoilop);
+            cbKhoilop.SelectedIndex = indexKhoiLop;
 
-
-            //foreach (var namhocdata in list.getNamHocList())
-            //{
-            //    cbNamhoc.Items.Add(namhocdata);
-            //}
 
             cbNamhoc.DataSource = list.getNamHocListData();
             cbNamhoc.DisplayMember = "TenNamHoc";
             cbNamhoc.ValueMember = "MaNamHoc";
+            int indexNamHoc = list.getNamHocListData().FindIndex(nh => nh.TenNamHoc == namhoc);
+            cbNamhoc.SelectedIndex = indexNamHoc;
+
 
             cbGiaovien.DataSource = list.getGiaoVienList();
             cbGiaovien.DisplayMember = "HoTen";
             cbGiaovien.ValueMember = "MaGiaoVien";
+            int indexGiaoVien = list.getGiaoVienList()
+                .FindIndex(gv =>
+                    gv.HoTen == giaovien
+                );
+            cbGiaovien.SelectedIndex = indexGiaoVien;
 
             //txHocKy.Items.Add("HK1");
             //txHocKy.Items.Add("HK2");
@@ -62,6 +70,15 @@ namespace GUI_CSharp
             txHocKy.DataSource = list.getHocKyList();
             txHocKy.DisplayMember = "TenHocKy";
             txHocKy.ValueMember = "MaHocKy";
+            Console.WriteLine(hocky);
+
+            int indexHocKy = list.getHocKyList().FindIndex(hk => hk.TenHocKy == hocky);
+            txHocKy.SelectedIndex = indexHocKy;
+
+            //foreach (HocKyDTO hocKy in list.getHocKyList())
+            //{
+            //    Console.WriteLine($"Hoc Ky ID: {hocKy.MaHocKy}, Name: {hocKy.TenHocKy}");
+            //}
 
 
             txMalop.Text = malop.ToString();
@@ -170,6 +187,11 @@ namespace GUI_CSharp
             //    textSiSo, textGiaoVien,
             //    textHocKy
             // );
+        }
+
+        private void cbKhoilop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
