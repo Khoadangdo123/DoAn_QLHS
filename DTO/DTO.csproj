@@ -142,6 +142,8 @@
     <Compile Include="ThanhTichDTO.cs" />
     <Compile Include="ThoiKhoaBieuDTO.cs" />
     <Compile Include="ThongKeHocSinhDTO.cs" />
+    <Compile Include="ThongKeKQDTO.cs" />
+    <Compile Include="ThongKeKQLopDTO.cs" />
     <Compile Include="TonGiaoDTO.cs" />
     <Compile Include="ViPhamDTO.cs" />
   </ItemGroup>

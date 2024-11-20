@@ -125,8 +125,9 @@
     <Compile Include="NgheNghiepDAL.cs" />
     <Compile Include="PhanCongDAL.cs" />
     <Compile Include="PhanLopDAL.cs" />
-    <Compile Include="ThongKeDiemDAL.cs" />
+    <Compile Include="ThongKeKQDAL.cs" />
     <Compile Include="ThongKeHocSinhDAL.cs" />
+    <Compile Include="ThongKeKQLopDAL.cs" />
     <Compile Include="TonGiaoDAL.cs" />
     <Compile Include="DanTocDAL.cs" />
     <Compile Include="HocSinhDAL.cs" />

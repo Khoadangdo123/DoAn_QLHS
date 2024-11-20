@@ -15,6 +15,7 @@ using GUI_CSharp.DTO;
 using OfficeOpenXml;
 using System.IO;
 using System.Windows.Input;
+using DTO;
 
 
 
@@ -27,6 +28,8 @@ namespace GUI_CSharp
         private DiemMonBLL diemMonBLL = new DiemMonBLL();
         private GiaoVienBLL giaoVienBLL = new GiaoVienBLL();
         private PhanCongBLL phanCongBLL = new PhanCongBLL();
+        private ThongKeKQBLL thongKeKQBLL = new ThongKeKQBLL();
+        private ThongKeKQLopBLL thongKeKQLopBLL = new ThongKeKQLopBLL();
         private ThongKeHocSinhBLL thongKeHocSinhBLL = new ThongKeHocSinhBLL();
         private LopBLL lopBLL = new LopBLL();
         public Trangchu()
@@ -43,6 +46,8 @@ namespace GUI_CSharp
             LoadDanhSachMonHoc();
             LoadThongKeHocSinh();
             LoadComboBoxData();
+            LoadThongKeKQ_HS();
+            LoadThongKeKQ_Lop();
         }
 
         //Load -- Hoc Sinh
@@ -240,20 +245,70 @@ namespace GUI_CSharp
                 listTKHS.Items.Add(listViewItem);
             }
         }
-        // Lọc DS thống kê từ Khối và lớp
+
+        // Hàm load Danh sách tổng kết kết quả của học sinh
+        private void LoadThongKeKQ_HS()
+        {
+            List<ThongKeKQDTO> thongKeKQList = thongKeKQBLL.GetThongKeKQ_HS();
+            DisplayKQList(thongKeKQList);
+        }
+
+        private void DisplayKQList(List<ThongKeKQDTO> thongKeKQList)
+        {
+            listTKKQ_HS.Items.Clear();
+
+            foreach (var kq in thongKeKQList)
+            {
+                var listViewItem = new ListViewItem(kq.STT.ToString());
+                listViewItem.SubItems.Add(kq.MaHocSinh);
+                listViewItem.SubItems.Add(kq.HoTen);
+                listViewItem.SubItems.Add(kq.Lop);
+                listViewItem.SubItems.Add(kq.NamHoc);
+                listViewItem.SubItems.Add(kq.KetQua);
+
+                listTKKQ_HS.Items.Add(listViewItem);
+            }
+        }
+
+        // Hàm load danh sách thống kê kết quả lớp
+        private void LoadThongKeKQ_Lop()
+        {
+            List<ThongKeKQLopDTO> thongKeKQList = thongKeKQLopBLL.GetThongKeKQ_Lop();
+            DisplayKQList_Lop(thongKeKQList);
+        }
+
+        private void DisplayKQList_Lop(List<ThongKeKQLopDTO> thongKeKQList)
+        {
+            listTKKQ_Lop.Items.Clear();
+
+            foreach (var kq in thongKeKQList)
+            {
+                var listViewItem = new ListViewItem(kq.STT.ToString());
+                listViewItem.SubItems.Add(kq.Lop);
+                listViewItem.SubItems.Add(kq.Khoi);
+                listViewItem.SubItems.Add(kq.NamHoc);
+                listViewItem.SubItems.Add(kq.LenLop.ToString());
+                listViewItem.SubItems.Add(kq.ThiLai.ToString());
+                listViewItem.SubItems.Add(kq.RenLuyenHe.ToString());
+                listViewItem.SubItems.Add(kq.OLai.ToString());
+
+                listTKKQ_Lop.Items.Add(listViewItem);
+            }
+        }
+
+        // Lọc DS thống kê từ năm học và lớp
         private void btnHienThiDSTKHS_Click(object sender, EventArgs e)
         {
-            string khoi = cbKhoi_TKHS.SelectedItem?.ToString();
             string lop = cbLop_TKHS.SelectedItem?.ToString();
             string namhoc = cbNamhoc_TKHS.SelectedItem?.ToString();
 
-            if (string.IsNullOrEmpty(khoi) && string.IsNullOrEmpty(lop) && string.IsNullOrEmpty(namhoc))
+            if (string.IsNullOrEmpty(lop) && string.IsNullOrEmpty(namhoc))
             {
                 MessageBox.Show("Vui lòng chọn trường thông tin cần xem", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                List<ThongKeHocSinhDTO> thongKeHocSinhList = thongKeHocSinhBLL.FilterHocSinh(khoi, lop, namhoc);
+                List<ThongKeHocSinhDTO> thongKeHocSinhList = thongKeHocSinhBLL.FilterHocSinh(lop, namhoc);
 
                 if (thongKeHocSinhList.Count == 0)
                 {
@@ -263,9 +318,60 @@ namespace GUI_CSharp
                 {
                     DisplayHocSinhList(thongKeHocSinhList);
                 }
-                cbKhoi_TKHS.SelectedItem = null;
                 cbLop_TKHS.SelectedItem = null;
                 cbNamhoc_TKHS.SelectedItem = null;
+            }
+        }
+
+        // lọc ds thống kê kết quả học sinh từ lớp và năm học
+        private void btnHienthi_TKKQ_HS_Click(object sender, EventArgs e)
+        {
+            string lop = cbLop_TKKQ_HS.SelectedItem?.ToString();
+            string namhoc = cbNamhoc_TKKQ_HS.SelectedItem?.ToString();
+
+            if (string.IsNullOrEmpty(lop) && string.IsNullOrEmpty(namhoc))
+            {
+                MessageBox.Show("Vui lòng chọn trường thông tin cần xem", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                List<ThongKeKQDTO> thongKeKQList = thongKeKQBLL.FilterTKKQ_HS(lop, namhoc);
+                if (thongKeKQList.Count == 0)
+                {
+                    MessageBox.Show("Không tìm thấy thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    DisplayKQList(thongKeKQList);
+                }
+                cbLop_TKKQ_HS.SelectedItem = null;
+                cbNamhoc_TKKQ_HS.SelectedItem = null;
+            }
+        }
+
+        // lọc ds thống kê kết quả lớp từ lớp và năm học
+        private void btnHienthi_TKKQ_Lop_Click(object sender, EventArgs e)
+        {
+            string lop = cbLop_TKKQ_Lop.SelectedItem?.ToString();
+            string namhoc = cbNamhoc_TKKQ_Lop.SelectedItem?.ToString();
+
+            if (string.IsNullOrEmpty(lop) || string.IsNullOrEmpty(namhoc))
+            {
+                MessageBox.Show("Vui lòng chọn đầy đủ thông tin cần xem", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                List<ThongKeKQLopDTO> thongKeKQListLop = thongKeKQLopBLL.FilterTKKQ_Lop(lop, namhoc);
+                if (thongKeKQListLop.Count == 0)
+                {
+                    MessageBox.Show("Không tìm thấy thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    DisplayKQList_Lop(thongKeKQListLop);
+                }
+                cbLop_TKKQ_Lop.SelectedItem = null;
+                cbNamhoc_TKKQ_Lop.SelectedItem = null;
             }
         }
 
@@ -276,13 +382,23 @@ namespace GUI_CSharp
             List<string> lopList = lopBLL.GetLopList();
             List<string> namhocList = lopBLL.GetNamhocList();
 
-            cbKhoi_TKHS.Items.Clear();
             cbLop_TKHS.Items.Clear();
             cbNamhoc_TKHS.Items.Clear();
 
-            cbKhoi_TKHS.Items.AddRange(khoiList.ToArray());
+            cbLop_TKKQ_HS.Items.Clear();
+            cbNamhoc_TKKQ_HS.Items.Clear();
+
+            cbLop_TKKQ_Lop.Items.Clear();
+            cbNamhoc_TKKQ_Lop.Items.Clear();
+
             cbLop_TKHS.Items.AddRange(lopList.Distinct().ToArray());
             cbNamhoc_TKHS.Items.AddRange(namhocList.ToArray());
+
+            cbLop_TKKQ_HS.Items.AddRange(lopList.Distinct().ToArray());
+            cbNamhoc_TKKQ_HS.Items.AddRange(namhocList.ToArray());
+
+            cbLop_TKKQ_Lop.Items.AddRange(lopList.Distinct().ToArray());
+            cbNamhoc_TKKQ_Lop.Items.AddRange(namhocList.ToArray());
         }
 
         // Tìm kiếm DS thống kê học sinh
@@ -310,10 +426,96 @@ namespace GUI_CSharp
             }
         }
 
+        // tìm kiếm thống kê kết quả học sinh
+        private void btnTimkiem_TKKQ_HS_Click(object sender, EventArgs e)
+        {
+            string keyword = txTimkiem_TKKQ_HS.Text.Trim();
+
+            if (string.IsNullOrEmpty(keyword))
+            {
+                MessageBox.Show("Vui lòng nhập thông tin cần tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                List<ThongKeKQDTO> thongKeKQList = thongKeKQBLL.TimKiemThongKeKQ_HS(keyword);
+
+                if (thongKeKQList.Count == 0)
+                {
+                    MessageBox.Show("Không tìm thấy thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    DisplayKQList(thongKeKQList);
+                }
+                txTimkiem_TKKQ_HS.Text = "";
+            }
+        }
+
         // Btn Load danh sách thống kê học sinh
         private void btnLoadListTKHS_Click(object sender, EventArgs e)
         {
             LoadThongKeHocSinh();
+        }
+        // Btn Load danh sách thống kê kết quả học sinh
+        private void btnLoad_TKKQ_HS_Click(object sender, EventArgs e)
+        {
+            LoadThongKeKQ_HS();
+        }
+        // btn load danh sách thống kê kết quả lớp
+        private void btnLoad_TKKQ_Lop_Click(object sender, EventArgs e)
+        {
+            LoadThongKeKQ_Lop();
+        }
+
+        // xuất excel thống kê kết quả lớp
+        private void btnXuatExcel_TKKQ_Lop_Click(object sender, EventArgs e)
+        {
+            List<ThongKeKQLopDTO> thongKeKQList = thongKeKQLopBLL.GetThongKeKQ_Lop();
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx";
+                saveFileDialog.Title = "Save an Excel File";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = saveFileDialog.FileName;
+                    thongKeKQLopBLL.ExportToExcel(thongKeKQList, filePath);
+                    MessageBox.Show("Xuất thành công", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        // Xuất excel thống kê học sinh
+        private void btnXuatExcel_TKHS_Click(object sender, EventArgs e)
+        {
+            List<ThongKeHocSinhDTO> thongKeHocSinhList = thongKeHocSinhBLL.GetThongKeHocSinh();
+
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx";
+                saveFileDialog.Title = "Save an Excel File";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = saveFileDialog.FileName;
+                    thongKeHocSinhBLL.ExportToExcel(thongKeHocSinhList, filePath);
+                    MessageBox.Show("Xuất thành công", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void btnXuatExcel_TKKQ_HS_Click(object sender, EventArgs e)
+        {
+            List<ThongKeKQDTO> thongKeKQList = thongKeKQBLL.GetThongKeKQ_HS();
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx";
+                saveFileDialog.Title = "Save an Excel File";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = saveFileDialog.FileName;
+                    thongKeKQBLL.ExportToExcel(thongKeKQList, filePath);
+                    MessageBox.Show("Xuất thành công!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
 
         private void MaterialTabControl_Selected(object sender, TabControlEventArgs e)
@@ -359,26 +561,25 @@ namespace GUI_CSharp
                 cardActionHS.Visible = true;
             }
 
-            // Môn học
+            // Kết quả học tập
             if (e.TabPageIndex == 4)
             {
 
             }
 
-            // Kết quả
+            // Nội quy
             if (e.TabPageIndex == 5)
             {
-                listDiem_Monhoc.Visible = true;
-                cardXemdiem_Mon.Visible = true;
-                listDiemTongKetHK.Visible = false;
-                cardXemdiem_Tongket.Visible = false;
+
             }
 
-            // Nội quy
+            // Thống kê
             if (e.TabPageIndex == 6)
             {
-                cardTT_VP.Visible = true;
-                cardHL_HK.Visible = false;
+                listTKKQ_HS.Visible = false;
+                listTKHS.Visible = true;
+                cardActionTKHS.Visible = true;
+                cardActionTKKQ.Visible = false;
             }
 
         }
@@ -1031,6 +1232,10 @@ namespace GUI_CSharp
             }
         }
 
+
+        
+
+
         private void cardXemdiem_Tongket_Paint(object sender, PaintEventArgs e)
         {
 
@@ -1060,21 +1265,77 @@ namespace GUI_CSharp
             }
         }
 
-        private void btnXuatExcel_TKHS_Click(object sender, EventArgs e)
+        private void tabThongkeHS_Click(object sender, EventArgs e)
         {
-            List<ThongKeHocSinhDTO> thongKeHocSinhList = thongKeHocSinhBLL.GetThongKeHocSinh();
-
-            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
-            {
-                saveFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx";
-                saveFileDialog.Title = "Save an Excel File";
-                if (saveFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    string filePath = saveFileDialog.FileName;
-                    thongKeHocSinhBLL.ExportToExcel(thongKeHocSinhList, filePath);
-                    MessageBox.Show("Export successful!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
+            listTKKQ_HS.Visible = false;
+            listTKHS.Visible = true;
+            cardActionTKHS.Visible = true;
+            cardActionTKKQ.Visible = false;
         }
+
+        private void tabThongkeKQ_Click(object sender, EventArgs e)
+        {
+            listTKKQ_HS.Visible = true;
+            listTKHS.Visible = false;
+            cardActionTKHS.Visible = false;
+            cardActionTKKQ.Visible = true;
+
+            txTimkiem_TKKQ_HS.Visible = true;
+            btnTimkiem_TKKQ_HS.Visible = true;
+            btnLoad_TKKQ_HS.Visible = true;
+            cbLop_TKKQ_HS.Visible = true;
+            cbNamhoc_TKKQ_HS.Visible = true;
+            btnHienthi_TKKQ_HS.Visible = true;
+            btnXuatExcel_TKKQ_HS.Visible = true;
+            listTKKQ_HS.Visible = true;
+
+            btnLoad_TKKQ_Lop.Visible = false;
+            cbLop_TKKQ_Lop.Visible = false;
+            cbNamhoc_TKKQ_Lop.Visible = false;
+            btnHienthi_TKKQ_Lop.Visible = false;
+            btnXuatExcel_TKKQ_Lop.Visible = false;
+            listTKKQ_Lop.Visible = false;
+        }
+
+        private void tabTKKQ_HS_Click(object sender, EventArgs e)
+        {
+            txTimkiem_TKKQ_HS.Visible = true;
+            btnTimkiem_TKKQ_HS.Visible = true;
+            btnLoad_TKKQ_HS.Visible = true;
+            cbLop_TKKQ_HS.Visible = true;
+            cbNamhoc_TKKQ_HS.Visible = true;
+            btnHienthi_TKKQ_HS.Visible = true;
+            btnXuatExcel_TKKQ_HS.Visible = true;
+            listTKKQ_HS.Visible = true;
+
+            btnLoad_TKKQ_Lop.Visible = false;
+            cbLop_TKKQ_Lop.Visible = false;
+            cbNamhoc_TKKQ_Lop.Visible = false;
+            btnHienthi_TKKQ_Lop.Visible = false;
+            btnXuatExcel_TKKQ_Lop.Visible =false;
+            listTKKQ_Lop.Visible = false;
+        }
+
+        private void tabTKKQ_KhoiLop_Click(object sender, EventArgs e)
+        {
+            txTimkiem_TKKQ_HS.Visible = false;
+            btnTimkiem_TKKQ_HS.Visible = false;
+            btnLoad_TKKQ_HS.Visible = false;
+            cbLop_TKKQ_HS.Visible = false;
+            cbNamhoc_TKKQ_HS.Visible = false;
+            btnHienthi_TKKQ_HS.Visible = false;
+            btnXuatExcel_TKKQ_HS.Visible = false;
+            listTKKQ_HS.Visible = false;
+
+            btnLoad_TKKQ_Lop.Visible = true;
+            cbLop_TKKQ_Lop.Visible = true;
+            cbNamhoc_TKKQ_Lop.Visible = true;
+            btnHienthi_TKKQ_Lop.Visible = true;
+            btnXuatExcel_TKKQ_Lop.Visible = true;
+            listTKKQ_Lop.Visible = true;
+
+        }
+
+        
     }
 }

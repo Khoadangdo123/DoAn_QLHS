@@ -126,7 +126,7 @@ namespace DAL
 
 
 
-        public List<ThongKeHocSinhDTO> FilterHocSinh(string khoi, string lop, string namhoc)
+        public List<ThongKeHocSinhDTO> FilterHocSinh(string lop, string namhoc)
         {
             List<ThongKeHocSinhDTO> thongKeHocSinhList = new List<ThongKeHocSinhDTO>();
             string query = @"
@@ -150,7 +150,6 @@ namespace DAL
                     JOIN 
                         namhoc nh ON pl.MaNamHoc = nh.MaNamHoc
                     WHERE 
-                        (@Khoi IS NULL OR kl.TenKhoiLop = @Khoi) AND
                         (@Lop IS NULL OR l.TenLop = @Lop) AND 
                         (@Namhoc IS NULL OR nh.TenNamHoc = @Namhoc)";
 
@@ -159,7 +158,6 @@ namespace DAL
                 DatabaseHelper.OpenConnection(conn);
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@Khoi", string.IsNullOrEmpty(khoi) ? (object)DBNull.Value : khoi);
                 cmd.Parameters.AddWithValue("@Lop", string.IsNullOrEmpty(lop) ? (object)DBNull.Value : lop);
                 cmd.Parameters.AddWithValue("@NamHoc", string.IsNullOrEmpty(namhoc) ? (object)DBNull.Value : namhoc);
                 using (MySqlDataReader reader = cmd.ExecuteReader())

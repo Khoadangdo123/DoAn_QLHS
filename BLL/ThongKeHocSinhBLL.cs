@@ -24,9 +24,9 @@ namespace BLL
             return thongKeHocSinhDAL.SearchHocSinh(keyword);
         }
 
-        public List<ThongKeHocSinhDTO> FilterHocSinh(string khoi, string lop, string namhoc)
+        public List<ThongKeHocSinhDTO> FilterHocSinh(string lop, string namhoc)
         {
-            return thongKeHocSinhDAL.FilterHocSinh(khoi, lop, namhoc);
+            return thongKeHocSinhDAL.FilterHocSinh(lop, namhoc);
         }
 
         public void ExportToExcel(List<ThongKeHocSinhDTO> thongKeHocSinhList, string filePath)
@@ -37,13 +37,13 @@ namespace BLL
 
                 // Add headers
                 worksheet.Cells[1, 1].Value = "STT";
-                worksheet.Cells[1, 2].Value = "MaHS";
-                worksheet.Cells[1, 3].Value = "TenHS";
-                worksheet.Cells[1, 4].Value = "NgaySinh";
-                worksheet.Cells[1, 5].Value = "GioiTinh";
-                worksheet.Cells[1, 6].Value = "Khoi";
-                worksheet.Cells[1, 7].Value = "Lop";
-                worksheet.Cells[1, 8].Value = "NamHoc";
+                worksheet.Cells[1, 2].Value = "Mã học sinh";
+                worksheet.Cells[1, 3].Value = "Họ và tên";
+                worksheet.Cells[1, 4].Value = "Ngày sinh";
+                worksheet.Cells[1, 5].Value = "Giới tính";
+                worksheet.Cells[1, 6].Value = "Khối";
+                worksheet.Cells[1, 7].Value = "Lớp";
+                worksheet.Cells[1, 8].Value = "Năm học";
 
                 // Add data
                 for (int i = 0; i < thongKeHocSinhList.Count; i++)
