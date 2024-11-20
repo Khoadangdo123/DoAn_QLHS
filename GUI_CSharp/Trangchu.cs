@@ -14,6 +14,7 @@ using BLL;
 using GUI_CSharp.DTO;
 using OfficeOpenXml;
 using System.IO;
+using System.Windows.Input;
 
 
 
@@ -26,6 +27,8 @@ namespace GUI_CSharp
         private DiemMonBLL diemMonBLL = new DiemMonBLL();
         private GiaoVienBLL giaoVienBLL = new GiaoVienBLL();
         private PhanCongBLL phanCongBLL = new PhanCongBLL();
+        private ThongKeHocSinhBLL thongKeHocSinhBLL = new ThongKeHocSinhBLL();
+        private LopBLL lopBLL = new LopBLL();
         public Trangchu()
         {
             InitializeComponent();
@@ -38,6 +41,8 @@ namespace GUI_CSharp
             LoadDanhSachKhoiLop();
             LoadDanhSachLop();
             LoadDanhSachMonHoc();
+            LoadThongKeHocSinh();
+            LoadComboBoxData();
         }
 
         //Load -- Hoc Sinh
@@ -210,11 +215,110 @@ namespace GUI_CSharp
             }
         }
 
+        // Hàm Load danh sách thống kê học sinh
+        private void LoadThongKeHocSinh()
+        {
+            List<ThongKeHocSinhDTO> thongKeHocSinhList = thongKeHocSinhBLL.GetThongKeHocSinh();
+            DisplayHocSinhList(thongKeHocSinhList);
+        }
 
+        private void DisplayHocSinhList(List<ThongKeHocSinhDTO> thongKeHocSinhList)
+        {
+            listTKHS.Items.Clear();
+
+            foreach (var hs in thongKeHocSinhList)
+            {
+                var listViewItem = new ListViewItem(hs.STT.ToString());
+                listViewItem.SubItems.Add(hs.MaHS);
+                listViewItem.SubItems.Add(hs.TenHS);
+                listViewItem.SubItems.Add(hs.NgaySinh.ToString("dd/MM/yyyy"));
+                listViewItem.SubItems.Add(hs.GioiTinh == 0 ? "Nam" : "Nữ");
+                listViewItem.SubItems.Add(hs.Khoi);
+                listViewItem.SubItems.Add(hs.Lop);
+                listViewItem.SubItems.Add(hs.NamHoc);
+
+                listTKHS.Items.Add(listViewItem);
+            }
+        }
+        // Lọc DS thống kê từ Khối và lớp
+        private void btnHienThiDSTKHS_Click(object sender, EventArgs e)
+        {
+            string khoi = cbKhoi_TKHS.SelectedItem?.ToString();
+            string lop = cbLop_TKHS.SelectedItem?.ToString();
+            string namhoc = cbNamhoc_TKHS.SelectedItem?.ToString();
+
+            if (string.IsNullOrEmpty(khoi) && string.IsNullOrEmpty(lop) && string.IsNullOrEmpty(namhoc))
+            {
+                MessageBox.Show("Vui lòng chọn trường thông tin cần xem", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                List<ThongKeHocSinhDTO> thongKeHocSinhList = thongKeHocSinhBLL.FilterHocSinh(khoi, lop, namhoc);
+
+                if (thongKeHocSinhList.Count == 0)
+                {
+                    MessageBox.Show("Không tìm thấy thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    DisplayHocSinhList(thongKeHocSinhList);
+                }
+                cbKhoi_TKHS.SelectedItem = null;
+                cbLop_TKHS.SelectedItem = null;
+                cbNamhoc_TKHS.SelectedItem = null;
+            }
+        }
+
+        // get dữ liệu cho combobox
+        private void LoadComboBoxData()
+        {
+            List<string> khoiList = lopBLL.GetKhoiList();
+            List<string> lopList = lopBLL.GetLopList();
+            List<string> namhocList = lopBLL.GetNamhocList();
+
+            cbKhoi_TKHS.Items.Clear();
+            cbLop_TKHS.Items.Clear();
+            cbNamhoc_TKHS.Items.Clear();
+
+            cbKhoi_TKHS.Items.AddRange(khoiList.ToArray());
+            cbLop_TKHS.Items.AddRange(lopList.Distinct().ToArray());
+            cbNamhoc_TKHS.Items.AddRange(namhocList.ToArray());
+        }
+
+        // Tìm kiếm DS thống kê học sinh
+        private void btnTimkiemTKHS_Click(object sender, EventArgs e)
+        {
+            string keyword = txTimkiemTKHS.Text.Trim();
+
+            if (string.IsNullOrEmpty(keyword))
+            {
+                MessageBox.Show("Vui lòng nhập thông tin cần tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                List<ThongKeHocSinhDTO> thongKeHocSinhList = thongKeHocSinhBLL.SearchHocSinh(keyword);
+
+                if (thongKeHocSinhList.Count == 0)
+                {
+                    MessageBox.Show("Không tìm thấy thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    DisplayHocSinhList(thongKeHocSinhList);
+                }
+                txTimkiemTKHS.Text = "";
+            }
+        }
+
+        // Btn Load danh sách thống kê học sinh
+        private void btnLoadListTKHS_Click(object sender, EventArgs e)
+        {
+            LoadThongKeHocSinh();
+        }
 
         private void MaterialTabControl_Selected(object sender, TabControlEventArgs e)
         {
-            if (e.TabPageIndex == 8)
+            if (e.TabPageIndex == 7)
             {
                 DialogResult result = MessageBox.Show("Bạn chắc chắn muốn thoát? ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
@@ -953,6 +1057,23 @@ namespace GUI_CSharp
                 item.SubItems.Add(dm.DiemTBHK.ToString());
 
                 listDiem_Monhoc.Items.Add(item);
+            }
+        }
+
+        private void btnXuatExcel_TKHS_Click(object sender, EventArgs e)
+        {
+            List<ThongKeHocSinhDTO> thongKeHocSinhList = thongKeHocSinhBLL.GetThongKeHocSinh();
+
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx";
+                saveFileDialog.Title = "Save an Excel File";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = saveFileDialog.FileName;
+                    thongKeHocSinhBLL.ExportToExcel(thongKeHocSinhList, filePath);
+                    MessageBox.Show("Export successful!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
     }
