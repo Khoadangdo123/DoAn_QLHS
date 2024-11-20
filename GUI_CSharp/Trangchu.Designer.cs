@@ -172,16 +172,6 @@ namespace GUI_CSharp
             this.mon3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.mon4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.diemTB_Tongket = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cardXemdiem_Tongket = new MaterialSkin.Controls.MaterialCard();
-            this.labelCanam = new MaterialSkin.Controls.MaterialLabel();
-            this.labelHocKy = new MaterialSkin.Controls.MaterialLabel();
-            this.btnLoadlistDiemTongketCN = new MaterialSkin.Controls.MaterialButton();
-            this.btnTongketCN = new MaterialSkin.Controls.MaterialButton();
-            this.btnTongketHK = new MaterialSkin.Controls.MaterialButton();
-            this.btnLoadlistDiemTongketHK = new MaterialSkin.Controls.MaterialButton();
-            this.cbNamhoc_Tongket = new MaterialSkin.Controls.MaterialComboBox();
-            this.cbHocky_Tongket = new MaterialSkin.Controls.MaterialComboBox();
-            this.cbLop_Tongket = new MaterialSkin.Controls.MaterialComboBox();
             this.listDiem_Monhoc = new MaterialSkin.Controls.MaterialListView();
             this.maHS_diem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tenHS_diem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -197,6 +187,16 @@ namespace GUI_CSharp
             this.cbHocky_diem = new MaterialSkin.Controls.MaterialComboBox();
             this.cbLop_diem = new MaterialSkin.Controls.MaterialComboBox();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.cardXemdiem_Tongket = new MaterialSkin.Controls.MaterialCard();
+            this.labelCanam = new MaterialSkin.Controls.MaterialLabel();
+            this.labelHocKy = new MaterialSkin.Controls.MaterialLabel();
+            this.btnLoadlistDiemTongketCN = new MaterialSkin.Controls.MaterialButton();
+            this.btnTongketCN = new MaterialSkin.Controls.MaterialButton();
+            this.btnTongketHK = new MaterialSkin.Controls.MaterialButton();
+            this.btnLoadlistDiemTongketHK = new MaterialSkin.Controls.MaterialButton();
+            this.cbNamhoc_Tongket = new MaterialSkin.Controls.MaterialComboBox();
+            this.cbHocky_Tongket = new MaterialSkin.Controls.MaterialComboBox();
+            this.cbLop_Tongket = new MaterialSkin.Controls.MaterialComboBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabTT_VP = new MaterialSkin.Controls.MaterialButton();
             this.tabHL_HK = new MaterialSkin.Controls.MaterialButton();
@@ -251,11 +251,57 @@ namespace GUI_CSharp
             this.btnXoa_TTVP = new MaterialSkin.Controls.MaterialButton();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.tabThongkeHS = new MaterialSkin.Controls.MaterialButton();
-            this.tabThongkeDiem = new MaterialSkin.Controls.MaterialButton();
+            this.tabThongkeKQ = new MaterialSkin.Controls.MaterialButton();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.cardActionTKKQ = new MaterialSkin.Controls.MaterialCard();
+            this.tabTKKQ_KhoiLop = new MaterialSkin.Controls.MaterialButton();
+            this.tabTKKQ_HS = new MaterialSkin.Controls.MaterialButton();
+            this.btnLoad_TKKQ_HS = new MaterialSkin.Controls.MaterialButton();
+            this.btnXuatExcel_TKKQ_HS = new MaterialSkin.Controls.MaterialButton();
+            this.btnTimkiem_TKKQ_HS = new MaterialSkin.Controls.MaterialButton();
+            this.txTimkiem_TKKQ_HS = new MaterialSkin.Controls.MaterialTextBox();
+            this.btnHienthi_TKKQ_HS = new MaterialSkin.Controls.MaterialButton();
+            this.cbNamhoc_TKKQ_HS = new MaterialSkin.Controls.MaterialComboBox();
+            this.cbLop_TKKQ_HS = new MaterialSkin.Controls.MaterialComboBox();
+            this.listTKKQ_HS = new MaterialSkin.Controls.MaterialListView();
+            this.STT_TKKQ = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.maHS_TKKQ = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tenHS_TKKQ = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lopHS_TKKQ = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.namHoc_TKKQ = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ketQua_TKKQ = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cardActionTKHS = new MaterialSkin.Controls.MaterialCard();
+            this.btnLoadListTKHS = new MaterialSkin.Controls.MaterialButton();
+            this.btnXuatExcel_TKHS = new MaterialSkin.Controls.MaterialButton();
+            this.btnTimkiemTKHS = new MaterialSkin.Controls.MaterialButton();
+            this.txTimkiemTKHS = new MaterialSkin.Controls.MaterialTextBox();
+            this.btnHienThiDSTKHS = new MaterialSkin.Controls.MaterialButton();
+            this.cbNamhoc_TKHS = new MaterialSkin.Controls.MaterialComboBox();
+            this.cbLop_TKHS = new MaterialSkin.Controls.MaterialComboBox();
+            this.listTKHS = new MaterialSkin.Controls.MaterialListView();
+            this.stt_TKHS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.maHS_TKHS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tenHS_TKHS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.bDay_TKHS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.gioiTinh_TKHS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.khoiHS_TKHS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lopHS_TKHS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.namHoc_TKHS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.label10 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btnLoad_TKKQ_Lop = new MaterialSkin.Controls.MaterialButton();
+            this.btnXuatExcel_TKKQ_Lop = new MaterialSkin.Controls.MaterialButton();
+            this.btnHienthi_TKKQ_Lop = new MaterialSkin.Controls.MaterialButton();
+            this.cbNamhoc_TKKQ_Lop = new MaterialSkin.Controls.MaterialComboBox();
+            this.cbLop_TKKQ_Lop = new MaterialSkin.Controls.MaterialComboBox();
+            this.listTKKQ_Lop = new MaterialSkin.Controls.MaterialListView();
+            this.STT_TKKQ_Lop = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lop_TKKQ_Lop = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.khoi_TKKQ_Lop = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.soLuong1_TKKQ_Lop = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.soLuong2_TKKQ_Lop = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.soLuong3_TKKQ_Lop = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.soLuong4_TKKQ_Lop = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.namHoc_TKKQ_Lop = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             tabPage7 = new System.Windows.Forms.TabPage();
             this.materialTabControl1.SuspendLayout();
             this.tabPage8.SuspendLayout();
@@ -275,8 +321,8 @@ namespace GUI_CSharp
             this.tabPage.SuspendLayout();
             this.cardActionKQ.SuspendLayout();
             this.cardListDiem.SuspendLayout();
-            this.cardXemdiem_Tongket.SuspendLayout();
             this.cardXemdiem_Mon.SuspendLayout();
+            this.cardXemdiem_Tongket.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.cardHL_HK.SuspendLayout();
             this.materialCard3.SuspendLayout();
@@ -288,6 +334,8 @@ namespace GUI_CSharp
             this.cardActionTT_VP.SuspendLayout();
             this.tabPage9.SuspendLayout();
             this.materialCard1.SuspendLayout();
+            this.cardActionTKKQ.SuspendLayout();
+            this.cardActionTKHS.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage7
@@ -297,9 +345,9 @@ namespace GUI_CSharp
             tabPage7.CausesValidation = false;
             tabPage7.ImageKey = "thoat.png";
             tabPage7.Location = new System.Drawing.Point(4, 39);
-            tabPage7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            tabPage7.Margin = new System.Windows.Forms.Padding(2);
             tabPage7.Name = "tabPage7";
-            tabPage7.Size = new System.Drawing.Size(1444, 799);
+            tabPage7.Size = new System.Drawing.Size(1688, 853);
             tabPage7.TabIndex = 6;
             tabPage7.Text = "Đăng xuất";
             // 
@@ -317,12 +365,12 @@ namespace GUI_CSharp
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialTabControl1.ImageList = this.imageList1;
             this.materialTabControl1.Location = new System.Drawing.Point(2, 52);
-            this.materialTabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.materialTabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabControl1.Multiline = true;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(1451, 840);
+            this.materialTabControl1.Size = new System.Drawing.Size(1696, 896);
             this.materialTabControl1.TabIndex = 2;
             // 
             // tabPage8
@@ -338,10 +386,10 @@ namespace GUI_CSharp
             this.tabPage8.Controls.Add(this.btnQLHS);
             this.tabPage8.ImageKey = "home.png";
             this.tabPage8.Location = new System.Drawing.Point(4, 39);
-            this.tabPage8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage8.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage8.Size = new System.Drawing.Size(1443, 797);
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage8.Size = new System.Drawing.Size(1688, 853);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "Trang chủ";
             // 
@@ -438,9 +486,9 @@ namespace GUI_CSharp
             this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage3.ImageKey = "lop.png";
             this.tabPage3.Location = new System.Drawing.Point(4, 39);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1444, 799);
+            this.tabPage3.Size = new System.Drawing.Size(1688, 853);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Lớp học";
             // 
@@ -468,10 +516,10 @@ namespace GUI_CSharp
             this.cardActionLop.Depth = 0;
             this.cardActionLop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cardActionLop.Location = new System.Drawing.Point(702, 14);
-            this.cardActionLop.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardActionLop.Margin = new System.Windows.Forms.Padding(14);
             this.cardActionLop.MouseState = MaterialSkin.MouseState.HOVER;
             this.cardActionLop.Name = "cardActionLop";
-            this.cardActionLop.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardActionLop.Padding = new System.Windows.Forms.Padding(14);
             this.cardActionLop.Size = new System.Drawing.Size(921, 80);
             this.cardActionLop.TabIndex = 4;
             // 
@@ -608,10 +656,10 @@ namespace GUI_CSharp
             this.cardLop1.Depth = 0;
             this.cardLop1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cardLop1.Location = new System.Drawing.Point(10, 95);
-            this.cardLop1.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardLop1.Margin = new System.Windows.Forms.Padding(14);
             this.cardLop1.MouseState = MaterialSkin.MouseState.HOVER;
             this.cardLop1.Name = "cardLop1";
-            this.cardLop1.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardLop1.Padding = new System.Windows.Forms.Padding(14);
             this.cardLop1.Size = new System.Drawing.Size(1613, 770);
             this.cardLop1.TabIndex = 0;
             // 
@@ -695,10 +743,10 @@ namespace GUI_CSharp
             this.tabPage2.Controls.Add(this.cardActionGV);
             this.tabPage2.ImageKey = "giaovien.png";
             this.tabPage2.Location = new System.Drawing.Point(4, 39);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1444, 799);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Size = new System.Drawing.Size(1688, 853);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Giáo viên";
             // 
@@ -757,10 +805,10 @@ namespace GUI_CSharp
             this.cardListGV.Depth = 0;
             this.cardListGV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cardListGV.Location = new System.Drawing.Point(10, 95);
-            this.cardListGV.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardListGV.Margin = new System.Windows.Forms.Padding(14);
             this.cardListGV.MouseState = MaterialSkin.MouseState.HOVER;
             this.cardListGV.Name = "cardListGV";
-            this.cardListGV.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardListGV.Padding = new System.Windows.Forms.Padding(14);
             this.cardListGV.Size = new System.Drawing.Size(1613, 770);
             this.cardListGV.TabIndex = 5;
             // 
@@ -901,10 +949,10 @@ namespace GUI_CSharp
             this.cardListPhancong.Depth = 0;
             this.cardListPhancong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cardListPhancong.Location = new System.Drawing.Point(10, 95);
-            this.cardListPhancong.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardListPhancong.Margin = new System.Windows.Forms.Padding(14);
             this.cardListPhancong.MouseState = MaterialSkin.MouseState.HOVER;
             this.cardListPhancong.Name = "cardListPhancong";
-            this.cardListPhancong.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardListPhancong.Padding = new System.Windows.Forms.Padding(14);
             this.cardListPhancong.Size = new System.Drawing.Size(1613, 770);
             this.cardListPhancong.TabIndex = 6;
             this.cardListPhancong.Visible = false;
@@ -977,10 +1025,10 @@ namespace GUI_CSharp
             this.cardActionGV.Depth = 0;
             this.cardActionGV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cardActionGV.Location = new System.Drawing.Point(702, 14);
-            this.cardActionGV.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardActionGV.Margin = new System.Windows.Forms.Padding(14);
             this.cardActionGV.MouseState = MaterialSkin.MouseState.HOVER;
             this.cardActionGV.Name = "cardActionGV";
-            this.cardActionGV.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardActionGV.Padding = new System.Windows.Forms.Padding(14);
             this.cardActionGV.Size = new System.Drawing.Size(921, 80);
             this.cardActionGV.TabIndex = 16;
             // 
@@ -1125,10 +1173,10 @@ namespace GUI_CSharp
             this.tabPage1.Controls.Add(this.cardListHS);
             this.tabPage1.ImageKey = "hocsinh.png";
             this.tabPage1.Location = new System.Drawing.Point(4, 39);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1444, 799);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Size = new System.Drawing.Size(1688, 853);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Học sinh";
             // 
@@ -1140,10 +1188,10 @@ namespace GUI_CSharp
             this.cardAction_Phanlop.Depth = 0;
             this.cardAction_Phanlop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cardAction_Phanlop.Location = new System.Drawing.Point(729, 95);
-            this.cardAction_Phanlop.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardAction_Phanlop.Margin = new System.Windows.Forms.Padding(14);
             this.cardAction_Phanlop.MouseState = MaterialSkin.MouseState.HOVER;
             this.cardAction_Phanlop.Name = "cardAction_Phanlop";
-            this.cardAction_Phanlop.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardAction_Phanlop.Padding = new System.Windows.Forms.Padding(14);
             this.cardAction_Phanlop.Size = new System.Drawing.Size(168, 770);
             this.cardAction_Phanlop.TabIndex = 22;
             this.cardAction_Phanlop.Visible = false;
@@ -1199,10 +1247,10 @@ namespace GUI_CSharp
             this.cardLopmoi.Depth = 0;
             this.cardLopmoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cardLopmoi.Location = new System.Drawing.Point(897, 95);
-            this.cardLopmoi.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardLopmoi.Margin = new System.Windows.Forms.Padding(14);
             this.cardLopmoi.MouseState = MaterialSkin.MouseState.HOVER;
             this.cardLopmoi.Name = "cardLopmoi";
-            this.cardLopmoi.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardLopmoi.Padding = new System.Windows.Forms.Padding(14);
             this.cardLopmoi.Size = new System.Drawing.Size(729, 770);
             this.cardLopmoi.TabIndex = 21;
             this.cardLopmoi.Visible = false;
@@ -1370,10 +1418,10 @@ namespace GUI_CSharp
             this.cardLopcu.Depth = 0;
             this.cardLopcu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cardLopcu.Location = new System.Drawing.Point(10, 95);
-            this.cardLopcu.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardLopcu.Margin = new System.Windows.Forms.Padding(14);
             this.cardLopcu.MouseState = MaterialSkin.MouseState.HOVER;
             this.cardLopcu.Name = "cardLopcu";
-            this.cardLopcu.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardLopcu.Padding = new System.Windows.Forms.Padding(14);
             this.cardLopcu.Size = new System.Drawing.Size(719, 770);
             this.cardLopcu.TabIndex = 20;
             this.cardLopcu.Visible = false;
@@ -1562,10 +1610,10 @@ namespace GUI_CSharp
             this.cardActionHS.Depth = 0;
             this.cardActionHS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cardActionHS.Location = new System.Drawing.Point(519, 14);
-            this.cardActionHS.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardActionHS.Margin = new System.Windows.Forms.Padding(14);
             this.cardActionHS.MouseState = MaterialSkin.MouseState.HOVER;
             this.cardActionHS.Name = "cardActionHS";
-            this.cardActionHS.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardActionHS.Padding = new System.Windows.Forms.Padding(14);
             this.cardActionHS.Size = new System.Drawing.Size(921, 80);
             this.cardActionHS.TabIndex = 23;
             // 
@@ -1752,10 +1800,10 @@ namespace GUI_CSharp
             this.cardListHS.Depth = 0;
             this.cardListHS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cardListHS.Location = new System.Drawing.Point(10, 95);
-            this.cardListHS.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardListHS.Margin = new System.Windows.Forms.Padding(14);
             this.cardListHS.MouseState = MaterialSkin.MouseState.HOVER;
             this.cardListHS.Name = "cardListHS";
-            this.cardListHS.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardListHS.Padding = new System.Windows.Forms.Padding(14);
             this.cardListHS.Size = new System.Drawing.Size(1613, 770);
             this.cardListHS.TabIndex = 16;
             // 
@@ -1888,9 +1936,9 @@ namespace GUI_CSharp
             this.tabPage.Controls.Add(this.cardListDiem);
             this.tabPage.ImageKey = "ketqua.png";
             this.tabPage.Location = new System.Drawing.Point(4, 39);
-            this.tabPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage.Name = "tabPage";
-            this.tabPage.Size = new System.Drawing.Size(1444, 799);
+            this.tabPage.Size = new System.Drawing.Size(1688, 853);
             this.tabPage.TabIndex = 5;
             this.tabPage.Text = "Kết quả học tập";
             // 
@@ -1951,10 +1999,10 @@ namespace GUI_CSharp
             this.cardActionKQ.Depth = 0;
             this.cardActionKQ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cardActionKQ.Location = new System.Drawing.Point(556, 14);
-            this.cardActionKQ.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardActionKQ.Margin = new System.Windows.Forms.Padding(14);
             this.cardActionKQ.MouseState = MaterialSkin.MouseState.HOVER;
             this.cardActionKQ.Name = "cardActionKQ";
-            this.cardActionKQ.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardActionKQ.Padding = new System.Windows.Forms.Padding(14);
             this.cardActionKQ.Size = new System.Drawing.Size(890, 80);
             this.cardActionKQ.TabIndex = 19;
             // 
@@ -2069,16 +2117,16 @@ namespace GUI_CSharp
             this.cardListDiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cardListDiem.Controls.Add(this.listDiemTongketCN);
             this.cardListDiem.Controls.Add(this.listDiemTongKetHK);
-            this.cardListDiem.Controls.Add(this.cardXemdiem_Tongket);
             this.cardListDiem.Controls.Add(this.listDiem_Monhoc);
             this.cardListDiem.Controls.Add(this.cardXemdiem_Mon);
+            this.cardListDiem.Controls.Add(this.cardXemdiem_Tongket);
             this.cardListDiem.Depth = 0;
             this.cardListDiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cardListDiem.Location = new System.Drawing.Point(10, 95);
-            this.cardListDiem.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardListDiem.Margin = new System.Windows.Forms.Padding(14);
             this.cardListDiem.MouseState = MaterialSkin.MouseState.HOVER;
             this.cardListDiem.Name = "cardListDiem";
-            this.cardListDiem.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardListDiem.Padding = new System.Windows.Forms.Padding(14);
             this.cardListDiem.Size = new System.Drawing.Size(1613, 770);
             this.cardListDiem.TabIndex = 17;
             // 
@@ -2234,6 +2282,221 @@ namespace GUI_CSharp
             this.diemTB_Tongket.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.diemTB_Tongket.Width = 140;
             // 
+            // listDiem_Monhoc
+            // 
+            this.listDiem_Monhoc.AutoArrange = false;
+            this.listDiem_Monhoc.AutoSizeTable = false;
+            this.listDiem_Monhoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.listDiem_Monhoc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listDiem_Monhoc.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.maHS_diem,
+            this.tenHS_diem,
+            this.diemMieng,
+            this.diem15,
+            this.diem45,
+            this.diemThi,
+            this.diemTB});
+            this.listDiem_Monhoc.Depth = 0;
+            this.listDiem_Monhoc.FullRowSelect = true;
+            this.listDiem_Monhoc.HideSelection = false;
+            this.listDiem_Monhoc.Location = new System.Drawing.Point(17, 18);
+            this.listDiem_Monhoc.MinimumSize = new System.Drawing.Size(200, 100);
+            this.listDiem_Monhoc.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.listDiem_Monhoc.MouseState = MaterialSkin.MouseState.OUT;
+            this.listDiem_Monhoc.Name = "listDiem_Monhoc";
+            this.listDiem_Monhoc.OwnerDraw = true;
+            this.listDiem_Monhoc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.listDiem_Monhoc.Size = new System.Drawing.Size(1035, 730);
+            this.listDiem_Monhoc.TabIndex = 5;
+            this.listDiem_Monhoc.UseCompatibleStateImageBehavior = false;
+            this.listDiem_Monhoc.View = System.Windows.Forms.View.Details;
+            // 
+            // maHS_diem
+            // 
+            this.maHS_diem.Text = "Mã học sinh";
+            this.maHS_diem.Width = 150;
+            // 
+            // tenHS_diem
+            // 
+            this.tenHS_diem.Text = "Họ và tên";
+            this.tenHS_diem.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tenHS_diem.Width = 200;
+            // 
+            // diemMieng
+            // 
+            this.diemMieng.Text = "Điểm miệng";
+            this.diemMieng.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.diemMieng.Width = 120;
+            // 
+            // diem15
+            // 
+            this.diem15.Text = "Điểm 15 phút";
+            this.diem15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.diem15.Width = 120;
+            // 
+            // diem45
+            // 
+            this.diem45.Text = "Điểm 45 phút";
+            this.diem45.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.diem45.Width = 120;
+            // 
+            // diemThi
+            // 
+            this.diemThi.Text = "Điểm thi";
+            this.diemThi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.diemThi.Width = 120;
+            // 
+            // diemTB
+            // 
+            this.diemTB.Text = "Điểm trung bình";
+            this.diemTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.diemTB.Width = 140;
+            // 
+            // cardXemdiem_Mon
+            // 
+            this.cardXemdiem_Mon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cardXemdiem_Mon.Controls.Add(this.btnShowDiem);
+            this.cardXemdiem_Mon.Controls.Add(this.cbNamhoc_diem);
+            this.cardXemdiem_Mon.Controls.Add(this.cbMon_diem);
+            this.cardXemdiem_Mon.Controls.Add(this.cbHocky_diem);
+            this.cardXemdiem_Mon.Controls.Add(this.cbLop_diem);
+            this.cardXemdiem_Mon.Controls.Add(this.materialLabel3);
+            this.cardXemdiem_Mon.Depth = 0;
+            this.cardXemdiem_Mon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cardXemdiem_Mon.Location = new System.Drawing.Point(1100, 18);
+            this.cardXemdiem_Mon.Margin = new System.Windows.Forms.Padding(14);
+            this.cardXemdiem_Mon.MouseState = MaterialSkin.MouseState.HOVER;
+            this.cardXemdiem_Mon.Name = "cardXemdiem_Mon";
+            this.cardXemdiem_Mon.Padding = new System.Windows.Forms.Padding(14);
+            this.cardXemdiem_Mon.Size = new System.Drawing.Size(480, 730);
+            this.cardXemdiem_Mon.TabIndex = 6;
+            // 
+            // btnShowDiem
+            // 
+            this.btnShowDiem.AutoSize = false;
+            this.btnShowDiem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnShowDiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnShowDiem.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnShowDiem.Depth = 0;
+            this.btnShowDiem.HighEmphasis = true;
+            this.btnShowDiem.Icon = null;
+            this.btnShowDiem.Location = new System.Drawing.Point(78, 487);
+            this.btnShowDiem.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnShowDiem.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnShowDiem.Name = "btnShowDiem";
+            this.btnShowDiem.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnShowDiem.Size = new System.Drawing.Size(328, 36);
+            this.btnShowDiem.TabIndex = 14;
+            this.btnShowDiem.Text = "Hiển thị danh sách";
+            this.btnShowDiem.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnShowDiem.UseAccentColor = false;
+            this.btnShowDiem.UseVisualStyleBackColor = true;
+            this.btnShowDiem.Click += new System.EventHandler(this.btnShowDiem_Click);
+            // 
+            // cbNamhoc_diem
+            // 
+            this.cbNamhoc_diem.AutoResize = false;
+            this.cbNamhoc_diem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbNamhoc_diem.Depth = 0;
+            this.cbNamhoc_diem.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cbNamhoc_diem.DropDownHeight = 174;
+            this.cbNamhoc_diem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNamhoc_diem.DropDownWidth = 121;
+            this.cbNamhoc_diem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbNamhoc_diem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbNamhoc_diem.FormattingEnabled = true;
+            this.cbNamhoc_diem.Hint = "Năm học";
+            this.cbNamhoc_diem.IntegralHeight = false;
+            this.cbNamhoc_diem.ItemHeight = 43;
+            this.cbNamhoc_diem.Location = new System.Drawing.Point(78, 315);
+            this.cbNamhoc_diem.MaxDropDownItems = 4;
+            this.cbNamhoc_diem.MouseState = MaterialSkin.MouseState.OUT;
+            this.cbNamhoc_diem.Name = "cbNamhoc_diem";
+            this.cbNamhoc_diem.Size = new System.Drawing.Size(328, 49);
+            this.cbNamhoc_diem.StartIndex = 0;
+            this.cbNamhoc_diem.TabIndex = 13;
+            // 
+            // cbMon_diem
+            // 
+            this.cbMon_diem.AutoResize = false;
+            this.cbMon_diem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbMon_diem.Depth = 0;
+            this.cbMon_diem.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cbMon_diem.DropDownHeight = 174;
+            this.cbMon_diem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMon_diem.DropDownWidth = 121;
+            this.cbMon_diem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbMon_diem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbMon_diem.FormattingEnabled = true;
+            this.cbMon_diem.Hint = "Môn";
+            this.cbMon_diem.IntegralHeight = false;
+            this.cbMon_diem.ItemHeight = 43;
+            this.cbMon_diem.Location = new System.Drawing.Point(78, 145);
+            this.cbMon_diem.MaxDropDownItems = 4;
+            this.cbMon_diem.MouseState = MaterialSkin.MouseState.OUT;
+            this.cbMon_diem.Name = "cbMon_diem";
+            this.cbMon_diem.Size = new System.Drawing.Size(328, 49);
+            this.cbMon_diem.StartIndex = 0;
+            this.cbMon_diem.TabIndex = 13;
+            // 
+            // cbHocky_diem
+            // 
+            this.cbHocky_diem.AutoResize = false;
+            this.cbHocky_diem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbHocky_diem.Depth = 0;
+            this.cbHocky_diem.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cbHocky_diem.DropDownHeight = 174;
+            this.cbHocky_diem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbHocky_diem.DropDownWidth = 121;
+            this.cbHocky_diem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbHocky_diem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbHocky_diem.FormattingEnabled = true;
+            this.cbHocky_diem.Hint = "Học kỳ";
+            this.cbHocky_diem.IntegralHeight = false;
+            this.cbHocky_diem.ItemHeight = 43;
+            this.cbHocky_diem.Location = new System.Drawing.Point(78, 400);
+            this.cbHocky_diem.MaxDropDownItems = 4;
+            this.cbHocky_diem.MouseState = MaterialSkin.MouseState.OUT;
+            this.cbHocky_diem.Name = "cbHocky_diem";
+            this.cbHocky_diem.Size = new System.Drawing.Size(328, 49);
+            this.cbHocky_diem.StartIndex = 0;
+            this.cbHocky_diem.TabIndex = 13;
+            // 
+            // cbLop_diem
+            // 
+            this.cbLop_diem.AutoResize = false;
+            this.cbLop_diem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbLop_diem.Depth = 0;
+            this.cbLop_diem.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cbLop_diem.DropDownHeight = 174;
+            this.cbLop_diem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLop_diem.DropDownWidth = 121;
+            this.cbLop_diem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbLop_diem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbLop_diem.FormattingEnabled = true;
+            this.cbLop_diem.Hint = "Lớp";
+            this.cbLop_diem.IntegralHeight = false;
+            this.cbLop_diem.ItemHeight = 43;
+            this.cbLop_diem.Location = new System.Drawing.Point(78, 230);
+            this.cbLop_diem.MaxDropDownItems = 4;
+            this.cbLop_diem.MouseState = MaterialSkin.MouseState.OUT;
+            this.cbLop_diem.Name = "cbLop_diem";
+            this.cbLop_diem.Size = new System.Drawing.Size(328, 49);
+            this.cbLop_diem.StartIndex = 0;
+            this.cbLop_diem.TabIndex = 13;
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel3.Location = new System.Drawing.Point(170, 85);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(152, 19);
+            this.materialLabel3.TabIndex = 10;
+            this.materialLabel3.Text = "XEM ĐIỂM HỌC SINH";
+            // 
             // cardXemdiem_Tongket
             // 
             this.cardXemdiem_Tongket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -2249,10 +2512,10 @@ namespace GUI_CSharp
             this.cardXemdiem_Tongket.Depth = 0;
             this.cardXemdiem_Tongket.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cardXemdiem_Tongket.Location = new System.Drawing.Point(554, 13);
-            this.cardXemdiem_Tongket.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardXemdiem_Tongket.Margin = new System.Windows.Forms.Padding(14);
             this.cardXemdiem_Tongket.MouseState = MaterialSkin.MouseState.HOVER;
             this.cardXemdiem_Tongket.Name = "cardXemdiem_Tongket";
-            this.cardXemdiem_Tongket.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardXemdiem_Tongket.Padding = new System.Windows.Forms.Padding(14);
             this.cardXemdiem_Tongket.Size = new System.Drawing.Size(480, 730);
             this.cardXemdiem_Tongket.TabIndex = 8;
             this.cardXemdiem_Tongket.Visible = false;
@@ -2441,221 +2704,6 @@ namespace GUI_CSharp
             this.cbLop_Tongket.StartIndex = 0;
             this.cbLop_Tongket.TabIndex = 13;
             // 
-            // listDiem_Monhoc
-            // 
-            this.listDiem_Monhoc.AutoArrange = false;
-            this.listDiem_Monhoc.AutoSizeTable = false;
-            this.listDiem_Monhoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.listDiem_Monhoc.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listDiem_Monhoc.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.maHS_diem,
-            this.tenHS_diem,
-            this.diemMieng,
-            this.diem15,
-            this.diem45,
-            this.diemThi,
-            this.diemTB});
-            this.listDiem_Monhoc.Depth = 0;
-            this.listDiem_Monhoc.FullRowSelect = true;
-            this.listDiem_Monhoc.HideSelection = false;
-            this.listDiem_Monhoc.Location = new System.Drawing.Point(17, 18);
-            this.listDiem_Monhoc.MinimumSize = new System.Drawing.Size(200, 100);
-            this.listDiem_Monhoc.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.listDiem_Monhoc.MouseState = MaterialSkin.MouseState.OUT;
-            this.listDiem_Monhoc.Name = "listDiem_Monhoc";
-            this.listDiem_Monhoc.OwnerDraw = true;
-            this.listDiem_Monhoc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.listDiem_Monhoc.Size = new System.Drawing.Size(1035, 730);
-            this.listDiem_Monhoc.TabIndex = 5;
-            this.listDiem_Monhoc.UseCompatibleStateImageBehavior = false;
-            this.listDiem_Monhoc.View = System.Windows.Forms.View.Details;
-            // 
-            // maHS_diem
-            // 
-            this.maHS_diem.Text = "Mã học sinh";
-            this.maHS_diem.Width = 150;
-            // 
-            // tenHS_diem
-            // 
-            this.tenHS_diem.Text = "Họ và tên";
-            this.tenHS_diem.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.tenHS_diem.Width = 200;
-            // 
-            // diemMieng
-            // 
-            this.diemMieng.Text = "Điểm miệng";
-            this.diemMieng.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.diemMieng.Width = 120;
-            // 
-            // diem15
-            // 
-            this.diem15.Text = "Điểm 15 phút";
-            this.diem15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.diem15.Width = 120;
-            // 
-            // diem45
-            // 
-            this.diem45.Text = "Điểm 45 phút";
-            this.diem45.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.diem45.Width = 120;
-            // 
-            // diemThi
-            // 
-            this.diemThi.Text = "Điểm thi";
-            this.diemThi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.diemThi.Width = 120;
-            // 
-            // diemTB
-            // 
-            this.diemTB.Text = "Điểm trung bình";
-            this.diemTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.diemTB.Width = 140;
-            // 
-            // cardXemdiem_Mon
-            // 
-            this.cardXemdiem_Mon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cardXemdiem_Mon.Controls.Add(this.btnShowDiem);
-            this.cardXemdiem_Mon.Controls.Add(this.cbNamhoc_diem);
-            this.cardXemdiem_Mon.Controls.Add(this.cbMon_diem);
-            this.cardXemdiem_Mon.Controls.Add(this.cbHocky_diem);
-            this.cardXemdiem_Mon.Controls.Add(this.cbLop_diem);
-            this.cardXemdiem_Mon.Controls.Add(this.materialLabel3);
-            this.cardXemdiem_Mon.Depth = 0;
-            this.cardXemdiem_Mon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cardXemdiem_Mon.Location = new System.Drawing.Point(1100, 18);
-            this.cardXemdiem_Mon.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
-            this.cardXemdiem_Mon.MouseState = MaterialSkin.MouseState.HOVER;
-            this.cardXemdiem_Mon.Name = "cardXemdiem_Mon";
-            this.cardXemdiem_Mon.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
-            this.cardXemdiem_Mon.Size = new System.Drawing.Size(480, 730);
-            this.cardXemdiem_Mon.TabIndex = 6;
-            // 
-            // btnShowDiem
-            // 
-            this.btnShowDiem.AutoSize = false;
-            this.btnShowDiem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnShowDiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnShowDiem.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnShowDiem.Depth = 0;
-            this.btnShowDiem.HighEmphasis = true;
-            this.btnShowDiem.Icon = null;
-            this.btnShowDiem.Location = new System.Drawing.Point(78, 487);
-            this.btnShowDiem.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnShowDiem.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnShowDiem.Name = "btnShowDiem";
-            this.btnShowDiem.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnShowDiem.Size = new System.Drawing.Size(328, 36);
-            this.btnShowDiem.TabIndex = 14;
-            this.btnShowDiem.Text = "Hiển thị danh sách";
-            this.btnShowDiem.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnShowDiem.UseAccentColor = false;
-            this.btnShowDiem.UseVisualStyleBackColor = true;
-            this.btnShowDiem.Click += new System.EventHandler(this.btnShowDiem_Click);
-            // 
-            // cbNamhoc_diem
-            // 
-            this.cbNamhoc_diem.AutoResize = false;
-            this.cbNamhoc_diem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cbNamhoc_diem.Depth = 0;
-            this.cbNamhoc_diem.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cbNamhoc_diem.DropDownHeight = 174;
-            this.cbNamhoc_diem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbNamhoc_diem.DropDownWidth = 121;
-            this.cbNamhoc_diem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.cbNamhoc_diem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cbNamhoc_diem.FormattingEnabled = true;
-            this.cbNamhoc_diem.Hint = "Năm học";
-            this.cbNamhoc_diem.IntegralHeight = false;
-            this.cbNamhoc_diem.ItemHeight = 43;
-            this.cbNamhoc_diem.Location = new System.Drawing.Point(78, 315);
-            this.cbNamhoc_diem.MaxDropDownItems = 4;
-            this.cbNamhoc_diem.MouseState = MaterialSkin.MouseState.OUT;
-            this.cbNamhoc_diem.Name = "cbNamhoc_diem";
-            this.cbNamhoc_diem.Size = new System.Drawing.Size(328, 49);
-            this.cbNamhoc_diem.StartIndex = 0;
-            this.cbNamhoc_diem.TabIndex = 13;
-            // 
-            // cbMon_diem
-            // 
-            this.cbMon_diem.AutoResize = false;
-            this.cbMon_diem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cbMon_diem.Depth = 0;
-            this.cbMon_diem.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cbMon_diem.DropDownHeight = 174;
-            this.cbMon_diem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMon_diem.DropDownWidth = 121;
-            this.cbMon_diem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.cbMon_diem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cbMon_diem.FormattingEnabled = true;
-            this.cbMon_diem.Hint = "Môn";
-            this.cbMon_diem.IntegralHeight = false;
-            this.cbMon_diem.ItemHeight = 43;
-            this.cbMon_diem.Location = new System.Drawing.Point(78, 145);
-            this.cbMon_diem.MaxDropDownItems = 4;
-            this.cbMon_diem.MouseState = MaterialSkin.MouseState.OUT;
-            this.cbMon_diem.Name = "cbMon_diem";
-            this.cbMon_diem.Size = new System.Drawing.Size(328, 49);
-            this.cbMon_diem.StartIndex = 0;
-            this.cbMon_diem.TabIndex = 13;
-            // 
-            // cbHocky_diem
-            // 
-            this.cbHocky_diem.AutoResize = false;
-            this.cbHocky_diem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cbHocky_diem.Depth = 0;
-            this.cbHocky_diem.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cbHocky_diem.DropDownHeight = 174;
-            this.cbHocky_diem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbHocky_diem.DropDownWidth = 121;
-            this.cbHocky_diem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.cbHocky_diem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cbHocky_diem.FormattingEnabled = true;
-            this.cbHocky_diem.Hint = "Học kỳ";
-            this.cbHocky_diem.IntegralHeight = false;
-            this.cbHocky_diem.ItemHeight = 43;
-            this.cbHocky_diem.Location = new System.Drawing.Point(78, 400);
-            this.cbHocky_diem.MaxDropDownItems = 4;
-            this.cbHocky_diem.MouseState = MaterialSkin.MouseState.OUT;
-            this.cbHocky_diem.Name = "cbHocky_diem";
-            this.cbHocky_diem.Size = new System.Drawing.Size(328, 49);
-            this.cbHocky_diem.StartIndex = 0;
-            this.cbHocky_diem.TabIndex = 13;
-            // 
-            // cbLop_diem
-            // 
-            this.cbLop_diem.AutoResize = false;
-            this.cbLop_diem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cbLop_diem.Depth = 0;
-            this.cbLop_diem.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cbLop_diem.DropDownHeight = 174;
-            this.cbLop_diem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbLop_diem.DropDownWidth = 121;
-            this.cbLop_diem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.cbLop_diem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cbLop_diem.FormattingEnabled = true;
-            this.cbLop_diem.Hint = "Lớp";
-            this.cbLop_diem.IntegralHeight = false;
-            this.cbLop_diem.ItemHeight = 43;
-            this.cbLop_diem.Location = new System.Drawing.Point(78, 230);
-            this.cbLop_diem.MaxDropDownItems = 4;
-            this.cbLop_diem.MouseState = MaterialSkin.MouseState.OUT;
-            this.cbLop_diem.Name = "cbLop_diem";
-            this.cbLop_diem.Size = new System.Drawing.Size(328, 49);
-            this.cbLop_diem.StartIndex = 0;
-            this.cbLop_diem.TabIndex = 13;
-            // 
-            // materialLabel3
-            // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(170, 85);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(152, 19);
-            this.materialLabel3.TabIndex = 10;
-            this.materialLabel3.Text = "XEM ĐIỂM HỌC SINH";
-            // 
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.White;
@@ -2666,7 +2714,7 @@ namespace GUI_CSharp
             this.tabPage4.ImageKey = "prescription.png";
             this.tabPage4.Location = new System.Drawing.Point(4, 39);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1444, 799);
+            this.tabPage4.Size = new System.Drawing.Size(1688, 853);
             this.tabPage4.TabIndex = 9;
             this.tabPage4.Text = "Nội quy";
             // 
@@ -2725,10 +2773,10 @@ namespace GUI_CSharp
             this.cardHL_HK.Depth = 0;
             this.cardHL_HK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cardHL_HK.Location = new System.Drawing.Point(9, 95);
-            this.cardHL_HK.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardHL_HK.Margin = new System.Windows.Forms.Padding(14);
             this.cardHL_HK.MouseState = MaterialSkin.MouseState.HOVER;
             this.cardHL_HK.Name = "cardHL_HK";
-            this.cardHL_HK.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardHL_HK.Padding = new System.Windows.Forms.Padding(14);
             this.cardHL_HK.Size = new System.Drawing.Size(1613, 770);
             this.cardHL_HK.TabIndex = 18;
             this.cardHL_HK.Visible = false;
@@ -2744,10 +2792,10 @@ namespace GUI_CSharp
             this.materialCard3.Depth = 0;
             this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard3.Location = new System.Drawing.Point(17, 28);
-            this.materialCard3.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.materialCard3.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard3.Name = "materialCard3";
-            this.materialCard3.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.materialCard3.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard3.Size = new System.Drawing.Size(765, 572);
             this.materialCard3.TabIndex = 0;
             // 
@@ -2890,10 +2938,10 @@ namespace GUI_CSharp
             this.materialCard4.Depth = 0;
             this.materialCard4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard4.Location = new System.Drawing.Point(822, 28);
-            this.materialCard4.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.materialCard4.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard4.Name = "materialCard4";
-            this.materialCard4.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.materialCard4.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard4.Size = new System.Drawing.Size(769, 572);
             this.materialCard4.TabIndex = 1;
             // 
@@ -3027,10 +3075,10 @@ namespace GUI_CSharp
             this.cardActionHL_HK.Depth = 0;
             this.cardActionHL_HK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cardActionHL_HK.Location = new System.Drawing.Point(599, 628);
-            this.cardActionHL_HK.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardActionHL_HK.Margin = new System.Windows.Forms.Padding(14);
             this.cardActionHL_HK.MouseState = MaterialSkin.MouseState.HOVER;
             this.cardActionHL_HK.Name = "cardActionHL_HK";
-            this.cardActionHL_HK.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardActionHL_HK.Padding = new System.Windows.Forms.Padding(14);
             this.cardActionHL_HK.Size = new System.Drawing.Size(403, 114);
             this.cardActionHL_HK.TabIndex = 17;
             // 
@@ -3108,10 +3156,10 @@ namespace GUI_CSharp
             this.cardTT_VP.Depth = 0;
             this.cardTT_VP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cardTT_VP.Location = new System.Drawing.Point(10, 95);
-            this.cardTT_VP.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardTT_VP.Margin = new System.Windows.Forms.Padding(14);
             this.cardTT_VP.MouseState = MaterialSkin.MouseState.HOVER;
             this.cardTT_VP.Name = "cardTT_VP";
-            this.cardTT_VP.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardTT_VP.Padding = new System.Windows.Forms.Padding(14);
             this.cardTT_VP.Size = new System.Drawing.Size(1613, 770);
             this.cardTT_VP.TabIndex = 9;
             // 
@@ -3126,10 +3174,10 @@ namespace GUI_CSharp
             this.cardThanhtich.Depth = 0;
             this.cardThanhtich.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cardThanhtich.Location = new System.Drawing.Point(17, 28);
-            this.cardThanhtich.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardThanhtich.Margin = new System.Windows.Forms.Padding(14);
             this.cardThanhtich.MouseState = MaterialSkin.MouseState.HOVER;
             this.cardThanhtich.Name = "cardThanhtich";
-            this.cardThanhtich.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardThanhtich.Padding = new System.Windows.Forms.Padding(14);
             this.cardThanhtich.Size = new System.Drawing.Size(765, 572);
             this.cardThanhtich.TabIndex = 0;
             // 
@@ -3257,10 +3305,10 @@ namespace GUI_CSharp
             this.cardVipham.Depth = 0;
             this.cardVipham.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cardVipham.Location = new System.Drawing.Point(822, 28);
-            this.cardVipham.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardVipham.Margin = new System.Windows.Forms.Padding(14);
             this.cardVipham.MouseState = MaterialSkin.MouseState.HOVER;
             this.cardVipham.Name = "cardVipham";
-            this.cardVipham.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardVipham.Padding = new System.Windows.Forms.Padding(14);
             this.cardVipham.Size = new System.Drawing.Size(769, 572);
             this.cardVipham.TabIndex = 1;
             // 
@@ -3386,10 +3434,10 @@ namespace GUI_CSharp
             this.cardActionTT_VP.Depth = 0;
             this.cardActionTT_VP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cardActionTT_VP.Location = new System.Drawing.Point(599, 628);
-            this.cardActionTT_VP.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardActionTT_VP.Margin = new System.Windows.Forms.Padding(14);
             this.cardActionTT_VP.MouseState = MaterialSkin.MouseState.HOVER;
             this.cardActionTT_VP.Name = "cardActionTT_VP";
-            this.cardActionTT_VP.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.cardActionTT_VP.Padding = new System.Windows.Forms.Padding(14);
             this.cardActionTT_VP.Size = new System.Drawing.Size(403, 114);
             this.cardActionTT_VP.TabIndex = 17;
             // 
@@ -3462,12 +3510,12 @@ namespace GUI_CSharp
             // 
             this.tabPage9.BackColor = System.Drawing.Color.White;
             this.tabPage9.Controls.Add(this.tabThongkeHS);
-            this.tabPage9.Controls.Add(this.tabThongkeDiem);
+            this.tabPage9.Controls.Add(this.tabThongkeKQ);
             this.tabPage9.Controls.Add(this.materialCard1);
             this.tabPage9.ImageKey = "statistical.png";
             this.tabPage9.Location = new System.Drawing.Point(4, 39);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Size = new System.Drawing.Size(1443, 797);
+            this.tabPage9.Size = new System.Drawing.Size(1688, 853);
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "Thống kê";
             // 
@@ -3492,43 +3540,583 @@ namespace GUI_CSharp
             this.tabThongkeHS.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.tabThongkeHS.UseAccentColor = false;
             this.tabThongkeHS.UseVisualStyleBackColor = false;
+            this.tabThongkeHS.Click += new System.EventHandler(this.tabThongkeHS_Click);
             // 
-            // tabThongkeDiem
+            // tabThongkeKQ
             // 
-            this.tabThongkeDiem.AutoSize = false;
-            this.tabThongkeDiem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tabThongkeDiem.BackColor = System.Drawing.Color.White;
-            this.tabThongkeDiem.CharacterCasing = MaterialSkin.Controls.MaterialButton.CharacterCasingEnum.Normal;
-            this.tabThongkeDiem.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.tabThongkeDiem.Depth = 0;
-            this.tabThongkeDiem.HighEmphasis = false;
-            this.tabThongkeDiem.Icon = null;
-            this.tabThongkeDiem.Location = new System.Drawing.Point(161, 14);
-            this.tabThongkeDiem.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.tabThongkeDiem.MouseState = MaterialSkin.MouseState.HOVER;
-            this.tabThongkeDiem.Name = "tabThongkeDiem";
-            this.tabThongkeDiem.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.tabThongkeDiem.Size = new System.Drawing.Size(150, 80);
-            this.tabThongkeDiem.TabIndex = 10;
-            this.tabThongkeDiem.Text = "Thống kê điểm";
-            this.tabThongkeDiem.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.tabThongkeDiem.UseAccentColor = false;
-            this.tabThongkeDiem.UseVisualStyleBackColor = false;
+            this.tabThongkeKQ.AutoSize = false;
+            this.tabThongkeKQ.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tabThongkeKQ.BackColor = System.Drawing.Color.White;
+            this.tabThongkeKQ.CharacterCasing = MaterialSkin.Controls.MaterialButton.CharacterCasingEnum.Normal;
+            this.tabThongkeKQ.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.tabThongkeKQ.Depth = 0;
+            this.tabThongkeKQ.HighEmphasis = false;
+            this.tabThongkeKQ.Icon = null;
+            this.tabThongkeKQ.Location = new System.Drawing.Point(161, 14);
+            this.tabThongkeKQ.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.tabThongkeKQ.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tabThongkeKQ.Name = "tabThongkeKQ";
+            this.tabThongkeKQ.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.tabThongkeKQ.Size = new System.Drawing.Size(150, 80);
+            this.tabThongkeKQ.TabIndex = 10;
+            this.tabThongkeKQ.Text = "Thống kê kết quả";
+            this.tabThongkeKQ.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.tabThongkeKQ.UseAccentColor = false;
+            this.tabThongkeKQ.UseVisualStyleBackColor = false;
+            this.tabThongkeKQ.Click += new System.EventHandler(this.tabThongkeKQ_Click);
             // 
             // materialCard1
             // 
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard1.Controls.Add(this.dateTimePicker1);
-            this.materialCard1.Controls.Add(this.label10);
+            this.materialCard1.Controls.Add(this.listTKKQ_Lop);
+            this.materialCard1.Controls.Add(this.listTKKQ_HS);
+            this.materialCard1.Controls.Add(this.listTKHS);
+            this.materialCard1.Controls.Add(this.cardActionTKKQ);
+            this.materialCard1.Controls.Add(this.cardActionTKHS);
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard1.Location = new System.Drawing.Point(10, 95);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard1.Size = new System.Drawing.Size(1613, 770);
             this.materialCard1.TabIndex = 1;
+            // 
+            // cardActionTKKQ
+            // 
+            this.cardActionTKKQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cardActionTKKQ.Controls.Add(this.btnLoad_TKKQ_Lop);
+            this.cardActionTKKQ.Controls.Add(this.btnXuatExcel_TKKQ_Lop);
+            this.cardActionTKKQ.Controls.Add(this.btnHienthi_TKKQ_Lop);
+            this.cardActionTKKQ.Controls.Add(this.cbNamhoc_TKKQ_Lop);
+            this.cardActionTKKQ.Controls.Add(this.cbLop_TKKQ_Lop);
+            this.cardActionTKKQ.Controls.Add(this.tabTKKQ_KhoiLop);
+            this.cardActionTKKQ.Controls.Add(this.tabTKKQ_HS);
+            this.cardActionTKKQ.Controls.Add(this.btnLoad_TKKQ_HS);
+            this.cardActionTKKQ.Controls.Add(this.btnXuatExcel_TKKQ_HS);
+            this.cardActionTKKQ.Controls.Add(this.btnTimkiem_TKKQ_HS);
+            this.cardActionTKKQ.Controls.Add(this.txTimkiem_TKKQ_HS);
+            this.cardActionTKKQ.Controls.Add(this.btnHienthi_TKKQ_HS);
+            this.cardActionTKKQ.Controls.Add(this.cbNamhoc_TKKQ_HS);
+            this.cardActionTKKQ.Controls.Add(this.cbLop_TKKQ_HS);
+            this.cardActionTKKQ.Depth = 0;
+            this.cardActionTKKQ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cardActionTKKQ.Location = new System.Drawing.Point(1114, 18);
+            this.cardActionTKKQ.Margin = new System.Windows.Forms.Padding(14);
+            this.cardActionTKKQ.MouseState = MaterialSkin.MouseState.HOVER;
+            this.cardActionTKKQ.Name = "cardActionTKKQ";
+            this.cardActionTKKQ.Padding = new System.Windows.Forms.Padding(14);
+            this.cardActionTKKQ.Size = new System.Drawing.Size(480, 730);
+            this.cardActionTKKQ.TabIndex = 13;
+            this.cardActionTKKQ.Visible = false;
+            // 
+            // tabTKKQ_KhoiLop
+            // 
+            this.tabTKKQ_KhoiLop.AutoSize = false;
+            this.tabTKKQ_KhoiLop.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tabTKKQ_KhoiLop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tabTKKQ_KhoiLop.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.tabTKKQ_KhoiLop.Depth = 0;
+            this.tabTKKQ_KhoiLop.HighEmphasis = false;
+            this.tabTKKQ_KhoiLop.Icon = null;
+            this.tabTKKQ_KhoiLop.Location = new System.Drawing.Point(251, 56);
+            this.tabTKKQ_KhoiLop.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.tabTKKQ_KhoiLop.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tabTKKQ_KhoiLop.Name = "tabTKKQ_KhoiLop";
+            this.tabTKKQ_KhoiLop.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.tabTKKQ_KhoiLop.Size = new System.Drawing.Size(150, 77);
+            this.tabTKKQ_KhoiLop.TabIndex = 25;
+            this.tabTKKQ_KhoiLop.Text = "Thống kê kết quả theo Khối / lớp";
+            this.tabTKKQ_KhoiLop.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.tabTKKQ_KhoiLop.UseAccentColor = false;
+            this.tabTKKQ_KhoiLop.UseVisualStyleBackColor = true;
+            this.tabTKKQ_KhoiLop.Click += new System.EventHandler(this.tabTKKQ_KhoiLop_Click);
+            // 
+            // tabTKKQ_HS
+            // 
+            this.tabTKKQ_HS.AutoSize = false;
+            this.tabTKKQ_HS.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tabTKKQ_HS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tabTKKQ_HS.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.tabTKKQ_HS.Depth = 0;
+            this.tabTKKQ_HS.HighEmphasis = false;
+            this.tabTKKQ_HS.Icon = null;
+            this.tabTKKQ_HS.Location = new System.Drawing.Point(73, 56);
+            this.tabTKKQ_HS.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.tabTKKQ_HS.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tabTKKQ_HS.Name = "tabTKKQ_HS";
+            this.tabTKKQ_HS.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.tabTKKQ_HS.Size = new System.Drawing.Size(150, 77);
+            this.tabTKKQ_HS.TabIndex = 26;
+            this.tabTKKQ_HS.Text = "Thống kê kết quả theo học sinh";
+            this.tabTKKQ_HS.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.tabTKKQ_HS.UseAccentColor = false;
+            this.tabTKKQ_HS.UseVisualStyleBackColor = true;
+            this.tabTKKQ_HS.Click += new System.EventHandler(this.tabTKKQ_HS_Click);
+            // 
+            // btnLoad_TKKQ_HS
+            // 
+            this.btnLoad_TKKQ_HS.AutoSize = false;
+            this.btnLoad_TKKQ_HS.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnLoad_TKKQ_HS.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnLoad_TKKQ_HS.Depth = 0;
+            this.btnLoad_TKKQ_HS.HighEmphasis = true;
+            this.btnLoad_TKKQ_HS.Icon = global::GUI_CSharp.Properties.Resources.reloading;
+            this.btnLoad_TKKQ_HS.Location = new System.Drawing.Point(73, 268);
+            this.btnLoad_TKKQ_HS.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnLoad_TKKQ_HS.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnLoad_TKKQ_HS.Name = "btnLoad_TKKQ_HS";
+            this.btnLoad_TKKQ_HS.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnLoad_TKKQ_HS.Size = new System.Drawing.Size(328, 42);
+            this.btnLoad_TKKQ_HS.TabIndex = 24;
+            this.btnLoad_TKKQ_HS.TabStop = false;
+            this.btnLoad_TKKQ_HS.Text = "Làm mới";
+            this.btnLoad_TKKQ_HS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLoad_TKKQ_HS.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnLoad_TKKQ_HS.UseAccentColor = false;
+            this.btnLoad_TKKQ_HS.UseVisualStyleBackColor = true;
+            this.btnLoad_TKKQ_HS.Click += new System.EventHandler(this.btnLoad_TKKQ_HS_Click);
+            // 
+            // btnXuatExcel_TKKQ_HS
+            // 
+            this.btnXuatExcel_TKKQ_HS.AutoSize = false;
+            this.btnXuatExcel_TKKQ_HS.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnXuatExcel_TKKQ_HS.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnXuatExcel_TKKQ_HS.Depth = 0;
+            this.btnXuatExcel_TKKQ_HS.HighEmphasis = true;
+            this.btnXuatExcel_TKKQ_HS.Icon = global::GUI_CSharp.Properties.Resources.excel;
+            this.btnXuatExcel_TKKQ_HS.Location = new System.Drawing.Point(73, 614);
+            this.btnXuatExcel_TKKQ_HS.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnXuatExcel_TKKQ_HS.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnXuatExcel_TKKQ_HS.Name = "btnXuatExcel_TKKQ_HS";
+            this.btnXuatExcel_TKKQ_HS.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnXuatExcel_TKKQ_HS.Size = new System.Drawing.Size(328, 40);
+            this.btnXuatExcel_TKKQ_HS.TabIndex = 23;
+            this.btnXuatExcel_TKKQ_HS.TabStop = false;
+            this.btnXuatExcel_TKKQ_HS.Text = "Xuất Excel";
+            this.btnXuatExcel_TKKQ_HS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXuatExcel_TKKQ_HS.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnXuatExcel_TKKQ_HS.UseAccentColor = false;
+            this.btnXuatExcel_TKKQ_HS.UseVisualStyleBackColor = true;
+            this.btnXuatExcel_TKKQ_HS.Click += new System.EventHandler(this.btnXuatExcel_TKKQ_HS_Click);
+            // 
+            // btnTimkiem_TKKQ_HS
+            // 
+            this.btnTimkiem_TKKQ_HS.AutoSize = false;
+            this.btnTimkiem_TKKQ_HS.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTimkiem_TKKQ_HS.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnTimkiem_TKKQ_HS.Depth = 0;
+            this.btnTimkiem_TKKQ_HS.HighEmphasis = true;
+            this.btnTimkiem_TKKQ_HS.Icon = ((System.Drawing.Image)(resources.GetObject("btnTimkiem_TKKQ_HS.Icon")));
+            this.btnTimkiem_TKKQ_HS.Location = new System.Drawing.Point(351, 206);
+            this.btnTimkiem_TKKQ_HS.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnTimkiem_TKKQ_HS.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnTimkiem_TKKQ_HS.Name = "btnTimkiem_TKKQ_HS";
+            this.btnTimkiem_TKKQ_HS.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnTimkiem_TKKQ_HS.Size = new System.Drawing.Size(50, 50);
+            this.btnTimkiem_TKKQ_HS.TabIndex = 16;
+            this.btnTimkiem_TKKQ_HS.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnTimkiem_TKKQ_HS.UseAccentColor = false;
+            this.btnTimkiem_TKKQ_HS.UseVisualStyleBackColor = true;
+            this.btnTimkiem_TKKQ_HS.Click += new System.EventHandler(this.btnTimkiem_TKKQ_HS_Click);
+            // 
+            // txTimkiem_TKKQ_HS
+            // 
+            this.txTimkiem_TKKQ_HS.AnimateReadOnly = false;
+            this.txTimkiem_TKKQ_HS.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txTimkiem_TKKQ_HS.Depth = 0;
+            this.txTimkiem_TKKQ_HS.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txTimkiem_TKKQ_HS.Hint = "Thông tin tìm kiếm";
+            this.txTimkiem_TKKQ_HS.LeadingIcon = null;
+            this.txTimkiem_TKKQ_HS.Location = new System.Drawing.Point(73, 206);
+            this.txTimkiem_TKKQ_HS.MaxLength = 50;
+            this.txTimkiem_TKKQ_HS.MouseState = MaterialSkin.MouseState.OUT;
+            this.txTimkiem_TKKQ_HS.Multiline = false;
+            this.txTimkiem_TKKQ_HS.Name = "txTimkiem_TKKQ_HS";
+            this.txTimkiem_TKKQ_HS.Size = new System.Drawing.Size(259, 50);
+            this.txTimkiem_TKKQ_HS.TabIndex = 15;
+            this.txTimkiem_TKKQ_HS.Text = "";
+            this.txTimkiem_TKKQ_HS.TrailingIcon = null;
+            // 
+            // btnHienthi_TKKQ_HS
+            // 
+            this.btnHienthi_TKKQ_HS.AutoSize = false;
+            this.btnHienthi_TKKQ_HS.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnHienthi_TKKQ_HS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnHienthi_TKKQ_HS.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnHienthi_TKKQ_HS.Depth = 0;
+            this.btnHienthi_TKKQ_HS.HighEmphasis = true;
+            this.btnHienthi_TKKQ_HS.Icon = null;
+            this.btnHienthi_TKKQ_HS.Location = new System.Drawing.Point(73, 562);
+            this.btnHienthi_TKKQ_HS.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnHienthi_TKKQ_HS.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnHienthi_TKKQ_HS.Name = "btnHienthi_TKKQ_HS";
+            this.btnHienthi_TKKQ_HS.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnHienthi_TKKQ_HS.Size = new System.Drawing.Size(328, 40);
+            this.btnHienthi_TKKQ_HS.TabIndex = 14;
+            this.btnHienthi_TKKQ_HS.Text = "Hiển thị danh sách";
+            this.btnHienthi_TKKQ_HS.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnHienthi_TKKQ_HS.UseAccentColor = false;
+            this.btnHienthi_TKKQ_HS.UseVisualStyleBackColor = true;
+            this.btnHienthi_TKKQ_HS.Click += new System.EventHandler(this.btnHienthi_TKKQ_HS_Click);
+            // 
+            // cbNamhoc_TKKQ_HS
+            // 
+            this.cbNamhoc_TKKQ_HS.AutoResize = false;
+            this.cbNamhoc_TKKQ_HS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbNamhoc_TKKQ_HS.Depth = 0;
+            this.cbNamhoc_TKKQ_HS.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cbNamhoc_TKKQ_HS.DropDownHeight = 174;
+            this.cbNamhoc_TKKQ_HS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNamhoc_TKKQ_HS.DropDownWidth = 121;
+            this.cbNamhoc_TKKQ_HS.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbNamhoc_TKKQ_HS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbNamhoc_TKKQ_HS.FormattingEnabled = true;
+            this.cbNamhoc_TKKQ_HS.Hint = "Năm học";
+            this.cbNamhoc_TKKQ_HS.IntegralHeight = false;
+            this.cbNamhoc_TKKQ_HS.ItemHeight = 43;
+            this.cbNamhoc_TKKQ_HS.Location = new System.Drawing.Point(73, 481);
+            this.cbNamhoc_TKKQ_HS.MaxDropDownItems = 4;
+            this.cbNamhoc_TKKQ_HS.MouseState = MaterialSkin.MouseState.OUT;
+            this.cbNamhoc_TKKQ_HS.Name = "cbNamhoc_TKKQ_HS";
+            this.cbNamhoc_TKKQ_HS.Size = new System.Drawing.Size(328, 49);
+            this.cbNamhoc_TKKQ_HS.StartIndex = 0;
+            this.cbNamhoc_TKKQ_HS.TabIndex = 13;
+            // 
+            // cbLop_TKKQ_HS
+            // 
+            this.cbLop_TKKQ_HS.AutoResize = false;
+            this.cbLop_TKKQ_HS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbLop_TKKQ_HS.Depth = 0;
+            this.cbLop_TKKQ_HS.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cbLop_TKKQ_HS.DropDownHeight = 174;
+            this.cbLop_TKKQ_HS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLop_TKKQ_HS.DropDownWidth = 121;
+            this.cbLop_TKKQ_HS.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbLop_TKKQ_HS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbLop_TKKQ_HS.FormattingEnabled = true;
+            this.cbLop_TKKQ_HS.Hint = "Lớp";
+            this.cbLop_TKKQ_HS.IntegralHeight = false;
+            this.cbLop_TKKQ_HS.ItemHeight = 43;
+            this.cbLop_TKKQ_HS.Location = new System.Drawing.Point(73, 403);
+            this.cbLop_TKKQ_HS.MaxDropDownItems = 4;
+            this.cbLop_TKKQ_HS.MouseState = MaterialSkin.MouseState.OUT;
+            this.cbLop_TKKQ_HS.Name = "cbLop_TKKQ_HS";
+            this.cbLop_TKKQ_HS.Size = new System.Drawing.Size(328, 49);
+            this.cbLop_TKKQ_HS.StartIndex = 0;
+            this.cbLop_TKKQ_HS.TabIndex = 13;
+            // 
+            // listTKKQ_HS
+            // 
+            this.listTKKQ_HS.AutoArrange = false;
+            this.listTKKQ_HS.AutoSizeTable = false;
+            this.listTKKQ_HS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.listTKKQ_HS.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listTKKQ_HS.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.STT_TKKQ,
+            this.maHS_TKKQ,
+            this.tenHS_TKKQ,
+            this.lopHS_TKKQ,
+            this.namHoc_TKKQ,
+            this.ketQua_TKKQ});
+            this.listTKKQ_HS.Depth = 0;
+            this.listTKKQ_HS.FullRowSelect = true;
+            this.listTKKQ_HS.HideSelection = false;
+            this.listTKKQ_HS.Location = new System.Drawing.Point(17, 18);
+            this.listTKKQ_HS.MinimumSize = new System.Drawing.Size(200, 100);
+            this.listTKKQ_HS.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.listTKKQ_HS.MouseState = MaterialSkin.MouseState.OUT;
+            this.listTKKQ_HS.Name = "listTKKQ_HS";
+            this.listTKKQ_HS.OwnerDraw = true;
+            this.listTKKQ_HS.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.listTKKQ_HS.Size = new System.Drawing.Size(1058, 730);
+            this.listTKKQ_HS.TabIndex = 12;
+            this.listTKKQ_HS.UseCompatibleStateImageBehavior = false;
+            this.listTKKQ_HS.View = System.Windows.Forms.View.Details;
+            this.listTKKQ_HS.Visible = false;
+            // 
+            // STT_TKKQ
+            // 
+            this.STT_TKKQ.Text = "STT";
+            // 
+            // maHS_TKKQ
+            // 
+            this.maHS_TKKQ.Text = "Mã học sinh";
+            this.maHS_TKKQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maHS_TKKQ.Width = 150;
+            // 
+            // tenHS_TKKQ
+            // 
+            this.tenHS_TKKQ.Text = "Họ và tên";
+            this.tenHS_TKKQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tenHS_TKKQ.Width = 250;
+            // 
+            // lopHS_TKKQ
+            // 
+            this.lopHS_TKKQ.Text = "Lớp";
+            this.lopHS_TKKQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.lopHS_TKKQ.Width = 100;
+            // 
+            // namHoc_TKKQ
+            // 
+            this.namHoc_TKKQ.Text = "Năm học";
+            this.namHoc_TKKQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.namHoc_TKKQ.Width = 200;
+            // 
+            // ketQua_TKKQ
+            // 
+            this.ketQua_TKKQ.Text = "Kết quả";
+            this.ketQua_TKKQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.ketQua_TKKQ.Width = 200;
+            // 
+            // cardActionTKHS
+            // 
+            this.cardActionTKHS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cardActionTKHS.Controls.Add(this.btnLoadListTKHS);
+            this.cardActionTKHS.Controls.Add(this.btnXuatExcel_TKHS);
+            this.cardActionTKHS.Controls.Add(this.btnTimkiemTKHS);
+            this.cardActionTKHS.Controls.Add(this.txTimkiemTKHS);
+            this.cardActionTKHS.Controls.Add(this.btnHienThiDSTKHS);
+            this.cardActionTKHS.Controls.Add(this.cbNamhoc_TKHS);
+            this.cardActionTKHS.Controls.Add(this.cbLop_TKHS);
+            this.cardActionTKHS.Depth = 0;
+            this.cardActionTKHS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cardActionTKHS.Location = new System.Drawing.Point(1114, 18);
+            this.cardActionTKHS.Margin = new System.Windows.Forms.Padding(14);
+            this.cardActionTKHS.MouseState = MaterialSkin.MouseState.HOVER;
+            this.cardActionTKHS.Name = "cardActionTKHS";
+            this.cardActionTKHS.Padding = new System.Windows.Forms.Padding(14);
+            this.cardActionTKHS.Size = new System.Drawing.Size(480, 730);
+            this.cardActionTKHS.TabIndex = 11;
+            // 
+            // btnLoadListTKHS
+            // 
+            this.btnLoadListTKHS.AutoSize = false;
+            this.btnLoadListTKHS.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnLoadListTKHS.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnLoadListTKHS.Depth = 0;
+            this.btnLoadListTKHS.HighEmphasis = true;
+            this.btnLoadListTKHS.Icon = global::GUI_CSharp.Properties.Resources.reloading;
+            this.btnLoadListTKHS.Location = new System.Drawing.Point(73, 145);
+            this.btnLoadListTKHS.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnLoadListTKHS.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnLoadListTKHS.Name = "btnLoadListTKHS";
+            this.btnLoadListTKHS.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnLoadListTKHS.Size = new System.Drawing.Size(328, 42);
+            this.btnLoadListTKHS.TabIndex = 24;
+            this.btnLoadListTKHS.TabStop = false;
+            this.btnLoadListTKHS.Text = "Làm mới";
+            this.btnLoadListTKHS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLoadListTKHS.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnLoadListTKHS.UseAccentColor = false;
+            this.btnLoadListTKHS.UseVisualStyleBackColor = true;
+            this.btnLoadListTKHS.Click += new System.EventHandler(this.btnLoadListTKHS_Click);
+            // 
+            // btnXuatExcel_TKHS
+            // 
+            this.btnXuatExcel_TKHS.AutoSize = false;
+            this.btnXuatExcel_TKHS.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnXuatExcel_TKHS.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnXuatExcel_TKHS.Depth = 0;
+            this.btnXuatExcel_TKHS.HighEmphasis = true;
+            this.btnXuatExcel_TKHS.Icon = global::GUI_CSharp.Properties.Resources.excel;
+            this.btnXuatExcel_TKHS.Location = new System.Drawing.Point(73, 607);
+            this.btnXuatExcel_TKHS.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnXuatExcel_TKHS.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnXuatExcel_TKHS.Name = "btnXuatExcel_TKHS";
+            this.btnXuatExcel_TKHS.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnXuatExcel_TKHS.Size = new System.Drawing.Size(328, 40);
+            this.btnXuatExcel_TKHS.TabIndex = 23;
+            this.btnXuatExcel_TKHS.TabStop = false;
+            this.btnXuatExcel_TKHS.Text = "Xuất Excel";
+            this.btnXuatExcel_TKHS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXuatExcel_TKHS.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnXuatExcel_TKHS.UseAccentColor = false;
+            this.btnXuatExcel_TKHS.UseVisualStyleBackColor = true;
+            this.btnXuatExcel_TKHS.Click += new System.EventHandler(this.btnXuatExcel_TKHS_Click);
+            // 
+            // btnTimkiemTKHS
+            // 
+            this.btnTimkiemTKHS.AutoSize = false;
+            this.btnTimkiemTKHS.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTimkiemTKHS.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnTimkiemTKHS.Depth = 0;
+            this.btnTimkiemTKHS.HighEmphasis = true;
+            this.btnTimkiemTKHS.Icon = ((System.Drawing.Image)(resources.GetObject("btnTimkiemTKHS.Icon")));
+            this.btnTimkiemTKHS.Location = new System.Drawing.Point(351, 63);
+            this.btnTimkiemTKHS.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnTimkiemTKHS.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnTimkiemTKHS.Name = "btnTimkiemTKHS";
+            this.btnTimkiemTKHS.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnTimkiemTKHS.Size = new System.Drawing.Size(50, 50);
+            this.btnTimkiemTKHS.TabIndex = 16;
+            this.btnTimkiemTKHS.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnTimkiemTKHS.UseAccentColor = false;
+            this.btnTimkiemTKHS.UseVisualStyleBackColor = true;
+            this.btnTimkiemTKHS.Click += new System.EventHandler(this.btnTimkiemTKHS_Click);
+            // 
+            // txTimkiemTKHS
+            // 
+            this.txTimkiemTKHS.AnimateReadOnly = false;
+            this.txTimkiemTKHS.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txTimkiemTKHS.Depth = 0;
+            this.txTimkiemTKHS.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txTimkiemTKHS.Hint = "Thông tin tìm kiếm";
+            this.txTimkiemTKHS.LeadingIcon = null;
+            this.txTimkiemTKHS.Location = new System.Drawing.Point(73, 63);
+            this.txTimkiemTKHS.MaxLength = 50;
+            this.txTimkiemTKHS.MouseState = MaterialSkin.MouseState.OUT;
+            this.txTimkiemTKHS.Multiline = false;
+            this.txTimkiemTKHS.Name = "txTimkiemTKHS";
+            this.txTimkiemTKHS.Size = new System.Drawing.Size(259, 50);
+            this.txTimkiemTKHS.TabIndex = 15;
+            this.txTimkiemTKHS.Text = "";
+            this.txTimkiemTKHS.TrailingIcon = null;
+            // 
+            // btnHienThiDSTKHS
+            // 
+            this.btnHienThiDSTKHS.AutoSize = false;
+            this.btnHienThiDSTKHS.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnHienThiDSTKHS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnHienThiDSTKHS.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnHienThiDSTKHS.Depth = 0;
+            this.btnHienThiDSTKHS.HighEmphasis = true;
+            this.btnHienThiDSTKHS.Icon = null;
+            this.btnHienThiDSTKHS.Location = new System.Drawing.Point(73, 540);
+            this.btnHienThiDSTKHS.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnHienThiDSTKHS.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnHienThiDSTKHS.Name = "btnHienThiDSTKHS";
+            this.btnHienThiDSTKHS.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnHienThiDSTKHS.Size = new System.Drawing.Size(328, 40);
+            this.btnHienThiDSTKHS.TabIndex = 14;
+            this.btnHienThiDSTKHS.Text = "Hiển thị danh sách";
+            this.btnHienThiDSTKHS.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnHienThiDSTKHS.UseAccentColor = false;
+            this.btnHienThiDSTKHS.UseVisualStyleBackColor = true;
+            this.btnHienThiDSTKHS.Click += new System.EventHandler(this.btnHienThiDSTKHS_Click);
+            // 
+            // cbNamhoc_TKHS
+            // 
+            this.cbNamhoc_TKHS.AutoResize = false;
+            this.cbNamhoc_TKHS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbNamhoc_TKHS.Depth = 0;
+            this.cbNamhoc_TKHS.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cbNamhoc_TKHS.DropDownHeight = 174;
+            this.cbNamhoc_TKHS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNamhoc_TKHS.DropDownWidth = 121;
+            this.cbNamhoc_TKHS.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbNamhoc_TKHS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbNamhoc_TKHS.FormattingEnabled = true;
+            this.cbNamhoc_TKHS.Hint = "Năm học";
+            this.cbNamhoc_TKHS.IntegralHeight = false;
+            this.cbNamhoc_TKHS.ItemHeight = 43;
+            this.cbNamhoc_TKHS.Location = new System.Drawing.Point(73, 443);
+            this.cbNamhoc_TKHS.MaxDropDownItems = 4;
+            this.cbNamhoc_TKHS.MouseState = MaterialSkin.MouseState.OUT;
+            this.cbNamhoc_TKHS.Name = "cbNamhoc_TKHS";
+            this.cbNamhoc_TKHS.Size = new System.Drawing.Size(328, 49);
+            this.cbNamhoc_TKHS.StartIndex = 0;
+            this.cbNamhoc_TKHS.TabIndex = 13;
+            // 
+            // cbLop_TKHS
+            // 
+            this.cbLop_TKHS.AutoResize = false;
+            this.cbLop_TKHS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbLop_TKHS.Depth = 0;
+            this.cbLop_TKHS.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cbLop_TKHS.DropDownHeight = 174;
+            this.cbLop_TKHS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLop_TKHS.DropDownWidth = 121;
+            this.cbLop_TKHS.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbLop_TKHS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbLop_TKHS.FormattingEnabled = true;
+            this.cbLop_TKHS.Hint = "Lớp";
+            this.cbLop_TKHS.IntegralHeight = false;
+            this.cbLop_TKHS.ItemHeight = 43;
+            this.cbLop_TKHS.Location = new System.Drawing.Point(73, 356);
+            this.cbLop_TKHS.MaxDropDownItems = 4;
+            this.cbLop_TKHS.MouseState = MaterialSkin.MouseState.OUT;
+            this.cbLop_TKHS.Name = "cbLop_TKHS";
+            this.cbLop_TKHS.Size = new System.Drawing.Size(328, 49);
+            this.cbLop_TKHS.StartIndex = 0;
+            this.cbLop_TKHS.TabIndex = 13;
+            // 
+            // listTKHS
+            // 
+            this.listTKHS.AutoArrange = false;
+            this.listTKHS.AutoSizeTable = false;
+            this.listTKHS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.listTKHS.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listTKHS.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.stt_TKHS,
+            this.maHS_TKHS,
+            this.tenHS_TKHS,
+            this.bDay_TKHS,
+            this.gioiTinh_TKHS,
+            this.khoiHS_TKHS,
+            this.lopHS_TKHS,
+            this.namHoc_TKHS});
+            this.listTKHS.Depth = 0;
+            this.listTKHS.FullRowSelect = true;
+            this.listTKHS.HideSelection = false;
+            this.listTKHS.Location = new System.Drawing.Point(17, 18);
+            this.listTKHS.MinimumSize = new System.Drawing.Size(200, 100);
+            this.listTKHS.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.listTKHS.MouseState = MaterialSkin.MouseState.OUT;
+            this.listTKHS.Name = "listTKHS";
+            this.listTKHS.OwnerDraw = true;
+            this.listTKHS.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.listTKHS.Size = new System.Drawing.Size(1058, 730);
+            this.listTKHS.TabIndex = 10;
+            this.listTKHS.UseCompatibleStateImageBehavior = false;
+            this.listTKHS.View = System.Windows.Forms.View.Details;
+            // 
+            // stt_TKHS
+            // 
+            this.stt_TKHS.Text = "STT";
+            // 
+            // maHS_TKHS
+            // 
+            this.maHS_TKHS.Text = "Mã học sinh";
+            this.maHS_TKHS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maHS_TKHS.Width = 150;
+            // 
+            // tenHS_TKHS
+            // 
+            this.tenHS_TKHS.Text = "Họ và tên";
+            this.tenHS_TKHS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tenHS_TKHS.Width = 200;
+            // 
+            // bDay_TKHS
+            // 
+            this.bDay_TKHS.Text = "Ngày sinh";
+            this.bDay_TKHS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.bDay_TKHS.Width = 100;
+            // 
+            // gioiTinh_TKHS
+            // 
+            this.gioiTinh_TKHS.Text = "Giới tính";
+            this.gioiTinh_TKHS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.gioiTinh_TKHS.Width = 100;
+            // 
+            // khoiHS_TKHS
+            // 
+            this.khoiHS_TKHS.Text = "Khối";
+            this.khoiHS_TKHS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.khoiHS_TKHS.Width = 100;
+            // 
+            // lopHS_TKHS
+            // 
+            this.lopHS_TKHS.Text = "Lớp ";
+            this.lopHS_TKHS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.lopHS_TKHS.Width = 100;
+            // 
+            // namHoc_TKHS
+            // 
+            this.namHoc_TKHS.Text = "Năm học";
+            this.namHoc_TKHS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.namHoc_TKHS.Width = 100;
             // 
             // imageList1
             // 
@@ -3546,33 +4134,213 @@ namespace GUI_CSharp
             this.imageList1.Images.SetKeyName(9, "statistical.png");
             this.imageList1.Images.SetKeyName(10, "prescription.png");
             // 
-            // label10
+            // btnLoad_TKKQ_Lop
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(285, 165);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "label10";
+            this.btnLoad_TKKQ_Lop.AutoSize = false;
+            this.btnLoad_TKKQ_Lop.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnLoad_TKKQ_Lop.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnLoad_TKKQ_Lop.Depth = 0;
+            this.btnLoad_TKKQ_Lop.HighEmphasis = true;
+            this.btnLoad_TKKQ_Lop.Icon = global::GUI_CSharp.Properties.Resources.reloading;
+            this.btnLoad_TKKQ_Lop.Location = new System.Drawing.Point(73, 523);
+            this.btnLoad_TKKQ_Lop.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnLoad_TKKQ_Lop.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnLoad_TKKQ_Lop.Name = "btnLoad_TKKQ_Lop";
+            this.btnLoad_TKKQ_Lop.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnLoad_TKKQ_Lop.Size = new System.Drawing.Size(157, 42);
+            this.btnLoad_TKKQ_Lop.TabIndex = 33;
+            this.btnLoad_TKKQ_Lop.TabStop = false;
+            this.btnLoad_TKKQ_Lop.Text = "Làm mới";
+            this.btnLoad_TKKQ_Lop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLoad_TKKQ_Lop.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnLoad_TKKQ_Lop.UseAccentColor = false;
+            this.btnLoad_TKKQ_Lop.UseVisualStyleBackColor = true;
+            this.btnLoad_TKKQ_Lop.Visible = false;
+            this.btnLoad_TKKQ_Lop.Click += new System.EventHandler(this.btnLoad_TKKQ_Lop_Click);
             // 
-            // dateTimePicker1
+            // btnXuatExcel_TKKQ_Lop
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(527, 167);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 1;
+            this.btnXuatExcel_TKKQ_Lop.AutoSize = false;
+            this.btnXuatExcel_TKKQ_Lop.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnXuatExcel_TKKQ_Lop.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnXuatExcel_TKKQ_Lop.Depth = 0;
+            this.btnXuatExcel_TKKQ_Lop.HighEmphasis = true;
+            this.btnXuatExcel_TKKQ_Lop.Icon = global::GUI_CSharp.Properties.Resources.excel;
+            this.btnXuatExcel_TKKQ_Lop.Location = new System.Drawing.Point(244, 524);
+            this.btnXuatExcel_TKKQ_Lop.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnXuatExcel_TKKQ_Lop.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnXuatExcel_TKKQ_Lop.Name = "btnXuatExcel_TKKQ_Lop";
+            this.btnXuatExcel_TKKQ_Lop.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnXuatExcel_TKKQ_Lop.Size = new System.Drawing.Size(157, 40);
+            this.btnXuatExcel_TKKQ_Lop.TabIndex = 32;
+            this.btnXuatExcel_TKKQ_Lop.TabStop = false;
+            this.btnXuatExcel_TKKQ_Lop.Text = "Xuất Excel";
+            this.btnXuatExcel_TKKQ_Lop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXuatExcel_TKKQ_Lop.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnXuatExcel_TKKQ_Lop.UseAccentColor = false;
+            this.btnXuatExcel_TKKQ_Lop.UseVisualStyleBackColor = true;
+            this.btnXuatExcel_TKKQ_Lop.Visible = false;
+            this.btnXuatExcel_TKKQ_Lop.Click += new System.EventHandler(this.btnXuatExcel_TKKQ_Lop_Click);
+            // 
+            // btnHienthi_TKKQ_Lop
+            // 
+            this.btnHienthi_TKKQ_Lop.AutoSize = false;
+            this.btnHienthi_TKKQ_Lop.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnHienthi_TKKQ_Lop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnHienthi_TKKQ_Lop.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnHienthi_TKKQ_Lop.Depth = 0;
+            this.btnHienthi_TKKQ_Lop.HighEmphasis = true;
+            this.btnHienthi_TKKQ_Lop.Icon = null;
+            this.btnHienthi_TKKQ_Lop.Location = new System.Drawing.Point(73, 464);
+            this.btnHienthi_TKKQ_Lop.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnHienthi_TKKQ_Lop.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnHienthi_TKKQ_Lop.Name = "btnHienthi_TKKQ_Lop";
+            this.btnHienthi_TKKQ_Lop.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnHienthi_TKKQ_Lop.Size = new System.Drawing.Size(328, 40);
+            this.btnHienthi_TKKQ_Lop.TabIndex = 29;
+            this.btnHienthi_TKKQ_Lop.Text = "Hiển thị danh sách";
+            this.btnHienthi_TKKQ_Lop.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnHienthi_TKKQ_Lop.UseAccentColor = false;
+            this.btnHienthi_TKKQ_Lop.UseVisualStyleBackColor = true;
+            this.btnHienthi_TKKQ_Lop.Visible = false;
+            this.btnHienthi_TKKQ_Lop.Click += new System.EventHandler(this.btnHienthi_TKKQ_Lop_Click);
+            // 
+            // cbNamhoc_TKKQ_Lop
+            // 
+            this.cbNamhoc_TKKQ_Lop.AutoResize = false;
+            this.cbNamhoc_TKKQ_Lop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbNamhoc_TKKQ_Lop.Depth = 0;
+            this.cbNamhoc_TKKQ_Lop.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cbNamhoc_TKKQ_Lop.DropDownHeight = 174;
+            this.cbNamhoc_TKKQ_Lop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNamhoc_TKKQ_Lop.DropDownWidth = 121;
+            this.cbNamhoc_TKKQ_Lop.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbNamhoc_TKKQ_Lop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbNamhoc_TKKQ_Lop.FormattingEnabled = true;
+            this.cbNamhoc_TKKQ_Lop.Hint = "Năm học";
+            this.cbNamhoc_TKKQ_Lop.IntegralHeight = false;
+            this.cbNamhoc_TKKQ_Lop.ItemHeight = 43;
+            this.cbNamhoc_TKKQ_Lop.Location = new System.Drawing.Point(73, 379);
+            this.cbNamhoc_TKKQ_Lop.MaxDropDownItems = 4;
+            this.cbNamhoc_TKKQ_Lop.MouseState = MaterialSkin.MouseState.OUT;
+            this.cbNamhoc_TKKQ_Lop.Name = "cbNamhoc_TKKQ_Lop";
+            this.cbNamhoc_TKKQ_Lop.Size = new System.Drawing.Size(328, 49);
+            this.cbNamhoc_TKKQ_Lop.StartIndex = 0;
+            this.cbNamhoc_TKKQ_Lop.TabIndex = 27;
+            this.cbNamhoc_TKKQ_Lop.Visible = false;
+            // 
+            // cbLop_TKKQ_Lop
+            // 
+            this.cbLop_TKKQ_Lop.AutoResize = false;
+            this.cbLop_TKKQ_Lop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbLop_TKKQ_Lop.Depth = 0;
+            this.cbLop_TKKQ_Lop.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cbLop_TKKQ_Lop.DropDownHeight = 174;
+            this.cbLop_TKKQ_Lop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLop_TKKQ_Lop.DropDownWidth = 121;
+            this.cbLop_TKKQ_Lop.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbLop_TKKQ_Lop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbLop_TKKQ_Lop.FormattingEnabled = true;
+            this.cbLop_TKKQ_Lop.Hint = "Lớp";
+            this.cbLop_TKKQ_Lop.IntegralHeight = false;
+            this.cbLop_TKKQ_Lop.ItemHeight = 43;
+            this.cbLop_TKKQ_Lop.Location = new System.Drawing.Point(73, 304);
+            this.cbLop_TKKQ_Lop.MaxDropDownItems = 4;
+            this.cbLop_TKKQ_Lop.MouseState = MaterialSkin.MouseState.OUT;
+            this.cbLop_TKKQ_Lop.Name = "cbLop_TKKQ_Lop";
+            this.cbLop_TKKQ_Lop.Size = new System.Drawing.Size(328, 49);
+            this.cbLop_TKKQ_Lop.StartIndex = 0;
+            this.cbLop_TKKQ_Lop.TabIndex = 28;
+            this.cbLop_TKKQ_Lop.Visible = false;
+            // 
+            // listTKKQ_Lop
+            // 
+            this.listTKKQ_Lop.AutoArrange = false;
+            this.listTKKQ_Lop.AutoSizeTable = false;
+            this.listTKKQ_Lop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.listTKKQ_Lop.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listTKKQ_Lop.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.STT_TKKQ_Lop,
+            this.lop_TKKQ_Lop,
+            this.khoi_TKKQ_Lop,
+            this.namHoc_TKKQ_Lop,
+            this.soLuong1_TKKQ_Lop,
+            this.soLuong2_TKKQ_Lop,
+            this.soLuong3_TKKQ_Lop,
+            this.soLuong4_TKKQ_Lop});
+            this.listTKKQ_Lop.Depth = 0;
+            this.listTKKQ_Lop.FullRowSelect = true;
+            this.listTKKQ_Lop.HideSelection = false;
+            this.listTKKQ_Lop.Location = new System.Drawing.Point(17, 18);
+            this.listTKKQ_Lop.MinimumSize = new System.Drawing.Size(200, 100);
+            this.listTKKQ_Lop.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.listTKKQ_Lop.MouseState = MaterialSkin.MouseState.OUT;
+            this.listTKKQ_Lop.Name = "listTKKQ_Lop";
+            this.listTKKQ_Lop.OwnerDraw = true;
+            this.listTKKQ_Lop.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.listTKKQ_Lop.Size = new System.Drawing.Size(1058, 730);
+            this.listTKKQ_Lop.TabIndex = 14;
+            this.listTKKQ_Lop.UseCompatibleStateImageBehavior = false;
+            this.listTKKQ_Lop.View = System.Windows.Forms.View.Details;
+            this.listTKKQ_Lop.Visible = false;
+            // 
+            // STT_TKKQ_Lop
+            // 
+            this.STT_TKKQ_Lop.Text = "STT";
+            // 
+            // lop_TKKQ_Lop
+            // 
+            this.lop_TKKQ_Lop.Text = "Lớp";
+            this.lop_TKKQ_Lop.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.lop_TKKQ_Lop.Width = 80;
+            // 
+            // khoi_TKKQ_Lop
+            // 
+            this.khoi_TKKQ_Lop.Text = "Khối";
+            this.khoi_TKKQ_Lop.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.khoi_TKKQ_Lop.Width = 80;
+            // 
+            // soLuong1_TKKQ_Lop
+            // 
+            this.soLuong1_TKKQ_Lop.Text = "Lên lớp";
+            this.soLuong1_TKKQ_Lop.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.soLuong1_TKKQ_Lop.Width = 100;
+            // 
+            // soLuong2_TKKQ_Lop
+            // 
+            this.soLuong2_TKKQ_Lop.Text = "Thi lại";
+            this.soLuong2_TKKQ_Lop.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.soLuong2_TKKQ_Lop.Width = 100;
+            // 
+            // soLuong3_TKKQ_Lop
+            // 
+            this.soLuong3_TKKQ_Lop.Text = "Rèn luyện hè";
+            this.soLuong3_TKKQ_Lop.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.soLuong3_TKKQ_Lop.Width = 130;
+            // 
+            // soLuong4_TKKQ_Lop
+            // 
+            this.soLuong4_TKKQ_Lop.Text = "Ở lại";
+            this.soLuong4_TKKQ_Lop.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.soLuong4_TKKQ_Lop.Width = 80;
+            // 
+            // namHoc_TKKQ_Lop
+            // 
+            this.namHoc_TKKQ_Lop.Text = "Năm học";
+            this.namHoc_TKKQ_Lop.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.namHoc_TKKQ_Lop.Width = 200;
             // 
             // Trangchu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1455, 894);
+            this.ClientSize = new System.Drawing.Size(1700, 950);
             this.Controls.Add(this.materialTabControl1);
             this.DrawerShowIconsWhenHidden = true;
             this.DrawerTabControl = this.materialTabControl1;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Trangchu";
@@ -3598,10 +4366,10 @@ namespace GUI_CSharp
             this.tabPage.ResumeLayout(false);
             this.cardActionKQ.ResumeLayout(false);
             this.cardListDiem.ResumeLayout(false);
-            this.cardXemdiem_Tongket.ResumeLayout(false);
-            this.cardXemdiem_Tongket.PerformLayout();
             this.cardXemdiem_Mon.ResumeLayout(false);
             this.cardXemdiem_Mon.PerformLayout();
+            this.cardXemdiem_Tongket.ResumeLayout(false);
+            this.cardXemdiem_Tongket.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.cardHL_HK.ResumeLayout(false);
             this.materialCard3.ResumeLayout(false);
@@ -3613,7 +4381,8 @@ namespace GUI_CSharp
             this.cardActionTT_VP.ResumeLayout(false);
             this.tabPage9.ResumeLayout(false);
             this.materialCard1.ResumeLayout(false);
-            this.materialCard1.PerformLayout();
+            this.cardActionTKKQ.ResumeLayout(false);
+            this.cardActionTKHS.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3822,7 +4591,7 @@ namespace GUI_CSharp
         private System.Windows.Forms.ColumnHeader diemTB;
         private MaterialSkin.Controls.MaterialButton btnNhapExcel;
         private MaterialSkin.Controls.MaterialButton tabThongkeHS;
-        private MaterialSkin.Controls.MaterialButton tabThongkeDiem;
+        private MaterialSkin.Controls.MaterialButton tabThongkeKQ;
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private System.Windows.Forms.Button btnQLHS;
         private System.Windows.Forms.Button btnQLThongKe;
@@ -3840,7 +4609,53 @@ namespace GUI_CSharp
         private System.Windows.Forms.ColumnHeader thu7;
         private System.Windows.Forms.Label label11;
         private MaterialButton search_ThongTinPhanLop;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label10;
+        private MaterialListView listTKHS;
+        private System.Windows.Forms.ColumnHeader stt_TKHS;
+        private System.Windows.Forms.ColumnHeader maHS_TKHS;
+        private System.Windows.Forms.ColumnHeader tenHS_TKHS;
+        private System.Windows.Forms.ColumnHeader bDay_TKHS;
+        private System.Windows.Forms.ColumnHeader gioiTinh_TKHS;
+        private System.Windows.Forms.ColumnHeader lopHS_TKHS;
+        private System.Windows.Forms.ColumnHeader namHoc_TKHS;
+        private MaterialCard cardActionTKHS;
+        private MaterialButton btnHienThiDSTKHS;
+        private MaterialComboBox cbLop_TKHS;
+        private MaterialButton btnTimkiemTKHS;
+        private MaterialTextBox txTimkiemTKHS;
+        private MaterialButton btnXuatExcel_TKHS;
+        private MaterialButton btnLoadListTKHS;
+        private System.Windows.Forms.ColumnHeader khoiHS_TKHS;
+        private MaterialComboBox cbNamhoc_TKHS;
+        private MaterialCard cardActionTKKQ;
+        private MaterialButton btnLoad_TKKQ_HS;
+        private MaterialButton btnXuatExcel_TKKQ_HS;
+        private MaterialButton btnTimkiem_TKKQ_HS;
+        private MaterialTextBox txTimkiem_TKKQ_HS;
+        private MaterialButton btnHienthi_TKKQ_HS;
+        private MaterialComboBox cbNamhoc_TKKQ_HS;
+        private MaterialComboBox cbLop_TKKQ_HS;
+        private MaterialListView listTKKQ_HS;
+        private System.Windows.Forms.ColumnHeader STT_TKKQ;
+        private System.Windows.Forms.ColumnHeader maHS_TKKQ;
+        private System.Windows.Forms.ColumnHeader tenHS_TKKQ;
+        private System.Windows.Forms.ColumnHeader lopHS_TKKQ;
+        private System.Windows.Forms.ColumnHeader namHoc_TKKQ;
+        private System.Windows.Forms.ColumnHeader ketQua_TKKQ;
+        private MaterialButton tabTKKQ_KhoiLop;
+        private MaterialButton tabTKKQ_HS;
+        private MaterialButton btnLoad_TKKQ_Lop;
+        private MaterialButton btnXuatExcel_TKKQ_Lop;
+        private MaterialButton btnHienthi_TKKQ_Lop;
+        private MaterialComboBox cbNamhoc_TKKQ_Lop;
+        private MaterialComboBox cbLop_TKKQ_Lop;
+        private MaterialListView listTKKQ_Lop;
+        private System.Windows.Forms.ColumnHeader STT_TKKQ_Lop;
+        private System.Windows.Forms.ColumnHeader lop_TKKQ_Lop;
+        private System.Windows.Forms.ColumnHeader khoi_TKKQ_Lop;
+        private System.Windows.Forms.ColumnHeader soLuong1_TKKQ_Lop;
+        private System.Windows.Forms.ColumnHeader soLuong2_TKKQ_Lop;
+        private System.Windows.Forms.ColumnHeader soLuong3_TKKQ_Lop;
+        private System.Windows.Forms.ColumnHeader soLuong4_TKKQ_Lop;
+        private System.Windows.Forms.ColumnHeader namHoc_TKKQ_Lop;
     }
 }
