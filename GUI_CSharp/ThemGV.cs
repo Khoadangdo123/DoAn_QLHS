@@ -29,6 +29,15 @@ namespace GUI_CSharp
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txMaGV.Text) ||
+                string.IsNullOrWhiteSpace(txTenGV.Text) ||
+                string.IsNullOrWhiteSpace(txDiachi.Text) ||
+                string.IsNullOrWhiteSpace(txSdt.Text) ||
+                cbMonGiangday.SelectedValue == null)
+            {
+                MessageBox.Show("Không được để trống !");
+                return;
+            }
             try
             {
                 GiaoVienDTO gv = new GiaoVienDTO
