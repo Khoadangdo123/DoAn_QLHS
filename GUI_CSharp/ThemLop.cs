@@ -15,10 +15,10 @@ namespace GUI_CSharp
 {
     public partial class ThemLop : MaterialForm
     {
+
         public ThemLop()
         {
             InitializeComponent();
-
             QuanLyLopHocBLL list = new QuanLyLopHocBLL();
 
             // Add items to the combo box
@@ -70,7 +70,7 @@ namespace GUI_CSharp
         {
 
         }
-
+        
         private static Random random = new Random();
 
         public string TaoMaLop(string maKhoi, string namHoc)
@@ -169,6 +169,7 @@ namespace GUI_CSharp
                 return;
             }
             string textHocKy = materialComboBox1.SelectedValue.ToString();
+
 
             try
             {

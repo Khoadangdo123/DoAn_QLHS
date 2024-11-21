@@ -29,19 +29,19 @@ namespace GUI_CSharp
         {
             if (check_matKhau.Checked)
             {
-                txtMatkhau.Password = false;
+                txMatkhau.Password = false;
             }
             else
             {
-                txtMatkhau.Password = true;
+                txMatkhau.Password = true;
             }
         }
 
         private void btnDangnhap_Click(object sender, EventArgs e)
         {
             TaiKhoanBLL dn = new TaiKhoanBLL();
-            String textTaiKhoan = txtTaikhoan.Text;
-            String textMatKhau = txtMatkhau.Text;
+            String textTaiKhoan = txTaikhoan.Text;
+            String textMatKhau = txMatkhau.Text;
             if (dn.taikhoan(textTaiKhoan, textMatKhau)[0] == "1")
             {
                 MessageBox.Show("Yêu cầu không để trống tài khoản", "Thông báo");
