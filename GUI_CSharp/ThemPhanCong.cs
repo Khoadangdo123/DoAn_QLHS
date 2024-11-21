@@ -58,7 +58,6 @@ namespace GUI_CSharp
         {
             List<KeyValuePair<string, string>> lopList = phanCongBLL.LayDanhSachLop();
 
-            // Old
             cbPhancongMalop.DataSource = new BindingSource(lopList, null);
             cbPhancongMalop.DisplayMember = "Value";
             cbPhancongMalop.ValueMember = "Key";
@@ -66,6 +65,14 @@ namespace GUI_CSharp
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
+            if (cbPhancongNamhoc.SelectedValue == null ||
+                cbPhancongGV.SelectedValue == null ||
+                cbPhancongMonhoc.SelectedValue == null ||
+                cbPhancongMalop.SelectedValue == null)
+            {
+                MessageBox.Show("Không được để trống !");
+                return;
+            }
             try
             {
                 string selectedMaNamHoc = cbPhancongNamhoc.SelectedValue.ToString();
