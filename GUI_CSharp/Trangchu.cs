@@ -547,7 +547,6 @@ namespace GUI_CSharp
             {
                 cardListGV.Visible = true;
                 cardListPhancong.Visible = false;
-                LoadGiaoVienList();
             }
 
 
