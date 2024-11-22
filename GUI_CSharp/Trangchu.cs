@@ -50,6 +50,10 @@ namespace GUI_CSharp
             LoadDanhSachKhoiLop();
             LoadDanhSachLop();
             LoadDanhSachMonHoc();
+            LoadThongKeHocSinh();
+            LoadComboBoxData();
+            LoadThongKeKQ_HS();
+            LoadThongKeKQ_Lop();
             label10.Text = TenNguoiDung;
             if (MaLoaiNguoiDung == "LND002")
             {
