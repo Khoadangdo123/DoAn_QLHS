@@ -67,7 +67,7 @@ namespace GUI_CSharp
             }
             else
             {
-                MessageBox.Show("Bạn nhập sai mật khẩu và tài khoản", "Thông báo");
+                MessageBox.Show("Bạn nhập sai mật khẩu hoặc tài khoản", "Thông báo");
             }
 
             //MessageBox.Show("Đăng Nhập Thành Công", "Thông báo");
@@ -81,6 +81,48 @@ namespace GUI_CSharp
         private void txTaikhoan_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Dangnhap_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Dangnhap_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                TaiKhoanBLL dn = new TaiKhoanBLL();
+                String textTaiKhoan = txTaikhoan.Text;
+                String textMatKhau = txMatkhau.Text;
+                if (dn.taikhoan(textTaiKhoan, textMatKhau)[0] == "1")
+                {
+                    MessageBox.Show("Yêu cầu không để trống tài khoản", "Thông báo");
+                }
+                else if (dn.taikhoan(textTaiKhoan, textMatKhau)[0] == "2")
+                {
+                    MessageBox.Show("Yêu cầu không để trống mật khẩu", "Thông báo");
+                }
+                else if (dn.taikhoan(textTaiKhoan, textMatKhau)[0] == "3")
+                {
+                    MessageBox.Show("Yêu cầu không để trống tài khoản và mật khẩu", "Thông báo");
+                }
+                else if (dn.taikhoan(textTaiKhoan, textMatKhau)[0] == "4")
+                {
+                    String textMaLoaiNguoiDung = dn.taikhoan(textTaiKhoan, textMatKhau)[1];
+                    String textMaNguoiDung = dn.taikhoan(textTaiKhoan, textMatKhau)[2];
+                    String textTenNguoiDung = dn.taikhoan(textTaiKhoan, textMatKhau)[3];
+                    MessageBox.Show("Đăng Nhập Thành Công", "Thông báo");
+                    this.Hide();
+                    Trangchu a = new Trangchu(textMaLoaiNguoiDung, textMaNguoiDung, textTenNguoiDung);
+                    a.Show();
+                    a.FormClosed += (s, args) => this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Bạn nhập sai mật khẩu hoặc tài khoản", "Thông báo");
+                }
+            }
         }
     }
 }
