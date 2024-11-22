@@ -2,7 +2,7 @@
 
 namespace GUI_CSharp.DTO
 {
-    internal class NamHocDTO
+    public class NamHocDTO
     {
         // Fields
         private string maNamHoc;   // Corresponds to MaNamHoc VARCHAR(6)

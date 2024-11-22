@@ -1,4 +1,5 @@
 ﻿using MaterialSkin.Controls;
+using BLL;
 
 namespace GUI_CSharp
 {
@@ -7,7 +8,7 @@ namespace GUI_CSharp
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        public System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -28,7 +29,7 @@ namespace GUI_CSharp
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dangnhap));
             this.btnDangnhap = new MaterialSkin.Controls.MaterialButton();
@@ -113,6 +114,7 @@ namespace GUI_CSharp
             this.txTaikhoan.TabIndex = 109;
             this.txTaikhoan.Text = "";
             this.txTaikhoan.TrailingIcon = null;
+            this.txTaikhoan.TextChanged += new System.EventHandler(this.txTaikhoan_TextChanged);
             // 
             // check_matKhau
             // 
@@ -152,6 +154,7 @@ namespace GUI_CSharp
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
+            this.Load += new System.EventHandler(this.Dangnhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -159,11 +162,11 @@ namespace GUI_CSharp
         }
 
         #endregion
-        private MaterialSkin.Controls.MaterialButton btnDangnhap;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private MaterialSkin.Controls.MaterialTextBox txMatkhau;
-        private MaterialSkin.Controls.MaterialTextBox txTaikhoan;
-        private MaterialSkin.Controls.MaterialCheckbox check_matKhau;
+        public MaterialSkin.Controls.MaterialButton btnDangnhap;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public MaterialSkin.Controls.MaterialTextBox txMatkhau;
+        public MaterialSkin.Controls.MaterialTextBox txTaikhoan;
+        public MaterialSkin.Controls.MaterialCheckbox check_matKhau;
     }
 }
 

@@ -125,6 +125,8 @@
     <Compile Include="NgheNghiepBLL.cs" />
     <Compile Include="PhanCongBLL.cs" />
     <Compile Include="PhanLopBLL.cs" />
+    <Compile Include="QuanLyLopHocBLL.csClass1.cs" />
+    <Compile Include="TaiKhoanBLL.cs" />
     <Compile Include="ThongKeKQBLL.cs" />
     <Compile Include="ThongKeHocSinhBLL.cs" />
     <Compile Include="ThongKeKQLopBLL.cs" />

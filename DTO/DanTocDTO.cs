@@ -2,7 +2,7 @@
 
 namespace GUI_CSharp.DTO
 {
-    internal class DanTocDTO
+    public class DanTocDTO
     {
         // Fields
         private string maDanToc;   // Corresponds to MaDanToc VARCHAR(6)

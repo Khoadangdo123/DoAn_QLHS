@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.materialCard = new MaterialSkin.Controls.MaterialCard();
+            this.txHocKy = new MaterialSkin.Controls.MaterialComboBox();
             this.txSiso = new MaterialSkin.Controls.MaterialTextBox();
             this.btnSua = new MaterialSkin.Controls.MaterialButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,6 +44,7 @@
             // materialCard
             // 
             this.materialCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard.Controls.Add(this.txHocKy);
             this.materialCard.Controls.Add(this.txSiso);
             this.materialCard.Controls.Add(this.btnSua);
             this.materialCard.Controls.Add(this.label1);
@@ -60,6 +62,29 @@
             this.materialCard.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard.Size = new System.Drawing.Size(632, 693);
             this.materialCard.TabIndex = 5;
+            // 
+            // txHocKy
+            // 
+            this.txHocKy.AutoResize = false;
+            this.txHocKy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txHocKy.Depth = 0;
+            this.txHocKy.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.txHocKy.DropDownHeight = 174;
+            this.txHocKy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txHocKy.DropDownWidth = 121;
+            this.txHocKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.txHocKy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txHocKy.FormattingEnabled = true;
+            this.txHocKy.Hint = "Học Kỳ";
+            this.txHocKy.IntegralHeight = false;
+            this.txHocKy.ItemHeight = 43;
+            this.txHocKy.Location = new System.Drawing.Point(73, 571);
+            this.txHocKy.MaxDropDownItems = 4;
+            this.txHocKy.MouseState = MaterialSkin.MouseState.OUT;
+            this.txHocKy.Name = "txHocKy";
+            this.txHocKy.Size = new System.Drawing.Size(460, 49);
+            this.txHocKy.StartIndex = 0;
+            this.txHocKy.TabIndex = 18;
             // 
             // txSiso
             // 
@@ -100,6 +125,7 @@
             this.btnSua.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnSua.UseAccentColor = false;
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // label1
             // 
@@ -245,5 +271,6 @@
         private MaterialSkin.Controls.MaterialTextBox txTenlop;
         private MaterialSkin.Controls.MaterialTextBox txMalop;
         private MaterialSkin.Controls.MaterialTextBox txSiso;
+        private MaterialSkin.Controls.MaterialComboBox txHocKy;
     }
 }

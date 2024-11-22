@@ -53,7 +53,7 @@ namespace DAL
                         {
                             MaHocSinh = reader["MaHocSinh"].ToString(),
                             HoTen = reader["HoTen"].ToString(),
-                            GioiTinh = Convert.ToInt32(reader["GioiTinh"]),
+                            GioiTinh = (reader["GioiTinh"].ToString() == "0" ? "Nam" : "Nu"),
                             NgaySinh = Convert.ToDateTime(reader["NgaySinh"]),
                             DiaChi = reader["DiaChi"].ToString(),
                             MaDanToc = reader["MaDanToc"].ToString(),
@@ -91,7 +91,7 @@ namespace DAL
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@MaHocSinh", hocSinh.MaHocSinh);
                     cmd.Parameters.AddWithValue("@HoTen", hocSinh.HoTen);
-                    cmd.Parameters.AddWithValue("@GioiTinh", hocSinh.GioiTinh);
+                    cmd.Parameters.AddWithValue("@GioiTinh", hocSinh.GioiTinh == "Nam" ? 0 : 1);
                     cmd.Parameters.AddWithValue("@NgaySinh", hocSinh.NgaySinh);
                     cmd.Parameters.AddWithValue("@DiaChi", hocSinh.DiaChi);
                     cmd.Parameters.AddWithValue("@MaDanToc", hocSinh.MaDanToc);
@@ -128,7 +128,7 @@ namespace DAL
 
                     cmd.Parameters.AddWithValue("@MaHocSinh", hocSinh.MaHocSinh);
                     cmd.Parameters.AddWithValue("@HoTen", hocSinh.HoTen);
-                    cmd.Parameters.AddWithValue("@GioiTinh", hocSinh.GioiTinh);
+                    cmd.Parameters.AddWithValue("@GioiTinh", hocSinh.GioiTinh == "Nam" ? 0:1);
                     cmd.Parameters.AddWithValue("@NgaySinh", hocSinh.NgaySinh);
                     cmd.Parameters.AddWithValue("@DiaChi", hocSinh.DiaChi);
                     cmd.Parameters.AddWithValue("@MaDanToc", hocSinh.MaDanToc);
@@ -203,7 +203,7 @@ namespace DAL
                         {
                             MaHocSinh = reader["MaHocSinh"].ToString(),
                             HoTen = reader["HoTen"].ToString(),
-                            GioiTinh = Convert.ToInt32(reader["GioiTinh"]),
+                            GioiTinh = (reader["GioiTinh"].ToString() == "0" ? "Nam" : "Nu"),
                             NgaySinh = Convert.ToDateTime(reader["NgaySinh"]),
                             DiaChi = reader["DiaChi"].ToString(),
                             MaDanToc = reader["MaDanToc"].ToString(),
@@ -243,7 +243,7 @@ namespace DAL
                     {
                         MaHocSinh = reader["MaHocSinh"].ToString(),
                         HoTen = reader["HoTen"].ToString(),
-                        GioiTinh = Convert.ToInt32(reader["GioiTinh"]),
+                        GioiTinh = reader["GioiTinh"].ToString(),
                         NgaySinh = Convert.ToDateTime(reader["NgaySinh"]),
                         DiaChi = reader["DiaChi"].ToString(),
                         MaDanToc = reader["MaDanToc"].ToString(),

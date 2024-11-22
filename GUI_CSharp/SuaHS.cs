@@ -37,8 +37,8 @@ namespace GUI_CSharp
             {
                 txMaHS.Text = hocSinh.MaHocSinh;
                 txTenHS.Text = hocSinh.HoTen;
-                gioiTinh_nam.Checked = hocSinh.GioiTinh == 0;
-                gioiTinh_nu.Checked = hocSinh.GioiTinh == 1;
+                gioiTinh_nam.Checked = hocSinh.GioiTinh == "Nam";
+                gioiTinh_nu.Checked = hocSinh.GioiTinh == "Nu";
                 ngaySinh_HS.Value = hocSinh.NgaySinh;
                 txDiachi_HS.Text = hocSinh.DiaChi;
                 cbDantoc.SelectedValue = hocSinh.MaDanToc;
@@ -88,7 +88,7 @@ namespace GUI_CSharp
             {
                 MaHocSinh = txMaHS.Text,
                 HoTen = txTenHS.Text,
-                GioiTinh = gioiTinh_nam.Checked ? 0 : 1,
+                GioiTinh = gioiTinh_nam.Checked ? "Nam" : "Nu",
                 NgaySinh = ngaySinh_HS.Value,
                 DiaChi = txDiachi_HS.Text,
                 MaDanToc = ((KeyValuePair<string, string>)cbDantoc.SelectedItem).Key,
@@ -109,6 +109,11 @@ namespace GUI_CSharp
                 MessageBox.Show("Câp nhật học sinh mã " + hocSinh.MaHocSinh + " thất bại!");
 
             }
+        }
+
+        private void cardHS_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

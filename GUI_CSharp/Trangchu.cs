@@ -16,6 +16,7 @@ using OfficeOpenXml;
 using System.IO;
 using System.Windows.Input;
 using DTO;
+using Org.BouncyCastle.Math.Field;
 
 
 
@@ -23,6 +24,8 @@ namespace GUI_CSharp
 {
     public partial class Trangchu : MaterialForm
     {
+        String MaLoaiNguoiDungBtn = null;
+        QuanLyLopHocBLL quanLyLopHocBLL = new QuanLyLopHocBLL();
         private HocSinhBLL hocSinhBLL = new HocSinhBLL();
         private PhanLopBLL phanLopBLL = new PhanLopBLL();
         private DiemMonBLL diemMonBLL = new DiemMonBLL();
@@ -32,6 +35,43 @@ namespace GUI_CSharp
         private ThongKeKQLopBLL thongKeKQLopBLL = new ThongKeKQLopBLL();
         private ThongKeHocSinhBLL thongKeHocSinhBLL = new ThongKeHocSinhBLL();
         private LopBLL lopBLL = new LopBLL();
+
+        public Trangchu(String MaLoaiNguoiDung, String MaNguoiDung, String TenNguoiDung)
+        {
+            InitializeComponent();
+
+            List<string> results = quanLyLopHocBLL.getDataListLopHoc();
+            LoadDataToMaterialListView(results);
+            this.materialTabControl1.Selected += new TabControlEventHandler(this.MaterialTabControl_Selected);
+            LoadDataTableHocSinh();
+            LoadDataTableDiemMon();
+            LoadDanhSachNamHoc();
+            LoadDanhSachHocKy();
+            LoadDanhSachKhoiLop();
+            LoadDanhSachLop();
+            LoadDanhSachMonHoc();
+            label10.Text = TenNguoiDung;
+            if (MaLoaiNguoiDung == "LND002")
+            {
+                this.materialTabControl1.Controls.Remove(tabPage4);
+                MaLoaiNguoiDungBtn = "LND002";
+                tabGiaovien.Visible = false;
+            }
+            else if (MaLoaiNguoiDung == "LND001")
+            {
+
+            }
+            else if (MaLoaiNguoiDung == "LND003")
+            {
+
+            }
+            else
+            {
+
+            }
+
+        }
+
         public Trangchu()
         {
             InitializeComponent();
@@ -50,6 +90,30 @@ namespace GUI_CSharp
             LoadThongKeKQ_Lop();
         }
 
+        public void LoadDataToMaterialListView(List<string> dataList)
+        {
+            listLop.Items.Clear();
+
+            foreach (string item in dataList)
+            {
+                // Tách các thuộc tính bằng dấu phẩy
+                string[] parts = item.Split(',');
+
+                // Tạo một ListViewItem với giá trị đầu tiên (Mã Lớp)
+                ListViewItem listViewItem = new ListViewItem(parts[0].Trim());
+
+                // Thêm các giá trị tiếp theo vào subitems (Tên Lớp và Sĩ Số)
+                listViewItem.SubItems.Add(parts[1].Trim());
+                listViewItem.SubItems.Add(parts[2].Trim());
+                listViewItem.SubItems.Add(parts[3].Trim());
+                listViewItem.SubItems.Add(parts[4].Trim());
+                listViewItem.SubItems.Add(parts[5].Trim());
+                listViewItem.SubItems.Add(parts[6].Trim());
+                // Thêm ListViewItem vào MaterialListView
+                listLop.Items.Add(listViewItem);
+            }
+        }
+
         //Load -- Hoc Sinh
         private void LoadDataTableHocSinh()
         {
@@ -62,7 +126,7 @@ namespace GUI_CSharp
                 ListViewItem item = new ListViewItem(hs.MaHocSinh);
 
                 item.SubItems.Add(hs.HoTen);
-                item.SubItems.Add(hs.convertGioiTinh);
+                item.SubItems.Add(hs.GioiTinh);
                 item.SubItems.Add(hs.NgaySinh.ToShortDateString());
                 item.SubItems.Add(hs.DiaChi);
                 item.SubItems.Add(hs.TenDanToc);
@@ -158,7 +222,7 @@ namespace GUI_CSharp
             cbKhoilop_Phanlop2.ValueMember = "Key";
         }
 
-        private void LoadDanhSachLop()
+        public void LoadDanhSachLop()
         {
             List<KeyValuePair<string, string>> lopList = phanLopBLL.LayDanhSachLop();
 
@@ -518,9 +582,9 @@ namespace GUI_CSharp
             }
         }
 
-        private void MaterialTabControl_Selected(object sender, TabControlEventArgs e)
+        public void MaterialTabControl_Selected(object sender, TabControlEventArgs e)
         {
-            if (e.TabPageIndex == 7)
+            if (e.TabPageIndex == 8)
             {
                 DialogResult result = MessageBox.Show("Bạn chắc chắn muốn thoát? ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
@@ -545,8 +609,23 @@ namespace GUI_CSharp
             // Giáo viên
             if (e.TabPageIndex == 2)
             {
-                cardListGV.Visible = true;
-                cardListPhancong.Visible = false;
+                if (MaLoaiNguoiDungBtn == "LND002")
+                {
+                    cardListGV.Visible = false;
+                    cardListPhancong.Visible = true;
+                    //btnThemGV.Visible = false;
+                    //btnXoaGV.Visible = false;
+                    //btnSuaGV.Visible = false;
+                    //btnLoadListGV.Visible = false;
+                    //txTimkiemGV.Visible = false;
+                    //btnTimkiemGV.Visible = false;
+
+                } else
+                {
+                    cardListGV.Visible = true;
+                    cardListPhancong.Visible = false;
+                    LoadGiaoVienList();
+                }
             }
 
 
@@ -560,25 +639,26 @@ namespace GUI_CSharp
                 cardActionHS.Visible = true;
             }
 
-            // Kết quả học tập
+            // Môn học
             if (e.TabPageIndex == 4)
             {
 
             }
 
-            // Nội quy
+            // Kết quả
             if (e.TabPageIndex == 5)
             {
-
+                listDiem_Monhoc.Visible = true;
+                cardXemdiem_Mon.Visible = true;
+                listDiemTongKetHK.Visible = false;
+                cardXemdiem_Tongket.Visible = false;
             }
 
-            // Thống kê
+            // Nội quy
             if (e.TabPageIndex == 6)
             {
-                listTKKQ_HS.Visible = false;
-                listTKHS.Visible = true;
-                cardActionTKHS.Visible = true;
-                cardActionTKKQ.Visible = false;
+                cardTT_VP.Visible = true;
+                cardHL_HK.Visible = false;
             }
 
         }
@@ -592,8 +672,35 @@ namespace GUI_CSharp
 
         private void btnSualop_Click(object sender, EventArgs e)
         {
-            SuaLop a = new SuaLop();
-            a.Show();
+            //SuaLop a = new SuaLop();             fix merge
+            //a.Show();
+            if (listLop.SelectedItems.Count > 0)
+            {
+                ListViewItem selectedItem = listLop.SelectedItems[0];
+
+                string maLop = selectedItem.SubItems[0].Text;
+                string tenLop = selectedItem.SubItems[1].Text;
+                string khoiLop = selectedItem.SubItems[2].Text;
+                string siSo = selectedItem.SubItems[3].Text;
+                string namHoc = selectedItem.SubItems[4].Text;
+                string giaoVien = selectedItem.SubItems[5].Text;
+                string hocKy = selectedItem.SubItems[6].Text;
+
+
+                SuaLop suaData = new SuaLop(
+                        maLop, tenLop,
+                        khoiLop, siSo,
+                        namHoc, giaoVien,
+                        hocKy
+                    );
+
+                suaData.Show();
+            }
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
         }
 
         // Kết quả
@@ -1087,6 +1194,114 @@ namespace GUI_CSharp
 
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.materialTabControl1.SelectedTab = this.materialTabControl1.TabPages[0];
+        }
+
+        private void dangxuat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage7_Click(object sender, EventArgs e)
+        {
+            this.materialTabControl1.SelectedTab = this.materialTabControl1.TabPages[7];
+        }
+
+        private void listLop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listLop.SelectedItems.Count > 0)
+            {
+                ListViewItem selectedItem = listLop.SelectedItems[0];
+
+                string maLop = selectedItem.SubItems[0].Text;
+                string tenLop = selectedItem.SubItems[1].Text;
+                string khoiLop = selectedItem.SubItems[2].Text;
+                int siSo = int.Parse(selectedItem.SubItems[3].Text);
+                string namHoc = selectedItem.SubItems[4].Text;
+                string giaoVien = selectedItem.SubItems[5].Text;
+                string hocKy = selectedItem.SubItems[6].Text;
+
+
+                //SuaLop suaData = new SuaLop(
+                //        maLop, tenLop,
+                //        khoiLop, siSo,
+                //        namHoc, giaoVien,
+                //        hocKy
+                //    );
+            }
+        }
+
+        private void btnXoalop_Click(object sender, EventArgs e)
+        {
+            if (listLop.SelectedItems.Count > 0)
+            {
+                string maLop = listLop.SelectedItems[0].Text;
+                var confirmResult = MessageBox.Show("Bạn có chắc chắn muốn xóa dòng đã chọn?",
+                                            "Xác nhận xóa",
+                                            MessageBoxButtons.YesNo);
+
+                if (confirmResult == DialogResult.Yes)
+                {
+                    // Xóa dòng trong cơ sở dữ liệu
+                    QuanLyLopHocBLL dataService = new QuanLyLopHocBLL();
+                    dataService.deleteListLopHoc(maLop);
+
+                    // Làm mới dữ liệu trong MaterialListView
+                    List<string> results = quanLyLopHocBLL.getDataListLopHoc();
+                    LoadDataToMaterialListView(results);
+                }
+
+            }
+        }
+
+        private void txTimkiemLop_TextChanged(object sender, EventArgs e)
+        {
+            SearchListDanhSachLop(txTimkiemLop.Text);
+        }
+
+        private void SearchListDanhSachLop(string keyword)
+        {
+            listLop.Items.Clear();
+            List<string> results = quanLyLopHocBLL.getDataListLopHoc();
+            LoadDataToMaterialListView(results);
+
+            if (!string.IsNullOrWhiteSpace(keyword))
+            {
+                keyword = keyword.ToLower();
+                foreach (ListViewItem item in listLop.Items)
+                {
+                    bool itemMatched = false;
+                    foreach (ListViewItem.ListViewSubItem subItem in item.SubItems)
+                    {
+                        // Kiểm tra nếu từ khóa xuất hiện trong subitem
+                        if (subItem.Text.ToLower().Contains(keyword))
+                        {
+                            itemMatched = true;
+                            break;
+                        }
+                    }
+
+                    if (!itemMatched)
+                    {
+                        item.Remove();
+                    }
+                }
+            }
+        }
+
+        private void btnTimkiemLop_Click(object sender, EventArgs e)
+        {
+            SearchListDanhSachLop(txTimkiemLop.Text);
+        }
+
+        private void btnLoadListLop_Click(object sender, EventArgs e)
+        {
+            List<string> results = quanLyLopHocBLL.getDataListLopHoc();
+            LoadDataToMaterialListView(results);
+        }
+
         private void btnTimkiemHS_Click(object sender, EventArgs e)
         {
             string searchTerm = txTimkiemHS.Text.Trim();
@@ -1100,7 +1315,7 @@ namespace GUI_CSharp
                 {
                     ListViewItem item = new ListViewItem(hocSinh.MaHocSinh);
                     item.SubItems.Add(hocSinh.HoTen);
-                    item.SubItems.Add(hocSinh.GioiTinh == 0 ? "Nam" : "Nữ");
+                    item.SubItems.Add(hocSinh.GioiTinh);
                     item.SubItems.Add(hocSinh.NgaySinh.ToShortDateString());
                     item.SubItems.Add(hocSinh.DiaChi);
                     item.SubItems.Add(hocSinh.MaDanToc);
@@ -1335,6 +1550,23 @@ namespace GUI_CSharp
 
         }
 
+        private void tabPage8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Dangnhap dn = new Dangnhap();
+            dn.Show();
+            dn.FormClosed += (s, args) => this.Close();
         
+        }
+
+        private void btnHuyDangXuat_Click(object sender, EventArgs e)
+        {
+            this.materialTabControl1.SelectedTab = this.materialTabControl1.TabPages[0];
+        }
     }
 }

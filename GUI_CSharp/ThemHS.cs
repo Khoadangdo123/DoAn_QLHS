@@ -72,7 +72,7 @@ namespace GUI_CSharp
    
                 MaHocSinh = txMaHS.Text,
                 HoTen = txTenHS.Text,
-                GioiTinh = gioiTinh_nam.Checked ? 0 : 1,
+                GioiTinh = gioiTinh_nam.Checked ? "Nam" : "Nu",
                 NgaySinh = ngaySinh_HS.Value,
                 DiaChi = txDiachi_HS.Text,
                 MaDanToc = ((KeyValuePair<string, string>)cbDantoc.SelectedItem).Key,
@@ -177,6 +177,11 @@ namespace GUI_CSharp
                     }
                 }
             }
+        }
+
+        private void cardHS_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

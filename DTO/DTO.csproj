@@ -135,6 +135,7 @@
     <Compile Include="MonHocDTO.cs" />
     <Compile Include="NamHocDTO.cs" />
     <Compile Include="NgheNghiepDTO.cs" />
+    <Compile Include="NguoiDTO.cs" />
     <Compile Include="NguoiDungDTO.cs" />
     <Compile Include="PhanCongDTO.cs" />
     <Compile Include="PhanLopDTO.cs" />

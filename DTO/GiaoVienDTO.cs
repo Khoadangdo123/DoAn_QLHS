@@ -1,8 +1,9 @@
-﻿using System;
+﻿using DTO;
+using System;
 
 namespace GUI_CSharp.DTO
 {
-    public class GiaoVienDTO  // Change 'internal' to 'public'
+    public class GiaoVienDTO : NguoiDTO  // Change 'internal' to 'public'
     {
         // Fields
         private string maGiaoVien;
@@ -43,9 +44,19 @@ namespace GUI_CSharp.DTO
         }
 
         // Constructor
-        public GiaoVienDTO() { }
 
-        public GiaoVienDTO(string maGiaoVien, string tenGiaoVien, string diaChi, string dienThoai, string maMonHoc)
+        public GiaoVienDTO()
+            : base("","", "")
+        {
+            this.maGiaoVien = "";
+            this.tenGiaoVien = "";
+            this.diaChi = "";
+            this.dienThoai = "";
+            this.maMonHoc = "";
+        }
+
+        public GiaoVienDTO(string maGiaoVien, string hoTen, string diaChi, string gioiTinh, string dienThoai, string maMonHoc)
+            : base(diaChi, hoTen, gioiTinh)
         {
             this.maGiaoVien = maGiaoVien;
             this.tenGiaoVien = tenGiaoVien;

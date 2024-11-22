@@ -2,7 +2,7 @@
 
 namespace GUI_CSharp.DTO
 {
-    internal class KetQuaDTO
+    public class KetQuaDTO
     {
         // Fields
         private string maKetQua;   // Corresponds to MaKetQua VARCHAR(6)

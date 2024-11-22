@@ -1,22 +1,23 @@
-﻿using System;
+﻿using DTO;
+using System;
 
 namespace GUI_CSharp.DTO
 {
-    public class HocSinhDTO
+    public class HocSinhDTO : NguoiDTO
     {
         // Fields
-        private string maHocSinh;
-        private string hoTen;
-        private int gioiTinh;
-        private DateTime ngaySinh;
-        private string diaChi;
-        private string maDanToc;
-        private string maTonGiao;
-        private string hoTenCha;
-        private string maNgheCha;
-        private string hoTenMe;
-        private string maNgheMe;
-        private string email;
+        public string maHocSinh;
+        public string hoTen;
+        public string gioiTinh;
+        public DateTime ngaySinh;
+        public string diaChi;
+        public string maDanToc;
+        public string maTonGiao;
+        public string hoTenCha;
+        public string maNgheCha;
+        public string hoTenMe;
+        public string maNgheMe;
+        public string email;
 
         // Getters and Setters
         public string MaHocSinh
@@ -31,7 +32,7 @@ namespace GUI_CSharp.DTO
             set { hoTen = value; }
         }
 
-        public int GioiTinh
+        public string GioiTinh
         {
             get { return gioiTinh; }
             set { gioiTinh = value; }
@@ -100,9 +101,28 @@ namespace GUI_CSharp.DTO
         }
 
         // Constructor
-        public HocSinhDTO() { }
 
-        public HocSinhDTO(string maHocSinh, string hoTen, int gioiTinh, DateTime ngaySinh, string diaChi, string maDanToc, string maTonGiao, string hoTenCha, string maNgheCha, string hoTenMe, string maNgheMe, string email)
+        // Constructor mặc định
+        public HocSinhDTO() : base("", "", "")
+        {
+            // Có thể khởi tạo giá trị mặc định cho các trường nếu cần
+            this.maHocSinh = "";
+            this.hoTen = "";
+            this.gioiTinh = "";
+            this.ngaySinh = DateTime.MinValue;
+            this.diaChi = "";
+            this.maDanToc = "";
+            this.maTonGiao = "";
+            this.hoTenCha = "";
+            this.maNgheCha = "";
+            this.hoTenMe = "";
+            this.maNgheMe = "";
+            this.email = "";
+        }
+
+
+        public HocSinhDTO(string maHocSinh, string hoTen, string gioiTinh, DateTime ngaySinh, string diaChi, string maDanToc, string maTonGiao, string hoTenCha, string maNgheCha, string hoTenMe, string maNgheMe, string email)
+            : base(diaChi, hoTen, gioiTinh)
         {
             this.maHocSinh = maHocSinh;
             this.hoTen = hoTen;
@@ -118,9 +138,9 @@ namespace GUI_CSharp.DTO
             this.email = email;
         }
 
-        public string convertGioiTinh
+       /** public string convertGioiTinh
         {
             get { return GioiTinh == 0 ? "Nam" : "Nữ"; }
-        }
+        }**/
     }
 }

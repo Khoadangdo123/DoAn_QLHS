@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GUI_CSharp.DTO
 {
-    internal class LoaiDiemDTO
+    public class LoaiDiemDTO
     {
         public string MaLoai { get; set; }
         public string TenLoai { get; set; }

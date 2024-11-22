@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GUI_CSharp.DTO
 {
-    internal class ThoiKhoaBieuDTO
+    public class ThoiKhoaBieuDTO
     {
         public int STT { get; set; }
         public string MaLop { get; set; }

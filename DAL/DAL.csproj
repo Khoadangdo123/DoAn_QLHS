@@ -118,6 +118,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseAccess,cs.cs" />
     <Compile Include="DiemMonDAL.cs" />
     <Compile Include="GiaoVienDAL.cs" />
     <Compile Include="LopDAL.cs" />
@@ -125,6 +126,8 @@
     <Compile Include="NgheNghiepDAL.cs" />
     <Compile Include="PhanCongDAL.cs" />
     <Compile Include="PhanLopDAL.cs" />
+    <Compile Include="QuanLyLopHocAccess.cs" />
+    <Compile Include="TaiKhoanAccess.cs" />
     <Compile Include="ThongKeKQDAL.cs" />
     <Compile Include="ThongKeHocSinhDAL.cs" />
     <Compile Include="ThongKeKQLopDAL.cs" />

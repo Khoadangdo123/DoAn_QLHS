@@ -31,12 +31,13 @@
             this.materialCard = new MaterialSkin.Controls.MaterialCard();
             this.btnThem = new MaterialSkin.Controls.MaterialButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.materialComboBox1 = new MaterialSkin.Controls.MaterialComboBox();
             this.cbGiaovien = new MaterialSkin.Controls.MaterialComboBox();
             this.cbNamhoc = new MaterialSkin.Controls.MaterialComboBox();
             this.cbKhoilop = new MaterialSkin.Controls.MaterialComboBox();
+            this.txSiso = new MaterialSkin.Controls.MaterialTextBox();
             this.txTenlop = new MaterialSkin.Controls.MaterialTextBox();
             this.txMalop = new MaterialSkin.Controls.MaterialTextBox();
-            this.txSiso = new MaterialSkin.Controls.MaterialTextBox();
             this.materialCard.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +46,7 @@
             this.materialCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard.Controls.Add(this.btnThem);
             this.materialCard.Controls.Add(this.label1);
+            this.materialCard.Controls.Add(this.materialComboBox1);
             this.materialCard.Controls.Add(this.cbGiaovien);
             this.materialCard.Controls.Add(this.cbNamhoc);
             this.materialCard.Controls.Add(this.cbKhoilop);
@@ -60,6 +62,7 @@
             this.materialCard.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard.Size = new System.Drawing.Size(632, 693);
             this.materialCard.TabIndex = 4;
+            this.materialCard.Paint += new System.Windows.Forms.PaintEventHandler(this.materialCard_Paint);
             // 
             // btnThem
             // 
@@ -82,6 +85,7 @@
             this.btnThem.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnThem.UseAccentColor = false;
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label1
             // 
@@ -92,6 +96,29 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "THÊM LỚP HỌC";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // materialComboBox1
+            // 
+            this.materialComboBox1.AutoResize = false;
+            this.materialComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialComboBox1.Depth = 0;
+            this.materialComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.materialComboBox1.DropDownHeight = 174;
+            this.materialComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.materialComboBox1.DropDownWidth = 121;
+            this.materialComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialComboBox1.FormattingEnabled = true;
+            this.materialComboBox1.Hint = "Học kì";
+            this.materialComboBox1.IntegralHeight = false;
+            this.materialComboBox1.ItemHeight = 43;
+            this.materialComboBox1.Location = new System.Drawing.Point(81, 501);
+            this.materialComboBox1.MaxDropDownItems = 4;
+            this.materialComboBox1.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialComboBox1.Name = "materialComboBox1";
+            this.materialComboBox1.Size = new System.Drawing.Size(460, 49);
+            this.materialComboBox1.StartIndex = 0;
+            this.materialComboBox1.TabIndex = 17;
             // 
             // cbGiaovien
             // 
@@ -105,16 +132,16 @@
             this.cbGiaovien.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cbGiaovien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cbGiaovien.FormattingEnabled = true;
-            this.cbGiaovien.Hint = "Giáo viên ";
+            this.cbGiaovien.Hint = "Giáo Viên";
             this.cbGiaovien.IntegralHeight = false;
             this.cbGiaovien.ItemHeight = 43;
-            this.cbGiaovien.Location = new System.Drawing.Point(75, 507);
+            this.cbGiaovien.Location = new System.Drawing.Point(81, 421);
             this.cbGiaovien.MaxDropDownItems = 4;
             this.cbGiaovien.MouseState = MaterialSkin.MouseState.OUT;
             this.cbGiaovien.Name = "cbGiaovien";
             this.cbGiaovien.Size = new System.Drawing.Size(460, 49);
             this.cbGiaovien.StartIndex = 0;
-            this.cbGiaovien.TabIndex = 6;
+            this.cbGiaovien.TabIndex = 19;
             // 
             // cbNamhoc
             // 
@@ -161,6 +188,25 @@
             this.cbKhoilop.Size = new System.Drawing.Size(460, 49);
             this.cbKhoilop.StartIndex = 0;
             this.cbKhoilop.TabIndex = 3;
+            this.cbKhoilop.SelectedIndexChanged += new System.EventHandler(this.cbKhoilop_SelectedIndexChanged);
+            // 
+            // txSiso
+            // 
+            this.txSiso.AnimateReadOnly = false;
+            this.txSiso.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txSiso.Depth = 0;
+            this.txSiso.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txSiso.Hint = "Sĩ số";
+            this.txSiso.LeadingIcon = null;
+            this.txSiso.Location = new System.Drawing.Point(75, 336);
+            this.txSiso.MaxLength = 50;
+            this.txSiso.MouseState = MaterialSkin.MouseState.OUT;
+            this.txSiso.Multiline = false;
+            this.txSiso.Name = "txSiso";
+            this.txSiso.Size = new System.Drawing.Size(460, 50);
+            this.txSiso.TabIndex = 3;
+            this.txSiso.Text = "";
+            this.txSiso.TrailingIcon = null;
             // 
             // txTenlop
             // 
@@ -199,24 +245,6 @@
             this.txMalop.Text = "";
             this.txMalop.TrailingIcon = null;
             // 
-            // txSiso
-            // 
-            this.txSiso.AnimateReadOnly = false;
-            this.txSiso.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txSiso.Depth = 0;
-            this.txSiso.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txSiso.Hint = "Sĩ số";
-            this.txSiso.LeadingIcon = null;
-            this.txSiso.Location = new System.Drawing.Point(75, 336);
-            this.txSiso.MaxLength = 50;
-            this.txSiso.MouseState = MaterialSkin.MouseState.OUT;
-            this.txSiso.Multiline = false;
-            this.txSiso.Name = "txSiso";
-            this.txSiso.Size = new System.Drawing.Size(460, 50);
-            this.txSiso.TabIndex = 3;
-            this.txSiso.Text = "";
-            this.txSiso.TrailingIcon = null;
-            // 
             // ThemLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,5 +273,6 @@
         private System.Windows.Forms.Label label1;
         private MaterialSkin.Controls.MaterialButton btnThem;
         private MaterialSkin.Controls.MaterialTextBox txSiso;
+        public MaterialSkin.Controls.MaterialComboBox materialComboBox1;
     }
 }
