@@ -9,7 +9,7 @@ namespace DAL
 {
     public class DatabaseHelper
     {
-        private static string connectionString = "server=localhost;database=qlhs;user=root;password=;";
+        private static string connectionString = "server=localhost;database=qlhs;user=root;password=hwxu;";
         //private static string connectionString = "server=;database=;user=;password=;";
 
         public static MySqlConnection GetConnection()
