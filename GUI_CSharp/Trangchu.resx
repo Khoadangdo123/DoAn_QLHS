@@ -3739,8 +3739,6 @@
         AAAAAADYGNts8/8BjASvKpMBBA8AAAAASUVORK5CYII=
 </value>
   </data>
-<<<<<<< Updated upstream
-=======
   <data name="btnTimkiemHL.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -4598,7 +4596,6 @@
         AgABAwX/AcECAAGHAeABAAEPAf8CAAEHCf8B8AEAAR8B/wIAAQ8F/ws=
 </value>
   </data>
->>>>>>> Stashed changes
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>
