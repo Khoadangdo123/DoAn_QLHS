@@ -118,7 +118,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
     <Compile Include="DiemMonBLL.cs" />
     <Compile Include="GiaoVienBLL.cs" />
     <Compile Include="LopBLL.cs" />
@@ -132,11 +131,9 @@
     <Compile Include="TonGiaoBLL.cs" />
     <Compile Include="DanTocBLL.cs" />
     <Compile Include="HocSinhBLL.cs" />
-=======
     <Compile Include="Class1.cs" />
     <Compile Include="HanhKiemBLL.cs" />
     <Compile Include="HocLucBLL.cs" />
->>>>>>> Stashed changes
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThanhTichBLL.cs" />
     <Compile Include="ViPhamBLL.cs" />
@@ -152,14 +149,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
     <None Include="app.config" />
     <None Include="packages.config" />
-=======
     <PackageReference Include="MaterialSkin.2">
       <Version>2.3.1</Version>
     </PackageReference>
->>>>>>> Stashed changes
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
