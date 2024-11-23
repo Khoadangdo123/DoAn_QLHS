@@ -32,9 +32,9 @@
             this.txMaHK = new MaterialSkin.Controls.MaterialTextBox();
             this.txTenHK = new MaterialSkin.Controls.MaterialTextBox();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            this.btnThem = new MaterialSkin.Controls.MaterialButton();
             this.diemCanduoi = new MaterialSkin.Controls.MaterialTextBox();
             this.diemCantren = new MaterialSkin.Controls.MaterialTextBox();
+            this.btnThem = new MaterialSkin.Controls.MaterialButton();
             this.materialCard1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +56,7 @@
             this.txMaHK.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txMaHK.Depth = 0;
             this.txMaHK.Enabled = false;
-            this.txMaHK.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txMaHK.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txMaHK.Hint = "Mã hạnh kiểm";
             this.txMaHK.LeadingIcon = null;
             this.txMaHK.Location = new System.Drawing.Point(40, 107);
@@ -74,7 +74,7 @@
             this.txTenHK.AnimateReadOnly = false;
             this.txTenHK.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txTenHK.Depth = 0;
-            this.txTenHK.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txTenHK.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txTenHK.Hint = "Hạnh kiểm";
             this.txTenHK.LeadingIcon = null;
             this.txTenHK.Location = new System.Drawing.Point(40, 183);
@@ -106,6 +106,42 @@
             this.materialCard1.Size = new System.Drawing.Size(480, 497);
             this.materialCard1.TabIndex = 38;
             // 
+            // diemCanduoi
+            // 
+            this.diemCanduoi.AnimateReadOnly = false;
+            this.diemCanduoi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.diemCanduoi.Depth = 0;
+            this.diemCanduoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.diemCanduoi.Hint = "ĐIểm cận dưới";
+            this.diemCanduoi.LeadingIcon = null;
+            this.diemCanduoi.Location = new System.Drawing.Point(40, 335);
+            this.diemCanduoi.MaxLength = 50;
+            this.diemCanduoi.MouseState = MaterialSkin.MouseState.OUT;
+            this.diemCanduoi.Multiline = false;
+            this.diemCanduoi.Name = "diemCanduoi";
+            this.diemCanduoi.Size = new System.Drawing.Size(411, 50);
+            this.diemCanduoi.TabIndex = 37;
+            this.diemCanduoi.Text = "";
+            this.diemCanduoi.TrailingIcon = null;
+            // 
+            // diemCantren
+            // 
+            this.diemCantren.AnimateReadOnly = false;
+            this.diemCantren.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.diemCantren.Depth = 0;
+            this.diemCantren.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.diemCantren.Hint = "Điểm cận trên";
+            this.diemCantren.LeadingIcon = null;
+            this.diemCantren.Location = new System.Drawing.Point(40, 259);
+            this.diemCantren.MaxLength = 50;
+            this.diemCantren.MouseState = MaterialSkin.MouseState.OUT;
+            this.diemCantren.Multiline = false;
+            this.diemCantren.Name = "diemCantren";
+            this.diemCantren.Size = new System.Drawing.Size(411, 50);
+            this.diemCantren.TabIndex = 37;
+            this.diemCantren.Text = "";
+            this.diemCantren.TrailingIcon = null;
+            // 
             // btnThem
             // 
             this.btnThem.AutoSize = false;
@@ -127,43 +163,6 @@
             this.btnThem.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnThem.UseAccentColor = false;
             this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // diemCanduoi
-            // 
-            this.diemCanduoi.AnimateReadOnly = false;
-            this.diemCanduoi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.diemCanduoi.Depth = 0;
-            this.diemCanduoi.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.diemCanduoi.Hint = "ĐIểm cận dưới";
-            this.diemCanduoi.LeadingIcon = null;
-            this.diemCanduoi.Location = new System.Drawing.Point(40, 335);
-            this.diemCanduoi.MaxLength = 50;
-            this.diemCanduoi.MouseState = MaterialSkin.MouseState.OUT;
-            this.diemCanduoi.Multiline = false;
-            this.diemCanduoi.Name = "diemCanduoi";
-            this.diemCanduoi.Size = new System.Drawing.Size(411, 50);
-            this.diemCanduoi.TabIndex = 37;
-            this.diemCanduoi.Text = "";
-            this.diemCanduoi.TrailingIcon = null;
-            // 
-            // diemCantren
-            // 
-            this.diemCantren.AnimateReadOnly = false;
-            this.diemCantren.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.diemCantren.Depth = 0;
-            this.diemCantren.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.diemCantren.Hint = "Điểm cận trên";
-            this.diemCantren.LeadingIcon = null;
-            this.diemCantren.Location = new System.Drawing.Point(40, 259);
-            this.diemCantren.MaxLength = 50;
-            this.diemCantren.MouseState = MaterialSkin.MouseState.OUT;
-            this.diemCantren.Multiline = false;
-            this.diemCantren.Name = "diemCantren";
-            this.diemCantren.Size = new System.Drawing.Size(411, 50);
-            this.diemCantren.TabIndex = 37;
-            this.diemCantren.Text = "";
-            this.diemCantren.TrailingIcon = null;
             // 
             // ThemHanhKiem
             // 

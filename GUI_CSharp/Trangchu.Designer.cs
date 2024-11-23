@@ -37,10 +37,6 @@ namespace GUI_CSharp
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Trangchu));
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-<<<<<<< Updated upstream
-=======
-            this.label10 = new System.Windows.Forms.Label();
->>>>>>> Stashed changes
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnQLThongKe = new System.Windows.Forms.Button();
@@ -202,31 +198,8 @@ namespace GUI_CSharp
             this.cbHocky_Tongket = new MaterialSkin.Controls.MaterialComboBox();
             this.cbLop_Tongket = new MaterialSkin.Controls.MaterialComboBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabHL_HK = new MaterialSkin.Controls.MaterialButton();
             this.tabTT_VP = new MaterialSkin.Controls.MaterialButton();
-            this.cardTT_VP = new MaterialSkin.Controls.MaterialCard();
-            this.cardThanhtich = new MaterialSkin.Controls.MaterialCard();
-            this.btnThemTT = new MaterialSkin.Controls.MaterialButton();
-            this.listTT = new MaterialSkin.Controls.MaterialListView();
-            this.maTT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tenTT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.diemCong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnTimkiem_TT = new MaterialSkin.Controls.MaterialButton();
-            this.txTimkiem_TT = new MaterialSkin.Controls.MaterialTextBox();
-            this.cardVipham = new MaterialSkin.Controls.MaterialCard();
-            this.btnThemVP = new MaterialSkin.Controls.MaterialButton();
-            this.listVP = new MaterialSkin.Controls.MaterialListView();
-            this.maVP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tenVP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.diemTru = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnTimkiem_VP = new MaterialSkin.Controls.MaterialButton();
-            this.txTimkiem_VP = new MaterialSkin.Controls.MaterialTextBox();
-            this.cardActionTT_VP = new MaterialSkin.Controls.MaterialCard();
-            this.btnSua_TTVP = new MaterialSkin.Controls.MaterialButton();
-            this.btnLoadList_TTVP = new MaterialSkin.Controls.MaterialButton();
-            this.btnXoa_TTVP = new MaterialSkin.Controls.MaterialButton();
+            this.tabHL_HK = new MaterialSkin.Controls.MaterialButton();
             this.cardHL_HK = new MaterialSkin.Controls.MaterialCard();
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
             this.btnThemHL = new MaterialSkin.Controls.MaterialButton();
@@ -253,7 +226,6 @@ namespace GUI_CSharp
             this.btnSuaHL_HK = new MaterialSkin.Controls.MaterialButton();
             this.btnLoadListHL_HK = new MaterialSkin.Controls.MaterialButton();
             this.btnXoaHL_HK = new MaterialSkin.Controls.MaterialButton();
-<<<<<<< Updated upstream
             this.cardTT_VP = new MaterialSkin.Controls.MaterialCard();
             this.cardThanhtich = new MaterialSkin.Controls.MaterialCard();
             this.btnThemTT = new MaterialSkin.Controls.MaterialButton();
@@ -330,13 +302,6 @@ namespace GUI_CSharp
             this.soLuong3_TKKQ_Lop = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.soLuong4_TKKQ_Lop = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.namHoc_TKKQ_Lop = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-=======
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.tabThongkeHS = new MaterialSkin.Controls.MaterialButton();
-            this.tabThongkeDiem = new MaterialSkin.Controls.MaterialButton();
-            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
->>>>>>> Stashed changes
             tabPage7 = new System.Windows.Forms.TabPage();
             this.materialTabControl1.SuspendLayout();
             this.tabPage8.SuspendLayout();
@@ -359,21 +324,18 @@ namespace GUI_CSharp
             this.cardXemdiem_Mon.SuspendLayout();
             this.cardXemdiem_Tongket.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.cardTT_VP.SuspendLayout();
-            this.cardThanhtich.SuspendLayout();
-            this.cardVipham.SuspendLayout();
-            this.cardActionTT_VP.SuspendLayout();
             this.cardHL_HK.SuspendLayout();
             this.materialCard3.SuspendLayout();
             this.materialCard4.SuspendLayout();
             this.cardActionHL_HK.SuspendLayout();
+            this.cardTT_VP.SuspendLayout();
+            this.cardThanhtich.SuspendLayout();
+            this.cardVipham.SuspendLayout();
+            this.cardActionTT_VP.SuspendLayout();
             this.tabPage9.SuspendLayout();
-<<<<<<< Updated upstream
             this.materialCard1.SuspendLayout();
             this.cardActionTKKQ.SuspendLayout();
             this.cardActionTKHS.SuspendLayout();
-=======
->>>>>>> Stashed changes
             this.SuspendLayout();
             // 
             // tabPage7
@@ -385,7 +347,7 @@ namespace GUI_CSharp
             tabPage7.Location = new System.Drawing.Point(4, 39);
             tabPage7.Margin = new System.Windows.Forms.Padding(2);
             tabPage7.Name = "tabPage7";
-            tabPage7.Size = new System.Drawing.Size(1281, 618);
+            tabPage7.Size = new System.Drawing.Size(1688, 853);
             tabPage7.TabIndex = 6;
             tabPage7.Text = "Đăng xuất";
             // 
@@ -408,7 +370,7 @@ namespace GUI_CSharp
             this.materialTabControl1.Multiline = true;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(1289, 661);
+            this.materialTabControl1.Size = new System.Drawing.Size(1696, 896);
             this.materialTabControl1.TabIndex = 2;
             // 
             // tabPage8
@@ -416,10 +378,6 @@ namespace GUI_CSharp
             this.tabPage8.BackColor = System.Drawing.Color.White;
             this.tabPage8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage8.BackgroundImage")));
             this.tabPage8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-<<<<<<< Updated upstream
-=======
-            this.tabPage8.Controls.Add(this.label10);
->>>>>>> Stashed changes
             this.tabPage8.Controls.Add(this.label9);
             this.tabPage8.Controls.Add(this.label8);
             this.tabPage8.Controls.Add(this.btnQLThongKe);
@@ -431,40 +389,16 @@ namespace GUI_CSharp
             this.tabPage8.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(2);
-<<<<<<< Updated upstream
             this.tabPage8.Size = new System.Drawing.Size(1688, 853);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "Trang chủ";
             // 
-=======
-            this.tabPage8.Size = new System.Drawing.Size(1281, 618);
-            this.tabPage8.TabIndex = 7;
-            this.tabPage8.Text = "Trang chủ";
-            // 
-            // label10
-            // 
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label10.Location = new System.Drawing.Point(69, 351);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(509, 194);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Đỗ Đăng Khoa - Nhóm trưởng\r\nBùi Võ Tiến Duy\r\nLê Tiến Hữu\r\nVõ Thanh Trọng\r\nLê Huy " +
-    "Tín\r\n";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
->>>>>>> Stashed changes
             // label9
             // 
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Edwardian Script ITC", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-<<<<<<< Updated upstream
             this.label9.Location = new System.Drawing.Point(69, 372);
-=======
-            this.label9.Location = new System.Drawing.Point(69, 283);
->>>>>>> Stashed changes
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(509, 59);
             this.label9.TabIndex = 1;
@@ -476,11 +410,7 @@ namespace GUI_CSharp
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Stencil", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-<<<<<<< Updated upstream
             this.label8.Location = new System.Drawing.Point(66, 242);
-=======
-            this.label8.Location = new System.Drawing.Point(66, 153);
->>>>>>> Stashed changes
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(701, 130);
             this.label8.TabIndex = 0;
@@ -558,7 +488,7 @@ namespace GUI_CSharp
             this.tabPage3.Location = new System.Drawing.Point(4, 39);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1281, 618);
+            this.tabPage3.Size = new System.Drawing.Size(1688, 853);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Lớp học";
             // 
@@ -816,7 +746,7 @@ namespace GUI_CSharp
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(1281, 618);
+            this.tabPage2.Size = new System.Drawing.Size(1688, 853);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Giáo viên";
             // 
@@ -1120,10 +1050,7 @@ namespace GUI_CSharp
             this.btnTimkiemGV.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnTimkiemGV.UseAccentColor = false;
             this.btnTimkiemGV.UseVisualStyleBackColor = true;
-<<<<<<< Updated upstream
             this.btnTimkiemGV.Click += new System.EventHandler(this.btnTimkiemGV_Click);
-=======
->>>>>>> Stashed changes
             // 
             // txTimkiemGV
             // 
@@ -1186,10 +1113,7 @@ namespace GUI_CSharp
             this.btnLoadListGV.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnLoadListGV.UseAccentColor = false;
             this.btnLoadListGV.UseVisualStyleBackColor = true;
-<<<<<<< Updated upstream
             this.btnLoadListGV.Click += new System.EventHandler(this.btnLoadListPhanCong_Click);
-=======
->>>>>>> Stashed changes
             // 
             // btnThemGV
             // 
@@ -1235,10 +1159,7 @@ namespace GUI_CSharp
             this.btnXoaGV.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnXoaGV.UseAccentColor = false;
             this.btnXoaGV.UseVisualStyleBackColor = true;
-<<<<<<< Updated upstream
             this.btnXoaGV.Click += new System.EventHandler(this.btnXoaGV_Click);
-=======
->>>>>>> Stashed changes
             // 
             // tabPage1
             // 
@@ -1255,7 +1176,7 @@ namespace GUI_CSharp
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(1281, 618);
+            this.tabPage1.Size = new System.Drawing.Size(1688, 853);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Học sinh";
             // 
@@ -1688,11 +1609,7 @@ namespace GUI_CSharp
             this.cardActionHS.Controls.Add(this.btnXoaHS);
             this.cardActionHS.Depth = 0;
             this.cardActionHS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-<<<<<<< Updated upstream
             this.cardActionHS.Location = new System.Drawing.Point(519, 14);
-=======
-            this.cardActionHS.Location = new System.Drawing.Point(607, 14);
->>>>>>> Stashed changes
             this.cardActionHS.Margin = new System.Windows.Forms.Padding(14);
             this.cardActionHS.MouseState = MaterialSkin.MouseState.HOVER;
             this.cardActionHS.Name = "cardActionHS";
@@ -1718,10 +1635,7 @@ namespace GUI_CSharp
             this.btnTimkiemHS.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnTimkiemHS.UseAccentColor = false;
             this.btnTimkiemHS.UseVisualStyleBackColor = true;
-<<<<<<< Updated upstream
             this.btnTimkiemHS.Click += new System.EventHandler(this.btnTimkiemHS_Click);
-=======
->>>>>>> Stashed changes
             // 
             // txTimkiemHS
             // 
@@ -1832,95 +1746,6 @@ namespace GUI_CSharp
             this.btnXoaHS.UseAccentColor = false;
             this.btnXoaHS.UseVisualStyleBackColor = true;
             this.btnXoaHS.Click += new System.EventHandler(this.btnXoaHS_Click);
-            // 
-            // btnSuaHS
-            // 
-            this.btnSuaHS.AutoSize = false;
-            this.btnSuaHS.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSuaHS.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnSuaHS.Depth = 0;
-            this.btnSuaHS.HighEmphasis = true;
-            this.btnSuaHS.Icon = global::GUI_CSharp.Properties.Resources.data_processing;
-            this.btnSuaHS.Location = new System.Drawing.Point(300, 18);
-            this.btnSuaHS.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnSuaHS.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnSuaHS.Name = "btnSuaHS";
-            this.btnSuaHS.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnSuaHS.Size = new System.Drawing.Size(110, 42);
-            this.btnSuaHS.TabIndex = 4;
-            this.btnSuaHS.TabStop = false;
-            this.btnSuaHS.Text = "Sửa";
-            this.btnSuaHS.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnSuaHS.UseAccentColor = false;
-            this.btnSuaHS.UseVisualStyleBackColor = true;
-            this.btnSuaHS.Click += new System.EventHandler(this.btnSuaHS_Click);
-            // 
-            // btnLoadListHS
-            // 
-            this.btnLoadListHS.AutoSize = false;
-            this.btnLoadListHS.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnLoadListHS.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnLoadListHS.Depth = 0;
-            this.btnLoadListHS.HighEmphasis = true;
-            this.btnLoadListHS.Icon = global::GUI_CSharp.Properties.Resources.reloading;
-            this.btnLoadListHS.Location = new System.Drawing.Point(427, 18);
-            this.btnLoadListHS.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnLoadListHS.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnLoadListHS.Name = "btnLoadListHS";
-            this.btnLoadListHS.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnLoadListHS.Size = new System.Drawing.Size(110, 42);
-            this.btnLoadListHS.TabIndex = 5;
-            this.btnLoadListHS.TabStop = false;
-            this.btnLoadListHS.Text = "Làm mới";
-            this.btnLoadListHS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLoadListHS.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnLoadListHS.UseAccentColor = false;
-            this.btnLoadListHS.UseVisualStyleBackColor = true;
-            // 
-            // btnThemHS
-            // 
-            this.btnThemHS.AutoSize = false;
-            this.btnThemHS.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnThemHS.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnThemHS.Depth = 0;
-            this.btnThemHS.HighEmphasis = true;
-            this.btnThemHS.Icon = global::GUI_CSharp.Properties.Resources.add;
-            this.btnThemHS.Location = new System.Drawing.Point(46, 18);
-            this.btnThemHS.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnThemHS.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnThemHS.Name = "btnThemHS";
-            this.btnThemHS.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnThemHS.Size = new System.Drawing.Size(110, 42);
-            this.btnThemHS.TabIndex = 6;
-            this.btnThemHS.TabStop = false;
-            this.btnThemHS.Text = "Thêm";
-            this.btnThemHS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThemHS.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnThemHS.UseAccentColor = false;
-            this.btnThemHS.UseVisualStyleBackColor = true;
-            this.btnThemHS.Click += new System.EventHandler(this.btnThemHS_Click);
-            // 
-            // btnXoaHS
-            // 
-            this.btnXoaHS.AutoSize = false;
-            this.btnXoaHS.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnXoaHS.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnXoaHS.Depth = 0;
-            this.btnXoaHS.HighEmphasis = true;
-            this.btnXoaHS.Icon = global::GUI_CSharp.Properties.Resources.remove;
-            this.btnXoaHS.Location = new System.Drawing.Point(173, 18);
-            this.btnXoaHS.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnXoaHS.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnXoaHS.Name = "btnXoaHS";
-            this.btnXoaHS.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnXoaHS.Size = new System.Drawing.Size(110, 42);
-            this.btnXoaHS.TabIndex = 7;
-            this.btnXoaHS.TabStop = false;
-            this.btnXoaHS.Text = "Xóa";
-            this.btnXoaHS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoaHS.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnXoaHS.UseAccentColor = false;
-            this.btnXoaHS.UseVisualStyleBackColor = true;
             // 
             // tabHS
             // 
@@ -2113,7 +1938,7 @@ namespace GUI_CSharp
             this.tabPage.Location = new System.Drawing.Point(4, 39);
             this.tabPage.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage.Name = "tabPage";
-            this.tabPage.Size = new System.Drawing.Size(1281, 618);
+            this.tabPage.Size = new System.Drawing.Size(1688, 853);
             this.tabPage.TabIndex = 5;
             this.tabPage.Text = "Kết quả học tập";
             // 
@@ -2202,10 +2027,7 @@ namespace GUI_CSharp
             this.btnNhapExcel.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnNhapExcel.UseAccentColor = false;
             this.btnNhapExcel.UseVisualStyleBackColor = true;
-<<<<<<< Updated upstream
             this.btnNhapExcel.Click += new System.EventHandler(this.btnNhapExcel_Click);
-=======
->>>>>>> Stashed changes
             // 
             // btnTimkiemKQ
             // 
@@ -2225,10 +2047,7 @@ namespace GUI_CSharp
             this.btnTimkiemKQ.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnTimkiemKQ.UseAccentColor = false;
             this.btnTimkiemKQ.UseVisualStyleBackColor = true;
-<<<<<<< Updated upstream
             this.btnTimkiemKQ.Click += new System.EventHandler(this.btnTimkiemKQ_Click);
-=======
->>>>>>> Stashed changes
             // 
             // txTimkiemKQ
             // 
@@ -2291,10 +2110,7 @@ namespace GUI_CSharp
             this.btnLoadListKQ.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnLoadListKQ.UseAccentColor = false;
             this.btnLoadListKQ.UseVisualStyleBackColor = true;
-<<<<<<< Updated upstream
             this.btnLoadListKQ.Click += new System.EventHandler(this.btnLoadListKQ_Click);
-=======
->>>>>>> Stashed changes
             // 
             // cardListDiem
             // 
@@ -2891,39 +2707,16 @@ namespace GUI_CSharp
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.White;
-            this.tabPage4.Controls.Add(this.tabHL_HK);
             this.tabPage4.Controls.Add(this.tabTT_VP);
-            this.tabPage4.Controls.Add(this.cardTT_VP);
+            this.tabPage4.Controls.Add(this.tabHL_HK);
             this.tabPage4.Controls.Add(this.cardHL_HK);
+            this.tabPage4.Controls.Add(this.cardTT_VP);
             this.tabPage4.ImageKey = "prescription.png";
             this.tabPage4.Location = new System.Drawing.Point(4, 39);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1281, 618);
+            this.tabPage4.Size = new System.Drawing.Size(1688, 853);
             this.tabPage4.TabIndex = 9;
             this.tabPage4.Text = "Nội quy";
-            // 
-            // tabHL_HK
-            // 
-            this.tabHL_HK.AutoSize = false;
-            this.tabHL_HK.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tabHL_HK.BackColor = System.Drawing.Color.White;
-            this.tabHL_HK.CharacterCasing = MaterialSkin.Controls.MaterialButton.CharacterCasingEnum.Normal;
-            this.tabHL_HK.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.tabHL_HK.Depth = 0;
-            this.tabHL_HK.HighEmphasis = false;
-            this.tabHL_HK.Icon = null;
-            this.tabHL_HK.Location = new System.Drawing.Point(161, 14);
-            this.tabHL_HK.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.tabHL_HK.MouseState = MaterialSkin.MouseState.HOVER;
-            this.tabHL_HK.Name = "tabHL_HK";
-            this.tabHL_HK.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.tabHL_HK.Size = new System.Drawing.Size(150, 80);
-            this.tabHL_HK.TabIndex = 11;
-            this.tabHL_HK.Text = "Học lực | Hạnh kiểm";
-            this.tabHL_HK.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.tabHL_HK.UseAccentColor = false;
-            this.tabHL_HK.UseVisualStyleBackColor = false;
-            this.tabHL_HK.Click += new System.EventHandler(this.tabHL_HK_Click);
             // 
             // tabTT_VP
             // 
@@ -2948,370 +2741,28 @@ namespace GUI_CSharp
             this.tabTT_VP.UseVisualStyleBackColor = false;
             this.tabTT_VP.Click += new System.EventHandler(this.tabTT_VP_Click);
             // 
-            // cardTT_VP
+            // tabHL_HK
             // 
-            this.cardTT_VP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cardTT_VP.Controls.Add(this.cardThanhtich);
-            this.cardTT_VP.Controls.Add(this.cardVipham);
-            this.cardTT_VP.Controls.Add(this.cardActionTT_VP);
-            this.cardTT_VP.Depth = 0;
-            this.cardTT_VP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cardTT_VP.Location = new System.Drawing.Point(10, 95);
-            this.cardTT_VP.Margin = new System.Windows.Forms.Padding(14);
-            this.cardTT_VP.MouseState = MaterialSkin.MouseState.HOVER;
-            this.cardTT_VP.Name = "cardTT_VP";
-            this.cardTT_VP.Padding = new System.Windows.Forms.Padding(14);
-            this.cardTT_VP.Size = new System.Drawing.Size(1613, 770);
-            this.cardTT_VP.TabIndex = 9;
-            // 
-            // cardThanhtich
-            // 
-            this.cardThanhtich.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cardThanhtich.Controls.Add(this.btnThemTT);
-            this.cardThanhtich.Controls.Add(this.listTT);
-            this.cardThanhtich.Controls.Add(this.label2);
-            this.cardThanhtich.Controls.Add(this.btnTimkiem_TT);
-            this.cardThanhtich.Controls.Add(this.txTimkiem_TT);
-            this.cardThanhtich.Depth = 0;
-            this.cardThanhtich.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cardThanhtich.Location = new System.Drawing.Point(17, 28);
-            this.cardThanhtich.Margin = new System.Windows.Forms.Padding(14);
-            this.cardThanhtich.MouseState = MaterialSkin.MouseState.HOVER;
-            this.cardThanhtich.Name = "cardThanhtich";
-            this.cardThanhtich.Padding = new System.Windows.Forms.Padding(14);
-            this.cardThanhtich.Size = new System.Drawing.Size(765, 572);
-            this.cardThanhtich.TabIndex = 0;
-            // 
-            // btnThemTT
-            // 
-            this.btnThemTT.AutoSize = false;
-            this.btnThemTT.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnThemTT.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnThemTT.Depth = 0;
-            this.btnThemTT.HighEmphasis = true;
-            this.btnThemTT.Icon = global::GUI_CSharp.Properties.Resources.add;
-            this.btnThemTT.Location = new System.Drawing.Point(225, 20);
-            this.btnThemTT.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnThemTT.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnThemTT.Name = "btnThemTT";
-            this.btnThemTT.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnThemTT.Size = new System.Drawing.Size(107, 50);
-            this.btnThemTT.TabIndex = 20;
-            this.btnThemTT.TabStop = false;
-            this.btnThemTT.Text = "Thêm";
-            this.btnThemTT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThemTT.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnThemTT.UseAccentColor = false;
-            this.btnThemTT.UseVisualStyleBackColor = true;
-            this.btnThemTT.Click += new System.EventHandler(this.btnThemTT_Click);
-            // 
-            // listTT
-            // 
-            this.listTT.AutoSizeTable = false;
-            this.listTT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.listTT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listTT.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.maTT,
-            this.tenTT,
-            this.diemCong});
-            this.listTT.Depth = 0;
-            this.listTT.FullRowSelect = true;
-            this.listTT.HideSelection = false;
-            this.listTT.Location = new System.Drawing.Point(21, 96);
-            this.listTT.MinimumSize = new System.Drawing.Size(200, 100);
-            this.listTT.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.listTT.MouseState = MaterialSkin.MouseState.OUT;
-            this.listTT.Name = "listTT";
-            this.listTT.OwnerDraw = true;
-            this.listTT.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.listTT.Size = new System.Drawing.Size(726, 449);
-            this.listTT.TabIndex = 19;
-            this.listTT.UseCompatibleStateImageBehavior = false;
-            this.listTT.View = System.Windows.Forms.View.Details;
-            // 
-            // maTT
-            // 
-            this.maTT.Text = "Mã thành tích";
-            this.maTT.Width = 150;
-            // 
-            // tenTT
-            // 
-            this.tenTT.Text = "Thành tích";
-            this.tenTT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.tenTT.Width = 150;
-            // 
-            // diemCong
-            // 
-            this.diemCong.Text = "Điểm cộng";
-            this.diemCong.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.diemCong.Width = 120;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(17, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 39);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "THÀNH TÍCH";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnTimkiem_TT
-            // 
-            this.btnTimkiem_TT.AutoSize = false;
-            this.btnTimkiem_TT.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnTimkiem_TT.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnTimkiem_TT.Depth = 0;
-            this.btnTimkiem_TT.HighEmphasis = true;
-            this.btnTimkiem_TT.Icon = ((System.Drawing.Image)(resources.GetObject("btnTimkiem_TT.Icon")));
-            this.btnTimkiem_TT.Location = new System.Drawing.Point(697, 20);
-            this.btnTimkiem_TT.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnTimkiem_TT.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnTimkiem_TT.Name = "btnTimkiem_TT";
-            this.btnTimkiem_TT.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnTimkiem_TT.Size = new System.Drawing.Size(50, 50);
-            this.btnTimkiem_TT.TabIndex = 13;
-            this.btnTimkiem_TT.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnTimkiem_TT.UseAccentColor = false;
-            this.btnTimkiem_TT.UseVisualStyleBackColor = true;
-            this.btnTimkiem_TT.Click += new System.EventHandler(this.btnTimkiem_TT_Click);
-            // 
-            // txTimkiem_TT
-            // 
-            this.txTimkiem_TT.AnimateReadOnly = false;
-            this.txTimkiem_TT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txTimkiem_TT.Depth = 0;
-            this.txTimkiem_TT.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txTimkiem_TT.Hint = "Thông tin tìm kiếm";
-            this.txTimkiem_TT.LeadingIcon = null;
-            this.txTimkiem_TT.Location = new System.Drawing.Point(379, 20);
-            this.txTimkiem_TT.MaxLength = 50;
-            this.txTimkiem_TT.MouseState = MaterialSkin.MouseState.OUT;
-            this.txTimkiem_TT.Multiline = false;
-            this.txTimkiem_TT.Name = "txTimkiem_TT";
-            this.txTimkiem_TT.Size = new System.Drawing.Size(301, 50);
-            this.txTimkiem_TT.TabIndex = 12;
-            this.txTimkiem_TT.Text = "";
-            this.txTimkiem_TT.TrailingIcon = null;
-            // 
-            // cardVipham
-            // 
-            this.cardVipham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cardVipham.Controls.Add(this.btnThemVP);
-            this.cardVipham.Controls.Add(this.listVP);
-            this.cardVipham.Controls.Add(this.label1);
-            this.cardVipham.Controls.Add(this.btnTimkiem_VP);
-            this.cardVipham.Controls.Add(this.txTimkiem_VP);
-            this.cardVipham.Depth = 0;
-            this.cardVipham.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cardVipham.Location = new System.Drawing.Point(809, 28);
-            this.cardVipham.Margin = new System.Windows.Forms.Padding(14);
-            this.cardVipham.MouseState = MaterialSkin.MouseState.HOVER;
-            this.cardVipham.Name = "cardVipham";
-            this.cardVipham.Padding = new System.Windows.Forms.Padding(14);
-            this.cardVipham.Size = new System.Drawing.Size(769, 572);
-            this.cardVipham.TabIndex = 1;
-            // 
-            // btnThemVP
-            // 
-            this.btnThemVP.AutoSize = false;
-            this.btnThemVP.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnThemVP.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnThemVP.Depth = 0;
-            this.btnThemVP.HighEmphasis = true;
-            this.btnThemVP.Icon = global::GUI_CSharp.Properties.Resources.add;
-            this.btnThemVP.Location = new System.Drawing.Point(229, 20);
-            this.btnThemVP.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnThemVP.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnThemVP.Name = "btnThemVP";
-            this.btnThemVP.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnThemVP.Size = new System.Drawing.Size(107, 50);
-            this.btnThemVP.TabIndex = 21;
-            this.btnThemVP.TabStop = false;
-            this.btnThemVP.Text = "Thêm";
-            this.btnThemVP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThemVP.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnThemVP.UseAccentColor = false;
-            this.btnThemVP.UseVisualStyleBackColor = true;
-            this.btnThemVP.Click += new System.EventHandler(this.btnThemVP_Click);
-            // 
-            // listVP
-            // 
-            this.listVP.AutoSizeTable = false;
-            this.listVP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.listVP.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listVP.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.maVP,
-            this.tenVP,
-            this.diemTru});
-            this.listVP.Depth = 0;
-            this.listVP.FullRowSelect = true;
-            this.listVP.HideSelection = false;
-            this.listVP.Location = new System.Drawing.Point(21, 96);
-            this.listVP.MinimumSize = new System.Drawing.Size(200, 100);
-            this.listVP.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.listVP.MouseState = MaterialSkin.MouseState.OUT;
-            this.listVP.Name = "listVP";
-            this.listVP.OwnerDraw = true;
-            this.listVP.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.listVP.Size = new System.Drawing.Size(726, 449);
-            this.listVP.TabIndex = 20;
-            this.listVP.UseCompatibleStateImageBehavior = false;
-            this.listVP.View = System.Windows.Forms.View.Details;
-            // 
-            // maVP
-            // 
-            this.maVP.Text = "Mã vi phạm";
-            this.maVP.Width = 150;
-            // 
-            // tenVP
-            // 
-            this.tenVP.Text = "Vi phạm";
-            this.tenVP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.tenVP.Width = 150;
-            // 
-            // diemTru
-            // 
-            this.diemTru.Text = "Điểm trừ";
-            this.diemTru.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.diemTru.Width = 120;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(16, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 39);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "VI PHẠM";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // btnTimkiem_VP
-            // 
-            this.btnTimkiem_VP.AutoSize = false;
-            this.btnTimkiem_VP.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnTimkiem_VP.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnTimkiem_VP.Depth = 0;
-            this.btnTimkiem_VP.HighEmphasis = true;
-            this.btnTimkiem_VP.Icon = ((System.Drawing.Image)(resources.GetObject("btnTimkiem_VP.Icon")));
-            this.btnTimkiem_VP.Location = new System.Drawing.Point(701, 20);
-            this.btnTimkiem_VP.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnTimkiem_VP.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnTimkiem_VP.Name = "btnTimkiem_VP";
-            this.btnTimkiem_VP.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnTimkiem_VP.Size = new System.Drawing.Size(50, 50);
-            this.btnTimkiem_VP.TabIndex = 13;
-            this.btnTimkiem_VP.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnTimkiem_VP.UseAccentColor = false;
-            this.btnTimkiem_VP.UseVisualStyleBackColor = true;
-            this.btnTimkiem_VP.Click += new System.EventHandler(this.btnTimkiem_VP_Click);
-            // 
-            // txTimkiem_VP
-            // 
-            this.txTimkiem_VP.AnimateReadOnly = false;
-            this.txTimkiem_VP.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txTimkiem_VP.Depth = 0;
-            this.txTimkiem_VP.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txTimkiem_VP.Hint = "Thông tin tìm kiếm";
-            this.txTimkiem_VP.LeadingIcon = null;
-            this.txTimkiem_VP.Location = new System.Drawing.Point(383, 20);
-            this.txTimkiem_VP.MaxLength = 50;
-            this.txTimkiem_VP.MouseState = MaterialSkin.MouseState.OUT;
-            this.txTimkiem_VP.Multiline = false;
-            this.txTimkiem_VP.Name = "txTimkiem_VP";
-            this.txTimkiem_VP.Size = new System.Drawing.Size(301, 50);
-            this.txTimkiem_VP.TabIndex = 12;
-            this.txTimkiem_VP.Text = "";
-            this.txTimkiem_VP.TrailingIcon = null;
-            // 
-            // cardActionTT_VP
-            // 
-            this.cardActionTT_VP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cardActionTT_VP.Controls.Add(this.btnSua_TTVP);
-            this.cardActionTT_VP.Controls.Add(this.btnLoadList_TTVP);
-            this.cardActionTT_VP.Controls.Add(this.btnXoa_TTVP);
-            this.cardActionTT_VP.Depth = 0;
-            this.cardActionTT_VP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cardActionTT_VP.Location = new System.Drawing.Point(599, 628);
-            this.cardActionTT_VP.Margin = new System.Windows.Forms.Padding(14);
-            this.cardActionTT_VP.MouseState = MaterialSkin.MouseState.HOVER;
-            this.cardActionTT_VP.Name = "cardActionTT_VP";
-            this.cardActionTT_VP.Padding = new System.Windows.Forms.Padding(14);
-            this.cardActionTT_VP.Size = new System.Drawing.Size(403, 114);
-            this.cardActionTT_VP.TabIndex = 17;
-            // 
-            // btnSua_TTVP
-            // 
-            this.btnSua_TTVP.AutoSize = false;
-            this.btnSua_TTVP.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSua_TTVP.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnSua_TTVP.Depth = 0;
-            this.btnSua_TTVP.HighEmphasis = true;
-            this.btnSua_TTVP.Icon = global::GUI_CSharp.Properties.Resources.data_processing;
-            this.btnSua_TTVP.Location = new System.Drawing.Point(145, 20);
-            this.btnSua_TTVP.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnSua_TTVP.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnSua_TTVP.Name = "btnSua_TTVP";
-            this.btnSua_TTVP.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnSua_TTVP.Size = new System.Drawing.Size(110, 72);
-            this.btnSua_TTVP.TabIndex = 4;
-            this.btnSua_TTVP.TabStop = false;
-            this.btnSua_TTVP.Text = "Sửa";
-            this.btnSua_TTVP.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnSua_TTVP.UseAccentColor = false;
-            this.btnSua_TTVP.UseVisualStyleBackColor = true;
-            this.btnSua_TTVP.Click += new System.EventHandler(this.btnSua_TTVP_Click);
-            // 
-            // btnLoadList_TTVP
-            // 
-            this.btnLoadList_TTVP.AutoSize = false;
-            this.btnLoadList_TTVP.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnLoadList_TTVP.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnLoadList_TTVP.Depth = 0;
-            this.btnLoadList_TTVP.HighEmphasis = true;
-            this.btnLoadList_TTVP.Icon = global::GUI_CSharp.Properties.Resources.reloading;
-            this.btnLoadList_TTVP.Location = new System.Drawing.Point(272, 20);
-            this.btnLoadList_TTVP.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnLoadList_TTVP.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnLoadList_TTVP.Name = "btnLoadList_TTVP";
-            this.btnLoadList_TTVP.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnLoadList_TTVP.Size = new System.Drawing.Size(110, 72);
-            this.btnLoadList_TTVP.TabIndex = 5;
-            this.btnLoadList_TTVP.TabStop = false;
-            this.btnLoadList_TTVP.Text = "Làm mới";
-            this.btnLoadList_TTVP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLoadList_TTVP.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnLoadList_TTVP.UseAccentColor = false;
-            this.btnLoadList_TTVP.UseVisualStyleBackColor = true;
-            this.btnLoadList_TTVP.Click += new System.EventHandler(this.btnLoadList_TTVP_Click);
-            // 
-            // btnXoa_TTVP
-            // 
-            this.btnXoa_TTVP.AutoSize = false;
-            this.btnXoa_TTVP.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnXoa_TTVP.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnXoa_TTVP.Depth = 0;
-            this.btnXoa_TTVP.HighEmphasis = true;
-            this.btnXoa_TTVP.Icon = global::GUI_CSharp.Properties.Resources.remove;
-            this.btnXoa_TTVP.Location = new System.Drawing.Point(18, 20);
-            this.btnXoa_TTVP.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnXoa_TTVP.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnXoa_TTVP.Name = "btnXoa_TTVP";
-            this.btnXoa_TTVP.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnXoa_TTVP.Size = new System.Drawing.Size(110, 72);
-            this.btnXoa_TTVP.TabIndex = 7;
-            this.btnXoa_TTVP.TabStop = false;
-            this.btnXoa_TTVP.Text = "Xóa";
-            this.btnXoa_TTVP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa_TTVP.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnXoa_TTVP.UseAccentColor = false;
-            this.btnXoa_TTVP.UseVisualStyleBackColor = true;
-            this.btnXoa_TTVP.Click += new System.EventHandler(this.btnXoa_TTVP_Click);
+            this.tabHL_HK.AutoSize = false;
+            this.tabHL_HK.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tabHL_HK.BackColor = System.Drawing.Color.White;
+            this.tabHL_HK.CharacterCasing = MaterialSkin.Controls.MaterialButton.CharacterCasingEnum.Normal;
+            this.tabHL_HK.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.tabHL_HK.Depth = 0;
+            this.tabHL_HK.HighEmphasis = false;
+            this.tabHL_HK.Icon = null;
+            this.tabHL_HK.Location = new System.Drawing.Point(161, 14);
+            this.tabHL_HK.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.tabHL_HK.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tabHL_HK.Name = "tabHL_HK";
+            this.tabHL_HK.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.tabHL_HK.Size = new System.Drawing.Size(150, 80);
+            this.tabHL_HK.TabIndex = 11;
+            this.tabHL_HK.Text = "Học lực | Hạnh kiểm";
+            this.tabHL_HK.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.tabHL_HK.UseAccentColor = false;
+            this.tabHL_HK.UseVisualStyleBackColor = false;
+            this.tabHL_HK.Click += new System.EventHandler(this.tabHL_HK_Click);
             // 
             // cardHL_HK
             // 
@@ -3321,7 +2772,7 @@ namespace GUI_CSharp
             this.cardHL_HK.Controls.Add(this.cardActionHL_HK);
             this.cardHL_HK.Depth = 0;
             this.cardHL_HK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cardHL_HK.Location = new System.Drawing.Point(10, 95);
+            this.cardHL_HK.Location = new System.Drawing.Point(9, 95);
             this.cardHL_HK.Margin = new System.Windows.Forms.Padding(14);
             this.cardHL_HK.MouseState = MaterialSkin.MouseState.HOVER;
             this.cardHL_HK.Name = "cardHL_HK";
@@ -3457,10 +2908,6 @@ namespace GUI_CSharp
             this.btnTimkiemHL.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnTimkiemHL.UseAccentColor = false;
             this.btnTimkiemHL.UseVisualStyleBackColor = true;
-<<<<<<< Updated upstream
-=======
-            this.btnTimkiemHL.Click += new System.EventHandler(this.btnTimkiemHL_Click);
->>>>>>> Stashed changes
             // 
             // txTimkiemHL
             // 
@@ -3490,7 +2937,7 @@ namespace GUI_CSharp
             this.materialCard4.Controls.Add(this.txTimkiemHK);
             this.materialCard4.Depth = 0;
             this.materialCard4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard4.Location = new System.Drawing.Point(831, 28);
+            this.materialCard4.Location = new System.Drawing.Point(822, 28);
             this.materialCard4.Margin = new System.Windows.Forms.Padding(14);
             this.materialCard4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard4.Name = "materialCard4";
@@ -3600,10 +3047,6 @@ namespace GUI_CSharp
             this.btnTimkiemHK.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnTimkiemHK.UseAccentColor = false;
             this.btnTimkiemHK.UseVisualStyleBackColor = true;
-<<<<<<< Updated upstream
-=======
-            this.btnTimkiemHK.Click += new System.EventHandler(this.btnTimkiemHK_Click);
->>>>>>> Stashed changes
             // 
             // txTimkiemHK
             // 
@@ -3659,10 +3102,6 @@ namespace GUI_CSharp
             this.btnSuaHL_HK.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnSuaHL_HK.UseAccentColor = false;
             this.btnSuaHL_HK.UseVisualStyleBackColor = true;
-<<<<<<< Updated upstream
-=======
-            this.btnSuaHL_HK.Click += new System.EventHandler(this.btnSuaHL_HK_Click);
->>>>>>> Stashed changes
             // 
             // btnLoadListHL_HK
             // 
@@ -3685,10 +3124,6 @@ namespace GUI_CSharp
             this.btnLoadListHL_HK.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnLoadListHL_HK.UseAccentColor = false;
             this.btnLoadListHL_HK.UseVisualStyleBackColor = true;
-<<<<<<< Updated upstream
-=======
-            this.btnLoadListHL_HK.Click += new System.EventHandler(this.btnLoadListHL_HK_Click);
->>>>>>> Stashed changes
             // 
             // btnXoaHL_HK
             // 
@@ -3711,7 +3146,6 @@ namespace GUI_CSharp
             this.btnXoaHL_HK.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnXoaHL_HK.UseAccentColor = false;
             this.btnXoaHL_HK.UseVisualStyleBackColor = true;
-<<<<<<< Updated upstream
             // 
             // cardTT_VP
             // 
@@ -4071,28 +3505,17 @@ namespace GUI_CSharp
             this.btnXoa_TTVP.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnXoa_TTVP.UseAccentColor = false;
             this.btnXoa_TTVP.UseVisualStyleBackColor = true;
-=======
-            this.btnXoaHL_HK.Click += new System.EventHandler(this.btnXoaHL_HK_Click);
->>>>>>> Stashed changes
             // 
             // tabPage9
             // 
             this.tabPage9.BackColor = System.Drawing.Color.White;
             this.tabPage9.Controls.Add(this.tabThongkeHS);
-<<<<<<< Updated upstream
             this.tabPage9.Controls.Add(this.tabThongkeKQ);
-=======
-            this.tabPage9.Controls.Add(this.tabThongkeDiem);
->>>>>>> Stashed changes
             this.tabPage9.Controls.Add(this.materialCard1);
             this.tabPage9.ImageKey = "statistical.png";
             this.tabPage9.Location = new System.Drawing.Point(4, 39);
             this.tabPage9.Name = "tabPage9";
-<<<<<<< Updated upstream
             this.tabPage9.Size = new System.Drawing.Size(1688, 853);
-=======
-            this.tabPage9.Size = new System.Drawing.Size(1281, 618);
->>>>>>> Stashed changes
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "Thống kê";
             // 
@@ -4117,7 +3540,6 @@ namespace GUI_CSharp
             this.tabThongkeHS.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.tabThongkeHS.UseAccentColor = false;
             this.tabThongkeHS.UseVisualStyleBackColor = false;
-<<<<<<< Updated upstream
             this.tabThongkeHS.Click += new System.EventHandler(this.tabThongkeHS_Click);
             // 
             // tabThongkeKQ
@@ -4142,42 +3564,15 @@ namespace GUI_CSharp
             this.tabThongkeKQ.UseAccentColor = false;
             this.tabThongkeKQ.UseVisualStyleBackColor = false;
             this.tabThongkeKQ.Click += new System.EventHandler(this.tabThongkeKQ_Click);
-=======
-            // 
-            // tabThongkeDiem
-            // 
-            this.tabThongkeDiem.AutoSize = false;
-            this.tabThongkeDiem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tabThongkeDiem.BackColor = System.Drawing.Color.White;
-            this.tabThongkeDiem.CharacterCasing = MaterialSkin.Controls.MaterialButton.CharacterCasingEnum.Normal;
-            this.tabThongkeDiem.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.tabThongkeDiem.Depth = 0;
-            this.tabThongkeDiem.HighEmphasis = false;
-            this.tabThongkeDiem.Icon = null;
-            this.tabThongkeDiem.Location = new System.Drawing.Point(161, 14);
-            this.tabThongkeDiem.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.tabThongkeDiem.MouseState = MaterialSkin.MouseState.HOVER;
-            this.tabThongkeDiem.Name = "tabThongkeDiem";
-            this.tabThongkeDiem.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.tabThongkeDiem.Size = new System.Drawing.Size(150, 80);
-            this.tabThongkeDiem.TabIndex = 10;
-            this.tabThongkeDiem.Text = "Thống kê điểm";
-            this.tabThongkeDiem.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.tabThongkeDiem.UseAccentColor = false;
-            this.tabThongkeDiem.UseVisualStyleBackColor = false;
->>>>>>> Stashed changes
             // 
             // materialCard1
             // 
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-<<<<<<< Updated upstream
             this.materialCard1.Controls.Add(this.listTKKQ_Lop);
             this.materialCard1.Controls.Add(this.listTKKQ_HS);
             this.materialCard1.Controls.Add(this.listTKHS);
             this.materialCard1.Controls.Add(this.cardActionTKKQ);
             this.materialCard1.Controls.Add(this.cardActionTKHS);
-=======
->>>>>>> Stashed changes
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard1.Location = new System.Drawing.Point(10, 95);
@@ -4188,7 +3583,6 @@ namespace GUI_CSharp
             this.materialCard1.Size = new System.Drawing.Size(1613, 770);
             this.materialCard1.TabIndex = 1;
             // 
-<<<<<<< Updated upstream
             // cardActionTKKQ
             // 
             this.cardActionTKKQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -4724,8 +4118,6 @@ namespace GUI_CSharp
             this.namHoc_TKHS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.namHoc_TKHS.Width = 100;
             // 
-=======
->>>>>>> Stashed changes
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -4742,7 +4134,6 @@ namespace GUI_CSharp
             this.imageList1.Images.SetKeyName(9, "statistical.png");
             this.imageList1.Images.SetKeyName(10, "prescription.png");
             // 
-<<<<<<< Updated upstream
             // btnLoad_TKKQ_Lop
             // 
             this.btnLoad_TKKQ_Lop.AutoSize = false;
@@ -4939,14 +4330,12 @@ namespace GUI_CSharp
             this.namHoc_TKKQ_Lop.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.namHoc_TKKQ_Lop.Width = 200;
             // 
-=======
->>>>>>> Stashed changes
             // Trangchu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1293, 715);
+            this.ClientSize = new System.Drawing.Size(1700, 950);
             this.Controls.Add(this.materialTabControl1);
             this.DrawerShowIconsWhenHidden = true;
             this.DrawerTabControl = this.materialTabControl1;
@@ -4957,7 +4346,6 @@ namespace GUI_CSharp
             this.Name = "Trangchu";
             this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.Trangchu_Load);
             this.materialTabControl1.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
@@ -4983,21 +4371,18 @@ namespace GUI_CSharp
             this.cardXemdiem_Tongket.ResumeLayout(false);
             this.cardXemdiem_Tongket.PerformLayout();
             this.tabPage4.ResumeLayout(false);
-            this.cardTT_VP.ResumeLayout(false);
-            this.cardThanhtich.ResumeLayout(false);
-            this.cardVipham.ResumeLayout(false);
-            this.cardActionTT_VP.ResumeLayout(false);
             this.cardHL_HK.ResumeLayout(false);
             this.materialCard3.ResumeLayout(false);
             this.materialCard4.ResumeLayout(false);
             this.cardActionHL_HK.ResumeLayout(false);
+            this.cardTT_VP.ResumeLayout(false);
+            this.cardThanhtich.ResumeLayout(false);
+            this.cardVipham.ResumeLayout(false);
+            this.cardActionTT_VP.ResumeLayout(false);
             this.tabPage9.ResumeLayout(false);
-<<<<<<< Updated upstream
             this.materialCard1.ResumeLayout(false);
             this.cardActionTKKQ.ResumeLayout(false);
             this.cardActionTKHS.ResumeLayout(false);
-=======
->>>>>>> Stashed changes
             this.ResumeLayout(false);
 
         }

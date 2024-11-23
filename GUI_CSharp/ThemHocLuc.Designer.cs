@@ -31,18 +31,17 @@
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.label2 = new System.Windows.Forms.Label();
             this.txMaHL = new MaterialSkin.Controls.MaterialTextBox();
+            this.btnThem = new MaterialSkin.Controls.MaterialButton();
             this.diemKhongche = new MaterialSkin.Controls.MaterialTextBox();
             this.diemCanduoi = new MaterialSkin.Controls.MaterialTextBox();
             this.diemCantren = new MaterialSkin.Controls.MaterialTextBox();
             this.txTenHL = new MaterialSkin.Controls.MaterialTextBox();
-            this.btnThem = new MaterialSkin.Controls.MaterialButton();
             this.materialCard1.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialCard1
             // 
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard1.BackgroundImage = global::GUI_CSharp.Properties.Resources.add;
             this.materialCard1.Controls.Add(this.label2);
             this.materialCard1.Controls.Add(this.txMaHL);
             this.materialCard1.Controls.Add(this.btnThem);
@@ -50,7 +49,6 @@
             this.materialCard1.Controls.Add(this.diemCanduoi);
             this.materialCard1.Controls.Add(this.diemCantren);
             this.materialCard1.Controls.Add(this.txTenHL);
-            this.materialCard1.Cursor = System.Windows.Forms.Cursors.Default;
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard1.Location = new System.Drawing.Point(4, 68);
@@ -60,7 +58,6 @@
             this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard1.Size = new System.Drawing.Size(500, 577);
             this.materialCard1.TabIndex = 39;
-            
             // 
             // label2
             // 
@@ -80,7 +77,7 @@
             this.txMaHL.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txMaHL.Depth = 0;
             this.txMaHL.Enabled = false;
-            this.txMaHL.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txMaHL.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txMaHL.Hint = "Mã học lực";
             this.txMaHL.LeadingIcon = null;
             this.txMaHL.Location = new System.Drawing.Point(43, 107);
@@ -92,78 +89,6 @@
             this.txMaHL.TabIndex = 37;
             this.txMaHL.Text = "";
             this.txMaHL.TrailingIcon = null;
-            // 
-            // diemKhongche
-            // 
-            this.diemKhongche.AnimateReadOnly = false;
-            this.diemKhongche.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.diemKhongche.Depth = 0;
-            this.diemKhongche.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.diemKhongche.Hint = "Điểm khống chế";
-            this.diemKhongche.LeadingIcon = null;
-            this.diemKhongche.Location = new System.Drawing.Point(43, 411);
-            this.diemKhongche.MaxLength = 50;
-            this.diemKhongche.MouseState = MaterialSkin.MouseState.OUT;
-            this.diemKhongche.Multiline = false;
-            this.diemKhongche.Name = "diemKhongche";
-            this.diemKhongche.Size = new System.Drawing.Size(411, 50);
-            this.diemKhongche.TabIndex = 37;
-            this.diemKhongche.Text = "";
-            this.diemKhongche.TrailingIcon = null;
-            // 
-            // diemCanduoi
-            // 
-            this.diemCanduoi.AnimateReadOnly = false;
-            this.diemCanduoi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.diemCanduoi.Depth = 0;
-            this.diemCanduoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.diemCanduoi.Hint = "Điểm cận dưới";
-            this.diemCanduoi.LeadingIcon = null;
-            this.diemCanduoi.Location = new System.Drawing.Point(43, 335);
-            this.diemCanduoi.MaxLength = 50;
-            this.diemCanduoi.MouseState = MaterialSkin.MouseState.OUT;
-            this.diemCanduoi.Multiline = false;
-            this.diemCanduoi.Name = "diemCanduoi";
-            this.diemCanduoi.Size = new System.Drawing.Size(411, 50);
-            this.diemCanduoi.TabIndex = 37;
-            this.diemCanduoi.Text = "";
-            this.diemCanduoi.TrailingIcon = null;
-            // 
-            // diemCantren
-            // 
-            this.diemCantren.AnimateReadOnly = false;
-            this.diemCantren.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.diemCantren.Depth = 0;
-            this.diemCantren.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.diemCantren.Hint = "Điểm cận trên";
-            this.diemCantren.LeadingIcon = null;
-            this.diemCantren.Location = new System.Drawing.Point(43, 259);
-            this.diemCantren.MaxLength = 50;
-            this.diemCantren.MouseState = MaterialSkin.MouseState.OUT;
-            this.diemCantren.Multiline = false;
-            this.diemCantren.Name = "diemCantren";
-            this.diemCantren.Size = new System.Drawing.Size(411, 50);
-            this.diemCantren.TabIndex = 37;
-            this.diemCantren.Text = "";
-            this.diemCantren.TrailingIcon = null;
-            // 
-            // txTenHL
-            // 
-            this.txTenHL.AnimateReadOnly = false;
-            this.txTenHL.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txTenHL.Depth = 0;
-            this.txTenHL.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txTenHL.Hint = "Học lực";
-            this.txTenHL.LeadingIcon = null;
-            this.txTenHL.Location = new System.Drawing.Point(43, 183);
-            this.txTenHL.MaxLength = 50;
-            this.txTenHL.MouseState = MaterialSkin.MouseState.OUT;
-            this.txTenHL.Multiline = false;
-            this.txTenHL.Name = "txTenHL";
-            this.txTenHL.Size = new System.Drawing.Size(411, 50);
-            this.txTenHL.TabIndex = 1;
-            this.txTenHL.Text = "";
-            this.txTenHL.TrailingIcon = null;
             // 
             // btnThem
             // 
@@ -186,7 +111,78 @@
             this.btnThem.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnThem.UseAccentColor = false;
             this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // diemKhongche
+            // 
+            this.diemKhongche.AnimateReadOnly = false;
+            this.diemKhongche.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.diemKhongche.Depth = 0;
+            this.diemKhongche.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.diemKhongche.Hint = "Điểm khống chế";
+            this.diemKhongche.LeadingIcon = null;
+            this.diemKhongche.Location = new System.Drawing.Point(43, 411);
+            this.diemKhongche.MaxLength = 50;
+            this.diemKhongche.MouseState = MaterialSkin.MouseState.OUT;
+            this.diemKhongche.Multiline = false;
+            this.diemKhongche.Name = "diemKhongche";
+            this.diemKhongche.Size = new System.Drawing.Size(411, 50);
+            this.diemKhongche.TabIndex = 37;
+            this.diemKhongche.Text = "";
+            this.diemKhongche.TrailingIcon = null;
+            // 
+            // diemCanduoi
+            // 
+            this.diemCanduoi.AnimateReadOnly = false;
+            this.diemCanduoi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.diemCanduoi.Depth = 0;
+            this.diemCanduoi.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.diemCanduoi.Hint = "Điểm cận dưới";
+            this.diemCanduoi.LeadingIcon = null;
+            this.diemCanduoi.Location = new System.Drawing.Point(43, 335);
+            this.diemCanduoi.MaxLength = 50;
+            this.diemCanduoi.MouseState = MaterialSkin.MouseState.OUT;
+            this.diemCanduoi.Multiline = false;
+            this.diemCanduoi.Name = "diemCanduoi";
+            this.diemCanduoi.Size = new System.Drawing.Size(411, 50);
+            this.diemCanduoi.TabIndex = 37;
+            this.diemCanduoi.Text = "";
+            this.diemCanduoi.TrailingIcon = null;
+            // 
+            // diemCantren
+            // 
+            this.diemCantren.AnimateReadOnly = false;
+            this.diemCantren.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.diemCantren.Depth = 0;
+            this.diemCantren.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.diemCantren.Hint = "Điểm cận trên";
+            this.diemCantren.LeadingIcon = null;
+            this.diemCantren.Location = new System.Drawing.Point(43, 259);
+            this.diemCantren.MaxLength = 50;
+            this.diemCantren.MouseState = MaterialSkin.MouseState.OUT;
+            this.diemCantren.Multiline = false;
+            this.diemCantren.Name = "diemCantren";
+            this.diemCantren.Size = new System.Drawing.Size(411, 50);
+            this.diemCantren.TabIndex = 37;
+            this.diemCantren.Text = "";
+            this.diemCantren.TrailingIcon = null;
+            // 
+            // txTenHL
+            // 
+            this.txTenHL.AnimateReadOnly = false;
+            this.txTenHL.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txTenHL.Depth = 0;
+            this.txTenHL.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txTenHL.Hint = "Học lực";
+            this.txTenHL.LeadingIcon = null;
+            this.txTenHL.Location = new System.Drawing.Point(43, 183);
+            this.txTenHL.MaxLength = 50;
+            this.txTenHL.MouseState = MaterialSkin.MouseState.OUT;
+            this.txTenHL.Multiline = false;
+            this.txTenHL.Name = "txTenHL";
+            this.txTenHL.Size = new System.Drawing.Size(411, 50);
+            this.txTenHL.TabIndex = 1;
+            this.txTenHL.Text = "";
+            this.txTenHL.TrailingIcon = null;
             // 
             // ThemHocLuc
             // 

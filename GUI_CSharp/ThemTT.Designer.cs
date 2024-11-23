@@ -99,7 +99,6 @@
             this.btnThemTT.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnThemTT.UseAccentColor = false;
             this.btnThemTT.UseVisualStyleBackColor = true;
-            this.btnThemTT.Click += new System.EventHandler(this.btnThemTT_Click);
             // 
             // txTenTT
             // 

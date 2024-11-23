@@ -12,22 +12,17 @@ using MaterialSkin;
 using System.Runtime.CompilerServices;
 using BLL;
 using GUI_CSharp.DTO;
-<<<<<<< Updated upstream
 using OfficeOpenXml;
 using System.IO;
 using System.Windows.Input;
 using DTO;
 
 
-=======
-using System.Drawing.Printing;
->>>>>>> Stashed changes
 
 namespace GUI_CSharp
 {
     public partial class Trangchu : MaterialForm
     {
-<<<<<<< Updated upstream
         private HocSinhBLL hocSinhBLL = new HocSinhBLL();
         private PhanLopBLL phanLopBLL = new PhanLopBLL();
         private DiemMonBLL diemMonBLL = new DiemMonBLL();
@@ -37,18 +32,11 @@ namespace GUI_CSharp
         private ThongKeKQLopBLL thongKeKQLopBLL = new ThongKeKQLopBLL();
         private ThongKeHocSinhBLL thongKeHocSinhBLL = new ThongKeHocSinhBLL();
         private LopBLL lopBLL = new LopBLL();
-=======
-        private ViPhamBLL viPhamBLL = new ViPhamBLL();
-        private ThanhTichBLL thanhTichBLL = new ThanhTichBLL();
-        private HocLucBLL hocLucBLL = new HocLucBLL();
-        private HanhKiemBLL hanhKiemBLL = new HanhKiemBLL();
->>>>>>> Stashed changes
         public Trangchu()
         {
             InitializeComponent();
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
             this.materialTabControl1.Selected += new TabControlEventHandler(this.MaterialTabControl_Selected);
-<<<<<<< Updated upstream
             LoadDataTableHocSinh();
             LoadDataTableDiemMon();
             LoadDanhSachNamHoc();
@@ -528,79 +516,8 @@ namespace GUI_CSharp
                     MessageBox.Show("Xuất thành công!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-=======
-
-            LoadDataTableViPham();
-            LoadDataTableThanhTich();
-            LoadDataTableHanhKiem();
-            LoadDataTableHocLuc();
-
->>>>>>> Stashed changes
         }
 
-        private void LoadDataTableViPham()
-        {
-            
-            List<ViPhamDTO> listViPham = viPhamBLL.GetAllViPham();
-            listVP.Items.Clear();
-            foreach (var vp in listViPham)
-            {
-                ListViewItem item = new ListViewItem(vp.MaViPham);
-                item.SubItems.Add(vp.NoiDung);
-                item.SubItems.Add(vp.DiemTru.ToString());
-                listVP.Items.Add(item);
-            }
-            listVP.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
-        }
-
-        private void LoadDataTableThanhTich()
-        {
-           
-            List<ThanhTichDTO> listThanhTich = thanhTichBLL.GetAllThanhTich();
-            listTT.Items.Clear();
-            foreach (var tt in listThanhTich)
-            {
-                ListViewItem item = new ListViewItem(tt.MaThanhTich);
-                item.SubItems.Add(tt.NoiDung);
-                item.SubItems.Add(tt.DiemThuong.ToString());
-                listTT.Items.Add(item);
-            }
-            listTT.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
-        }
-
-        private void LoadDataTableHocLuc()
-        {
-
-            List<HocLucDTO> listHocLuc = hocLucBLL.GetAllHocLuc();
-            listHL.Items.Clear();
-            foreach (var hl in listHocLuc)
-            {
-                ListViewItem item = new ListViewItem(hl.MaHocLuc);
-                item.SubItems.Add(hl.TenHocLuc);
-                item.SubItems.Add(hl.DiemCanTren.ToString());
-                item.SubItems.Add(hl.DiemCanDuoi.ToString());
-                item.SubItems.Add(hl.DiemKhongChe.ToString());
-                listHL.Items.Add(item);
-            }
-            listHL.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
-        }
-
-        private void LoadDataTableHanhKiem()
-        {
-
-            List<HanhKiemDTO> listHanhKiem = hanhKiemBLL.GetAllHanhKiem();
-            listHK.Items.Clear();
-            foreach (var hk in listHanhKiem)
-            {
-                ListViewItem item = new ListViewItem(hk.MaHanhKiem);
-                item.SubItems.Add(hk.TenHanhKiem);
-                //item.SubItems.Add(hk.DiemCanTren.ToString());
-                //item.SubItems.Add(hk.DiemCanDuoi.ToString());
-                //item.SubItems.Add(hk.DiemKhongChe.ToString());
-                listHK.Items.Add(item);
-            }
-            listTT.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
-        }
         private void MaterialTabControl_Selected(object sender, TabControlEventArgs e)
         {
             if (e.TabPageIndex == 7)
@@ -618,8 +535,6 @@ namespace GUI_CSharp
                     this.materialTabControl1.SelectedTab = this.materialTabControl1.TabPages[0];
                 }
             }
-
-
 
             // Lớp học
             if (e.TabPageIndex == 1)
@@ -1076,9 +991,8 @@ namespace GUI_CSharp
         // Nội quy
         private void btnThemTT_Click(object sender, EventArgs e)
         {
-            ThemTT themTTForm = new ThemTT();
-            themTTForm.Show();
-            LoadDataTableThanhTich();
+            ThemTT a = new ThemTT();
+            a.Show();
         }
 
         private void btnThemVP_Click(object sender, EventArgs e)
@@ -1103,14 +1017,12 @@ namespace GUI_CSharp
         {
             ThemHocLuc a = new ThemHocLuc();
             a.Show();
-            LoadDataTableHocLuc();
         }
 
         private void btnThemHK_Click(object sender, EventArgs e)
         {
             ThemHanhKiem a = new ThemHanhKiem();
             a.Show();
-            LoadDataTableHanhKiem();
         }
 
         private void btnQLHS_Click(object sender, EventArgs e)
@@ -1133,7 +1045,6 @@ namespace GUI_CSharp
             this.materialTabControl1.SelectedTab = this.materialTabControl1.TabPages[6];
         }
 
-<<<<<<< Updated upstream
         private void listHS_Click(object sender, EventArgs e)
         {
 
@@ -1146,75 +1057,10 @@ namespace GUI_CSharp
                 string maHocSinh = listHS.SelectedItems[0].SubItems[0].Text;
 
                 var confirmResult = MessageBox.Show("Bạn có chắc chắn muốn xóa học sinh mã " + maHocSinh + " không?",
-=======
-        private void btnTimkiem_TT_Click(object sender, EventArgs e)
-        {
-            string searchTerm = txTimkiem_TT.Text.Trim();
-            LoadThanhTichSearchResults(searchTerm);
-        }
-
-        private void LoadThanhTichSearchResults(string searchTerm)
-        {
-            var results = thanhTichBLL.SearchThanhTich(searchTerm);
-            listTT.Items.Clear();
-            if (results.Count > 0)
-            {
-                foreach (var thanhTich in results)
-                {
-                    ListViewItem item = new ListViewItem(thanhTich.MaThanhTich);
-                    item.SubItems.Add(thanhTich.NoiDung);
-                    item.SubItems.Add(thanhTich.DiemThuong.ToString()); // Convert double to string
-                    listTT.Items.Add(item);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Không tìm thấy học sinh nào khớp với yêu cầu tìm kiếm.");
-            }
-        }
-        private void btnTimkiem_VP_Click(object sender, EventArgs e)
-        {
-            string searchTerm = txTimkiem_VP.Text.Trim();
-            LoadViPhamSearchResults(searchTerm);
-        }
-        private void LoadViPhamSearchResults(string searchTerm)
-        {
-            var results = viPhamBLL.SearchViPham(searchTerm);
-            listVP.Items.Clear();
-            if (results.Count > 0)
-            {
-                foreach (var viPham in results)
-                {
-                    ListViewItem item = new ListViewItem(viPham.MaViPham);
-                    item.SubItems.Add(viPham.NoiDung);
-                    item.SubItems.Add(viPham.DiemTru.ToString()); // Convert double to string
-                    listVP.Items.Add(item);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Không tìm thấy vi phạm nào khớp với yêu cầu tìm kiếm.");
-            }
-        }
-
-        private void btnLoadList_TTVP_Click(object sender, EventArgs e)
-        {
-            LoadDataTableThanhTich();
-            LoadDataTableViPham();
-        }
-
-        private void btnXoaHL_HK_Click(object sender, EventArgs e)
-        {
-            if (listHL.SelectedItems.Count > 0)
-            {
-                string maHocLuc = listHL.SelectedItems[0].SubItems[0].Text;
-                var confirmResult = MessageBox.Show("Bạn có chắc chắn muốn xóa Học Lực mã " + maHocLuc + " không?",
->>>>>>> Stashed changes
                                                      "Xác nhận xóa",
                                                      MessageBoxButtons.YesNo);
                 if (confirmResult == DialogResult.Yes)
                 {
-<<<<<<< Updated upstream
                     if (hocSinhBLL.DeleteHocSinh(maHocSinh))
                     {
                         MessageBox.Show("Xóa học sinh mã " + maHocSinh + " thành công!");
@@ -1223,35 +1069,6 @@ namespace GUI_CSharp
                     else
                     {
                         MessageBox.Show("Xóa học sinh mã " + maHocSinh + " thất bại!");
-=======
-                    if (hocLucBLL.DeleteHocLuc(maHocLuc))
-                    {
-                        MessageBox.Show("Xóa học lực mã " + maHocLuc + " thành công!");
-                        LoadDataTableHocLuc();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Xóa học lực mã " + maHocLuc + " thất bại!");
-                    }
-                }
-            }
-            else if (listHK.SelectedItems.Count > 0)
-            {
-                string maHanhKiem = listHK.SelectedItems[0].SubItems[0].Text;
-                var confirmResult = MessageBox.Show("Bạn có chắc chắn muốn xóa hạnh kiểm mã " + maHanhKiem + " không?",
-                                                     "Xác nhận xóa",
-                                                     MessageBoxButtons.YesNo);
-                if (confirmResult == DialogResult.Yes)
-                {
-                    if (hanhKiemBLL.DeleteHanhKiem(maHanhKiem))
-                    {
-                        MessageBox.Show("Xóa hạnh kiểm mã " + maHanhKiem + " thành công!");
-                        LoadDataTableHanhKiem();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Xóa hạnh kiểm mã " + maHanhKiem + " thất bại!");
->>>>>>> Stashed changes
                     }
                 }
             }
@@ -1260,7 +1077,6 @@ namespace GUI_CSharp
                 MessageBox.Show("Vui lòng chọn một học sinh để xóa.");
             }
         }
-<<<<<<< Updated upstream
 
         private void btnLoadListHS_Click(object sender, EventArgs e)
         {
@@ -1521,166 +1337,5 @@ namespace GUI_CSharp
         }
 
         
-=======
-        private void btnXoa_TTVP_Click(object sender, EventArgs e)
-        {
-            if (listVP.SelectedItems.Count > 0)
-            {
-                string maViPham = listVP.SelectedItems[0].SubItems[0].Text;
-                var confirmResult = MessageBox.Show("Bạn có chắc chắn muốn xóa Vi Pham mã " + maViPham + " không?",
-                                                     "Xác nhận xóa",
-                                                     MessageBoxButtons.YesNo);
-                if (confirmResult == DialogResult.Yes)
-                {
-                    if (viPhamBLL.DeleteViPham(maViPham))
-                    {
-                        MessageBox.Show("Xóa vi pham mã " + maViPham + " thành công!");
-                        LoadDataTableViPham();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Xóa vi pham mã " + maViPham + " thất bại!");
-                    }
-                }
-            }
-            else if (listTT.SelectedItems.Count > 0)
-            {
-                string maThanhTich = listTT.SelectedItems[0].SubItems[0].Text;
-                var confirmResult = MessageBox.Show("Bạn có chắc chắn muốn xóa thanh tich mã " + maThanhTich + " không?",
-                                                     "Xác nhận xóa",
-                                                     MessageBoxButtons.YesNo);
-                if (confirmResult == DialogResult.Yes)
-                {
-                    if (thanhTichBLL.DeleteThanhTich(maThanhTich))
-                    {
-                        MessageBox.Show("Xóa thanh tich mã " + maThanhTich + " thành công!");
-                        LoadDataTableThanhTich();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Xóa thanh tich mã " + maThanhTich + " thất bại!");
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn một học sinh để xóa.");
-            }
-        }
-        
-        
-        private void Trangchu_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
-        
-
-        private void btnLoadListHL_HK_Click(object sender, EventArgs e)
-        {
-            LoadDataTableHanhKiem();
-            LoadDataTableHocLuc();
-        }
-
-        private void btnSua_TTVP_Click(object sender, EventArgs e)
-        {
-            if (listVP.SelectedItems.Count > 0)
-            {
-                string maViPham = listVP.SelectedItems[0].SubItems[0].Text;
-                SuaVP suaVPForm = new SuaVP(maViPham);
-                suaVPForm.Show();
-                LoadDataTableViPham();
-            }
-            else if (listTT.SelectedItems.Count > 0)
-            {
-                string maThanhTich = listTT.SelectedItems[0].SubItems[0].Text;
-                SuaTT suaTTForm = new SuaTT(maThanhTich);
-                suaTTForm.Show();
-                LoadDataTableThanhTich();
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn một học sinh để sửa.");
-            }
-        }
-
-        private void btnTimkiemHL_Click(object sender, EventArgs e)
-        {
-            string searchTerm = txTimkiemHL.Text.Trim();
-            LoadHocLucSearchResults(searchTerm);
-        }
-        private void LoadHocLucSearchResults(string searchTerm)
-        {
-            var results = hocLucBLL.SearchHocLuc(searchTerm);
-            listHL.Items.Clear();
-            if (results.Count > 0)
-            {
-                foreach (var hocLuc in results)
-                {
-                    ListViewItem item = new ListViewItem(hocLuc.MaHocLuc);
-                    item.SubItems.Add(hocLuc.TenHocLuc);
-                    item.SubItems.Add(hocLuc.DiemCanTren.ToString()); 
-                    item.SubItems.Add(hocLuc.DiemCanDuoi.ToString());
-                    item.SubItems.Add(hocLuc.DiemKhongChe.ToString());
-                    listHL.Items.Add(item);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Không tìm thấy học sinh nào khớp với yêu cầu tìm kiếm.");
-            }
-        }
-        private void btnTimkiemHK_Click(object sender, EventArgs e)
-        {
-            string searchTerm = txTimkiemHK.Text.Trim();
-            LoadHanhKiemSearchResults(searchTerm);
-        }
-        private void LoadHanhKiemSearchResults(string searchTerm)
-        {
-            var results = hanhKiemBLL.SearchHanhKiem(searchTerm);
-            listHK.Items.Clear();
-            if (results.Count > 0)
-            {
-                foreach (var hanhKiem in results)
-                {
-                    ListViewItem item = new ListViewItem(hanhKiem.MaHanhKiem);
-                    item.SubItems.Add(hanhKiem.TenHanhKiem);
-                   
-                    listHK.Items.Add(item);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Không tìm thấy học sinh nào khớp với yêu cầu tìm kiếm.");
-            }
-        }
-        private void btnSuaHL_HK_Click(object sender, EventArgs e)
-        {
-            if (listHL.SelectedItems.Count > 0)
-            {
-                string maHocLuc = listHL.SelectedItems[0].SubItems[0].Text;
-                SuaHL suaHLForm = new SuaHL(maHocLuc);
-                suaHLForm.Show();
-                LoadDataTableHocLuc();
-            }
-            else if (listHK.SelectedItems.Count > 0)
-            {
-                string maHanhKiem = listHK.SelectedItems[0].SubItems[0].Text;
-                SuaHK suaHKForm = new SuaHK(maHanhKiem);
-                suaHKForm.Show();
-                LoadDataTableHanhKiem();
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn một học sinh để sửa.");
-            }
-        }
->>>>>>> Stashed changes
     }
 }
