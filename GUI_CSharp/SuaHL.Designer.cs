@@ -1,6 +1,6 @@
 ﻿namespace GUI_CSharp
 {
-    partial class ThemHocLuc
+    partial class SuaHL
     {
         /// <summary>
         /// Required designer variable.
@@ -31,26 +31,24 @@
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.label2 = new System.Windows.Forms.Label();
             this.txMaHL = new MaterialSkin.Controls.MaterialTextBox();
+            this.btnSuaHL = new MaterialSkin.Controls.MaterialButton();
             this.diemKhongche = new MaterialSkin.Controls.MaterialTextBox();
             this.diemCanduoi = new MaterialSkin.Controls.MaterialTextBox();
             this.diemCantren = new MaterialSkin.Controls.MaterialTextBox();
             this.txTenHL = new MaterialSkin.Controls.MaterialTextBox();
-            this.btnThem = new MaterialSkin.Controls.MaterialButton();
             this.materialCard1.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialCard1
             // 
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard1.BackgroundImage = global::GUI_CSharp.Properties.Resources.add;
             this.materialCard1.Controls.Add(this.label2);
             this.materialCard1.Controls.Add(this.txMaHL);
-            this.materialCard1.Controls.Add(this.btnThem);
+            this.materialCard1.Controls.Add(this.btnSuaHL);
             this.materialCard1.Controls.Add(this.diemKhongche);
             this.materialCard1.Controls.Add(this.diemCanduoi);
             this.materialCard1.Controls.Add(this.diemCantren);
             this.materialCard1.Controls.Add(this.txTenHL);
-            this.materialCard1.Cursor = System.Windows.Forms.Cursors.Default;
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard1.Location = new System.Drawing.Point(4, 68);
@@ -60,7 +58,6 @@
             this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard1.Size = new System.Drawing.Size(500, 577);
             this.materialCard1.TabIndex = 39;
-            
             // 
             // label2
             // 
@@ -71,7 +68,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(231, 43);
             this.label2.TabIndex = 36;
-            this.label2.Text = "THÊM HỌC LỰC";
+            this.label2.Text = "SỬA HỌC LỰC";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txMaHL
@@ -80,7 +77,7 @@
             this.txMaHL.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txMaHL.Depth = 0;
             this.txMaHL.Enabled = false;
-            this.txMaHL.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txMaHL.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txMaHL.Hint = "Mã học lực";
             this.txMaHL.LeadingIcon = null;
             this.txMaHL.Location = new System.Drawing.Point(43, 107);
@@ -93,12 +90,35 @@
             this.txMaHL.Text = "";
             this.txMaHL.TrailingIcon = null;
             // 
+            // btnSuaHL
+            // 
+            this.btnSuaHL.AutoSize = false;
+            this.btnSuaHL.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSuaHL.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnSuaHL.Depth = 0;
+            this.btnSuaHL.HighEmphasis = true;
+            this.btnSuaHL.Icon = global::GUI_CSharp.Properties.Resources.add;
+            this.btnSuaHL.Location = new System.Drawing.Point(103, 491);
+            this.btnSuaHL.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSuaHL.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSuaHL.Name = "btnSuaHL";
+            this.btnSuaHL.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnSuaHL.Size = new System.Drawing.Size(281, 39);
+            this.btnSuaHL.TabIndex = 38;
+            this.btnSuaHL.TabStop = false;
+            this.btnSuaHL.Text = "Sửa";
+            this.btnSuaHL.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSuaHL.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnSuaHL.UseAccentColor = false;
+            this.btnSuaHL.UseVisualStyleBackColor = true;
+            this.btnSuaHL.Click += new System.EventHandler(this.btnSuaHL_Click);
+            // 
             // diemKhongche
             // 
             this.diemKhongche.AnimateReadOnly = false;
             this.diemKhongche.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.diemKhongche.Depth = 0;
-            this.diemKhongche.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.diemKhongche.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.diemKhongche.Hint = "Điểm khống chế";
             this.diemKhongche.LeadingIcon = null;
             this.diemKhongche.Location = new System.Drawing.Point(43, 411);
@@ -116,7 +136,7 @@
             this.diemCanduoi.AnimateReadOnly = false;
             this.diemCanduoi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.diemCanduoi.Depth = 0;
-            this.diemCanduoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.diemCanduoi.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.diemCanduoi.Hint = "Điểm cận dưới";
             this.diemCanduoi.LeadingIcon = null;
             this.diemCanduoi.Location = new System.Drawing.Point(43, 335);
@@ -134,7 +154,7 @@
             this.diemCantren.AnimateReadOnly = false;
             this.diemCantren.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.diemCantren.Depth = 0;
-            this.diemCantren.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.diemCantren.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.diemCantren.Hint = "Điểm cận trên";
             this.diemCantren.LeadingIcon = null;
             this.diemCantren.Location = new System.Drawing.Point(43, 259);
@@ -152,7 +172,7 @@
             this.txTenHL.AnimateReadOnly = false;
             this.txTenHL.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txTenHL.Depth = 0;
-            this.txTenHL.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txTenHL.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txTenHL.Hint = "Học lực";
             this.txTenHL.LeadingIcon = null;
             this.txTenHL.Location = new System.Drawing.Point(43, 183);
@@ -165,30 +185,7 @@
             this.txTenHL.Text = "";
             this.txTenHL.TrailingIcon = null;
             // 
-            // btnThem
-            // 
-            this.btnThem.AutoSize = false;
-            this.btnThem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnThem.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnThem.Depth = 0;
-            this.btnThem.HighEmphasis = true;
-            this.btnThem.Icon = global::GUI_CSharp.Properties.Resources.add;
-            this.btnThem.Location = new System.Drawing.Point(105, 488);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnThem.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnThem.Name = "btnThem";
-            this.btnThem.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnThem.Size = new System.Drawing.Size(279, 42);
-            this.btnThem.TabIndex = 38;
-            this.btnThem.TabStop = false;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnThem.UseAccentColor = false;
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // ThemHocLuc
+            // SuaHL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -196,10 +193,10 @@
             this.Controls.Add(this.materialCard1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ThemHocLuc";
+            this.Name = "SuaHL";
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ThemHocLuc";
+            this.Text = "SuaHocLuc";
             this.materialCard1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -210,7 +207,7 @@
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private System.Windows.Forms.Label label2;
         private MaterialSkin.Controls.MaterialTextBox txMaHL;
-        private MaterialSkin.Controls.MaterialButton btnThem;
+        private MaterialSkin.Controls.MaterialButton btnSuaHL;
         private MaterialSkin.Controls.MaterialTextBox diemKhongche;
         private MaterialSkin.Controls.MaterialTextBox diemCanduoi;
         private MaterialSkin.Controls.MaterialTextBox diemCantren;

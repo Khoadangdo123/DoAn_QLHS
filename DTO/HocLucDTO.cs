@@ -2,7 +2,7 @@
 
 namespace GUI_CSharp.DTO
 {
-    internal class HocLucDTO
+    public class HocLucDTO
     {
         // Fields
         private string maHocLuc;       // Corresponds to MaHocLuc VARCHAR(6)

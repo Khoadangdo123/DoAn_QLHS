@@ -327,6 +327,18 @@
     <Compile Include="SuaGV.Designer.cs">
       <DependentUpon>SuaGV.cs</DependentUpon>
     </Compile>
+    <Compile Include="SuaHK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaHK.Designer.cs">
+      <DependentUpon>SuaHK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuaHL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaHL.Designer.cs">
+      <DependentUpon>SuaHL.cs</DependentUpon>
+    </Compile>
     <Compile Include="SuaHS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -344,6 +356,18 @@
     </Compile>
     <Compile Include="SuaPhanCong.Designer.cs">
       <DependentUpon>SuaPhanCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuaTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaTT.Designer.cs">
+      <DependentUpon>SuaTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuaVP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaVP.Designer.cs">
+      <DependentUpon>SuaVP.cs</DependentUpon>
     </Compile>
     <Compile Include="ThemGV.cs">
       <SubType>Form</SubType>
@@ -416,6 +440,12 @@
     <EmbeddedResource Include="SuaGV.resx">
       <DependentUpon>SuaGV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SuaHK.resx">
+      <DependentUpon>SuaHK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaHL.resx">
+      <DependentUpon>SuaHL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SuaHS.resx">
       <DependentUpon>SuaHS.cs</DependentUpon>
     </EmbeddedResource>
@@ -424,6 +454,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SuaPhanCong.resx">
       <DependentUpon>SuaPhanCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaTT.resx">
+      <DependentUpon>SuaTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaVP.resx">
+      <DependentUpon>SuaVP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemGV.resx">
       <DependentUpon>ThemGV.cs</DependentUpon>

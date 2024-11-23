@@ -14,38 +14,44 @@ using GUI_CSharp.DTO;
 
 namespace GUI_CSharp
 {
-    public partial class ThemTT : MaterialForm
+    public partial class SuaTT : MaterialForm
     {
         ThanhTichBLL thanhTichBLL = new ThanhTichBLL();
-        public ThemTT()
+        public SuaTT(string maThanhTich)
         {
             InitializeComponent();
-
-            string maTT_New = thanhTichBLL.GenMaTT();
-            txMaTT.Text = maTT_New;
+            LoadThanhTichByMa(maThanhTich);
 
             cbDiemCong.Items.AddRange(new object[] { 1, 2, 3, 4, 5 });
             cbDiemCong.SelectedIndex = 0; // Set default selected value
-
         }
 
-        private void btnThemTT_Click(object sender, EventArgs e)
+        private void LoadThanhTichByMa(string maThanhTich)
+        {
+            ThanhTichDTO thanhTich = thanhTichBLL.GetThanhTichByMa(maThanhTich);
+            if (thanhTich != null)
+            {
+                txMaTT.Text = thanhTich.MaThanhTich;
+                txTenTT.Text = thanhTich.TenThanhTich;
+                cbDiemCong.SelectedItem = thanhTich.DiemThuong;
+            }
+        }
+        private void btnSuaTT_Click(object sender, EventArgs e)
         {
             ThanhTichDTO thanhTich = new ThanhTichDTO
             {
                 MaThanhTich = txMaTT.Text,
                 TenThanhTich = txTenTT.Text,
                 DiemThuong = Convert.ToDouble(cbDiemCong.SelectedItem)
-
             };
 
-            if (thanhTichBLL.AddThanhTich(thanhTich))
+            if (thanhTichBLL.UpdateThanhTich(thanhTich))
             {
-                MessageBox.Show("Thêm thành tích thành công!");
+                MessageBox.Show("Sửa thành tích thành công!");
             }
             else
             {
-                MessageBox.Show("Thêm thành tích thất bại!");
+                MessageBox.Show("Sửa thành tích thất bại!");
             }
         }
     }
