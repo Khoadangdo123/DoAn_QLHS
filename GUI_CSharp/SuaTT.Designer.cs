@@ -1,6 +1,6 @@
 ﻿namespace GUI_CSharp
 {
-    partial class ThemTT
+    partial class SuaTT
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.cbDiemCong = new MaterialSkin.Controls.MaterialComboBox();
-            this.btnThemTT = new MaterialSkin.Controls.MaterialButton();
+            this.btnSuaTT = new MaterialSkin.Controls.MaterialButton();
             this.txTenTT = new MaterialSkin.Controls.MaterialTextBox();
             this.txMaTT = new MaterialSkin.Controls.MaterialTextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,18 +41,18 @@
             // 
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard1.Controls.Add(this.cbDiemCong);
-            this.materialCard1.Controls.Add(this.btnThemTT);
+            this.materialCard1.Controls.Add(this.btnSuaTT);
             this.materialCard1.Controls.Add(this.txTenTT);
             this.materialCard1.Controls.Add(this.txMaTT);
             this.materialCard1.Controls.Add(this.label2);
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(2, 67);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard1.Location = new System.Drawing.Point(3, 103);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(21, 22, 21, 22);
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(520, 520);
+            this.materialCard1.Padding = new System.Windows.Forms.Padding(21, 22, 21, 22);
+            this.materialCard1.Size = new System.Drawing.Size(780, 800);
             this.materialCard1.TabIndex = 0;
             // 
             // cbDiemCong
@@ -70,36 +70,37 @@
             this.cbDiemCong.Hint = "Điểm cộng";
             this.cbDiemCong.IntegralHeight = false;
             this.cbDiemCong.ItemHeight = 43;
-            this.cbDiemCong.Location = new System.Drawing.Point(59, 310);
+            this.cbDiemCong.Location = new System.Drawing.Point(88, 477);
+            this.cbDiemCong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbDiemCong.MaxDropDownItems = 4;
             this.cbDiemCong.MouseState = MaterialSkin.MouseState.OUT;
             this.cbDiemCong.Name = "cbDiemCong";
-            this.cbDiemCong.Size = new System.Drawing.Size(411, 49);
+            this.cbDiemCong.Size = new System.Drawing.Size(614, 49);
             this.cbDiemCong.StartIndex = 0;
             this.cbDiemCong.TabIndex = 39;
             // 
-            // btnThemTT
+            // btnSuaTT
             // 
-            this.btnThemTT.AutoSize = false;
-            this.btnThemTT.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnThemTT.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnThemTT.Depth = 0;
-            this.btnThemTT.HighEmphasis = true;
-            this.btnThemTT.Icon = global::GUI_CSharp.Properties.Resources.add;
-            this.btnThemTT.Location = new System.Drawing.Point(121, 397);
-            this.btnThemTT.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnThemTT.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnThemTT.Name = "btnThemTT";
-            this.btnThemTT.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnThemTT.Size = new System.Drawing.Size(279, 42);
-            this.btnThemTT.TabIndex = 38;
-            this.btnThemTT.TabStop = false;
-            this.btnThemTT.Text = "Thêm";
-            this.btnThemTT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThemTT.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnThemTT.UseAccentColor = false;
-            this.btnThemTT.UseVisualStyleBackColor = true;
-            this.btnThemTT.Click += new System.EventHandler(this.btnThemTT_Click);
+            this.btnSuaTT.AutoSize = false;
+            this.btnSuaTT.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSuaTT.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnSuaTT.Depth = 0;
+            this.btnSuaTT.HighEmphasis = true;
+            this.btnSuaTT.Icon = global::GUI_CSharp.Properties.Resources.add;
+            this.btnSuaTT.Location = new System.Drawing.Point(182, 611);
+            this.btnSuaTT.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
+            this.btnSuaTT.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSuaTT.Name = "btnSuaTT";
+            this.btnSuaTT.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnSuaTT.Size = new System.Drawing.Size(418, 65);
+            this.btnSuaTT.TabIndex = 38;
+            this.btnSuaTT.TabStop = false;
+            this.btnSuaTT.Text = "Sửa";
+            this.btnSuaTT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSuaTT.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnSuaTT.UseAccentColor = false;
+            this.btnSuaTT.UseVisualStyleBackColor = true;
+            this.btnSuaTT.Click += new System.EventHandler(this.btnSuaTT_Click);
             // 
             // txTenTT
             // 
@@ -109,12 +110,13 @@
             this.txTenTT.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txTenTT.Hint = "Thành tích";
             this.txTenTT.LeadingIcon = null;
-            this.txTenTT.Location = new System.Drawing.Point(59, 220);
+            this.txTenTT.Location = new System.Drawing.Point(88, 338);
+            this.txTenTT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txTenTT.MaxLength = 50;
             this.txTenTT.MouseState = MaterialSkin.MouseState.OUT;
             this.txTenTT.Multiline = false;
             this.txTenTT.Name = "txTenTT";
-            this.txTenTT.Size = new System.Drawing.Size(411, 50);
+            this.txTenTT.Size = new System.Drawing.Size(616, 50);
             this.txTenTT.TabIndex = 36;
             this.txTenTT.Text = "";
             this.txTenTT.TrailingIcon = null;
@@ -128,12 +130,13 @@
             this.txMaTT.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txMaTT.Hint = "Mã thành tích";
             this.txMaTT.LeadingIcon = null;
-            this.txMaTT.Location = new System.Drawing.Point(59, 130);
+            this.txMaTT.Location = new System.Drawing.Point(88, 200);
+            this.txMaTT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txMaTT.MaxLength = 50;
             this.txMaTT.MouseState = MaterialSkin.MouseState.OUT;
             this.txMaTT.Multiline = false;
             this.txMaTT.Name = "txMaTT";
-            this.txMaTT.Size = new System.Drawing.Size(411, 50);
+            this.txMaTT.Size = new System.Drawing.Size(616, 50);
             this.txMaTT.TabIndex = 1;
             this.txMaTT.Text = "";
             this.txMaTT.TrailingIcon = null;
@@ -143,25 +146,27 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(149, 45);
+            this.label2.Location = new System.Drawing.Point(224, 69);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(231, 43);
+            this.label2.Size = new System.Drawing.Size(346, 66);
             this.label2.TabIndex = 35;
-            this.label2.Text = "THÊM THÀNH TÍCH";
+            this.label2.Text = "SỬA THÀNH TÍCH";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ThemTT
+            // SuaTT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 592);
+            this.ClientSize = new System.Drawing.Size(786, 911);
             this.Controls.Add(this.materialCard1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ThemTT";
-            this.Sizable = false;
+            this.Name = "SuaTT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ThemThanhTich";
+            this.Text = "SuaThanhTich";
+            this.Sizable = false;
             this.materialCard1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -171,7 +176,7 @@
 
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private MaterialSkin.Controls.MaterialComboBox cbDiemCong;
-        private MaterialSkin.Controls.MaterialButton btnThemTT;
+        private MaterialSkin.Controls.MaterialButton btnSuaTT;
         private MaterialSkin.Controls.MaterialTextBox txTenTT;
         private MaterialSkin.Controls.MaterialTextBox txMaTT;
         private System.Windows.Forms.Label label2;

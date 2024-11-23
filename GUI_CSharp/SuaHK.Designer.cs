@@ -1,6 +1,6 @@
 ﻿namespace GUI_CSharp
 {
-    partial class ThemHanhKiem
+    partial class SuaHK
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@
             this.txMaHK = new MaterialSkin.Controls.MaterialTextBox();
             this.txTenHK = new MaterialSkin.Controls.MaterialTextBox();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            this.btnThem = new MaterialSkin.Controls.MaterialButton();
+            this.btnSuaHK = new MaterialSkin.Controls.MaterialButton();
             this.diemCanduoi = new MaterialSkin.Controls.MaterialTextBox();
             this.diemCantren = new MaterialSkin.Controls.MaterialTextBox();
             this.materialCard1.SuspendLayout();
@@ -47,7 +47,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(231, 43);
             this.label2.TabIndex = 36;
-            this.label2.Text = "THÊM HẠNH KIỂM";
+            this.label2.Text = "SỬA HẠNH KIỂM";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txMaHK
@@ -92,7 +92,7 @@
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard1.Controls.Add(this.label2);
             this.materialCard1.Controls.Add(this.txMaHK);
-            this.materialCard1.Controls.Add(this.btnThem);
+            this.materialCard1.Controls.Add(this.btnSuaHK);
             this.materialCard1.Controls.Add(this.diemCanduoi);
             this.materialCard1.Controls.Add(this.diemCantren);
             this.materialCard1.Controls.Add(this.txTenHK);
@@ -106,28 +106,28 @@
             this.materialCard1.Size = new System.Drawing.Size(480, 497);
             this.materialCard1.TabIndex = 38;
             // 
-            // btnThem
+            // btnSuaHK
             // 
-            this.btnThem.AutoSize = false;
-            this.btnThem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnThem.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnThem.Depth = 0;
-            this.btnThem.HighEmphasis = true;
-            this.btnThem.Icon = global::GUI_CSharp.Properties.Resources.add;
-            this.btnThem.Location = new System.Drawing.Point(95, 418);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnThem.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnThem.Name = "btnThem";
-            this.btnThem.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnThem.Size = new System.Drawing.Size(279, 42);
-            this.btnThem.TabIndex = 38;
-            this.btnThem.TabStop = false;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnThem.UseAccentColor = false;
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnSuaHK.AutoSize = false;
+            this.btnSuaHK.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSuaHK.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnSuaHK.Depth = 0;
+            this.btnSuaHK.HighEmphasis = true;
+            this.btnSuaHK.Icon = global::GUI_CSharp.Properties.Resources.add;
+            this.btnSuaHK.Location = new System.Drawing.Point(95, 418);
+            this.btnSuaHK.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSuaHK.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSuaHK.Name = "btnSuaHK";
+            this.btnSuaHK.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnSuaHK.Size = new System.Drawing.Size(279, 42);
+            this.btnSuaHK.TabIndex = 38;
+            this.btnSuaHK.TabStop = false;
+            this.btnSuaHK.Text = "Sửa";
+            this.btnSuaHK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSuaHK.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnSuaHK.UseAccentColor = false;
+            this.btnSuaHK.UseVisualStyleBackColor = true;
+            this.btnSuaHK.Click += new System.EventHandler(this.btnSuaHK_Click);
             // 
             // diemCanduoi
             // 
@@ -165,7 +165,7 @@
             this.diemCantren.Text = "";
             this.diemCantren.TrailingIcon = null;
             // 
-            // ThemHanhKiem
+            // SuaHK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -173,10 +173,10 @@
             this.Controls.Add(this.materialCard1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ThemHanhKiem";
+            this.Name = "SuaHK";
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ThemHanhKiem";
+            this.Text = "SuaHanhKiem";
             this.materialCard1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -190,6 +190,6 @@
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private MaterialSkin.Controls.MaterialTextBox diemCantren;
         private MaterialSkin.Controls.MaterialTextBox diemCanduoi;
-        private MaterialSkin.Controls.MaterialButton btnThem;
+        private MaterialSkin.Controls.MaterialButton btnSuaHK;
     }
 }
