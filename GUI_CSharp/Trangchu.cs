@@ -661,6 +661,10 @@ namespace GUI_CSharp
             // Nội quy
             if (e.TabPageIndex == 6)
             {
+                listTKKQ_HS.Visible = false;
+                listTKHS.Visible = true;
+                cardActionTKHS.Visible = true;
+                cardActionTKKQ.Visible = false;
                 cardTT_VP.Visible = true;
                 cardHL_HK.Visible = false;
             }
