@@ -12,22 +12,15 @@ using MaterialSkin;
 using System.Runtime.CompilerServices;
 using BLL;
 using GUI_CSharp.DTO;
-<<<<<<< Updated upstream
 using OfficeOpenXml;
 using System.IO;
-using System.Windows.Input;
-using DTO;
 
-
-=======
 using System.Drawing.Printing;
->>>>>>> Stashed changes
 
 namespace GUI_CSharp
 {
     public partial class Trangchu : MaterialForm
     {
-<<<<<<< Updated upstream
         private HocSinhBLL hocSinhBLL = new HocSinhBLL();
         private PhanLopBLL phanLopBLL = new PhanLopBLL();
         private DiemMonBLL diemMonBLL = new DiemMonBLL();
@@ -37,18 +30,16 @@ namespace GUI_CSharp
         private ThongKeKQLopBLL thongKeKQLopBLL = new ThongKeKQLopBLL();
         private ThongKeHocSinhBLL thongKeHocSinhBLL = new ThongKeHocSinhBLL();
         private LopBLL lopBLL = new LopBLL();
-=======
+
         private ViPhamBLL viPhamBLL = new ViPhamBLL();
         private ThanhTichBLL thanhTichBLL = new ThanhTichBLL();
         private HocLucBLL hocLucBLL = new HocLucBLL();
         private HanhKiemBLL hanhKiemBLL = new HanhKiemBLL();
->>>>>>> Stashed changes
         public Trangchu()
         {
             InitializeComponent();
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
             this.materialTabControl1.Selected += new TabControlEventHandler(this.MaterialTabControl_Selected);
-<<<<<<< Updated upstream
             LoadDataTableHocSinh();
             LoadDataTableDiemMon();
             LoadDanhSachNamHoc();
