@@ -7,7 +7,6 @@ namespace DAL
 {
     public class PhanCongDAL
     {
-
         public List<PhanCongDTO> GetAllPhanCong()
         {
             List<PhanCongDTO> list = new List<PhanCongDTO>();
@@ -25,7 +24,10 @@ namespace DAL
                             STT = int.Parse(reader["STT"].ToString()),
                             MaGiaoVien = reader["MaGiaoVien"].ToString(),
                             MaLop = reader["MaLop"].ToString(),
-                            MaMonHoc = reader["MaMonHoc"].ToString()
+                            MaMonHoc = reader["MaMonHoc"].ToString(),
+                            MaNamHoc = reader["MaNamHoc"].ToString(),
+                            SoTiet = int.Parse(reader["SoTiet"].ToString()),
+                            NgayPhanCong = DateTime.Parse(reader["NgayPhanCong"].ToString())
                         };
                         list.Add(pc);
                     }
@@ -34,9 +36,10 @@ namespace DAL
             }
             return list;
         }
+
         public int GenSTT()
         {
-            int newSTT = 1; 
+            int newSTT = 1;
             using (MySqlConnection conn = DatabaseHelper.GetConnection())
             {
                 DatabaseHelper.OpenConnection(conn);
@@ -71,7 +74,8 @@ namespace DAL
                             MaGiaoVien = reader["MaGiaoVien"].ToString(),
                             MaLop = reader["MaLop"].ToString(),
                             MaMonHoc = reader["MaMonHoc"].ToString(),
-                            MaNamHoc = reader["MaNamHoc"].ToString()
+                            MaNamHoc = reader["MaNamHoc"].ToString(),
+                            SoTiet = int.Parse(reader["SoTiet"].ToString())
                         };
                     }
                 }
@@ -85,30 +89,34 @@ namespace DAL
             using (MySqlConnection conn = DatabaseHelper.GetConnection())
             {
                 DatabaseHelper.OpenConnection(conn);
-                string query = "INSERT INTO PhanCong (MaGiaoVien, MaLop, MaMonHoc, MaNamHoc) VALUES (@MaGiaoVien, @MaLop, @MaMonHoc, @MaNamHoc)";
+                string query = "INSERT INTO PhanCong (MaGiaoVien, MaLop, MaMonHoc, MaNamHoc, SoTiet,NgayPhanCong) VALUES (@MaGiaoVien, @MaLop, @MaMonHoc, @MaNamHoc, @SoTiet,@NgayPhanCong)";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@MaGiaoVien", pc.MaGiaoVien);
                 cmd.Parameters.AddWithValue("@MaLop", pc.MaLop);
                 cmd.Parameters.AddWithValue("@MaMonHoc", pc.MaMonHoc);
                 cmd.Parameters.AddWithValue("@MaNamHoc", pc.MaNamHoc);
+                cmd.Parameters.AddWithValue("@SoTiet", pc.SoTiet);
+                cmd.Parameters.AddWithValue("@NgayPhanCong", pc.NgayPhanCong);
                 int result = cmd.ExecuteNonQuery();
                 DatabaseHelper.CloseConnection(conn);
                 return result > 0;
             }
         }
 
-
         public bool UpdatePhanCong(PhanCongDTO pc)
         {
             using (MySqlConnection conn = DatabaseHelper.GetConnection())
             {
                 DatabaseHelper.OpenConnection(conn);
-                string query = "UPDATE PhanCong SET MaGiaoVien = @MaGiaoVien, MaLop = @MaLop, MaMonHoc = @MaMonHoc WHERE STT = @STT";
+                string query = "UPDATE PhanCong SET MaGiaoVien = @MaGiaoVien, MaLop = @MaLop, MaMonHoc = @MaMonHoc, MaNamHoc = @MaNamHoc, SoTiet = @SoTiet, NgayPhanCong = @NgayPhanCong WHERE STT = @STT";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@STT", pc.STT);
                 cmd.Parameters.AddWithValue("@MaGiaoVien", pc.MaGiaoVien);
                 cmd.Parameters.AddWithValue("@MaLop", pc.MaLop);
                 cmd.Parameters.AddWithValue("@MaMonHoc", pc.MaMonHoc);
+                cmd.Parameters.AddWithValue("@MaNamHoc", pc.MaNamHoc);
+                cmd.Parameters.AddWithValue("@SoTiet", pc.SoTiet);
+                cmd.Parameters.AddWithValue("@NgayPhanCong", pc.NgayPhanCong);
                 int result = cmd.ExecuteNonQuery();
                 DatabaseHelper.CloseConnection(conn);
                 return result > 0;
@@ -128,6 +136,7 @@ namespace DAL
                 return result > 0;
             }
         }
+
         public List<KeyValuePair<string, string>> LayDanhSachNamHoc()
         {
             List<KeyValuePair<string, string>> namHocList = new List<KeyValuePair<string, string>>();
@@ -149,6 +158,7 @@ namespace DAL
 
             return namHocList;
         }
+
         public List<KeyValuePair<string, string>> LayDanhSachLop()
         {
             List<KeyValuePair<string, string>> lopList = new List<KeyValuePair<string, string>>();
@@ -170,12 +180,12 @@ namespace DAL
 
             return lopList;
         }
+
         public List<PhanCongDTO> SearchPhanCong(string searchTerm)
         {
             List<PhanCongDTO> results = new List<PhanCongDTO>();
 
-            // Truy vấn tìm kiếm cho mã giáo viên, mã lớp, hoặc mã môn học
-            string query = "SELECT * FROM PhanCong WHERE  MaGiaoVien LIKE @search OR MaLop LIKE @search OR MaMonHoc LIKE @search";
+            string query = "SELECT * FROM PhanCong WHERE MaGiaoVien LIKE @search OR MaLop LIKE @search OR MaMonHoc LIKE @search";
 
             using (MySqlConnection conn = DatabaseHelper.GetConnection())
             {
@@ -193,7 +203,8 @@ namespace DAL
                             MaGiaoVien = reader["MaGiaoVien"].ToString(),
                             MaLop = reader["MaLop"].ToString(),
                             MaMonHoc = reader["MaMonHoc"].ToString(),
-                            MaNamHoc = reader["MaNamHoc"].ToString()
+                            MaNamHoc = reader["MaNamHoc"].ToString(),
+                            SoTiet = int.Parse(reader["SoTiet"].ToString())
                         };
                         results.Add(phanCong);
                     }
@@ -202,6 +213,5 @@ namespace DAL
 
             return results;
         }
-
     }
 }

@@ -186,7 +186,9 @@ namespace GUI_CSharp
                 item.SubItems.Add(gv.DiaChi);
                 item.SubItems.Add(gv.MaMonHoc);
                 item.SubItems.Add(gv.DienThoai);
+                
                 listGV.Items.Add(item);
+
             }
         }
         private void LoadPhanCongList()
@@ -200,12 +202,17 @@ namespace GUI_CSharp
                 string tenLop = phanLopBLL.LayDanhSachLop().FirstOrDefault(l => l.Key == pc.MaLop).Value;
                 string tenMonHoc = diemMonBLL.LayDanhSachMonHoc().FirstOrDefault(mh => mh.Key == pc.MaMonHoc).Value;
                 string tenGiaoVien = giaoVienBLL.GetAllGiaoVien().FirstOrDefault(gv => gv.MaGiaoVien == pc.MaGiaoVien).TenGiaoVien;
+                string soTiet = pc.SoTiet.ToString();
+                string ngayPhanCong = pc.NgayPhanCong.ToShortDateString();
 
                 ListViewItem item = new ListViewItem(pc.STT.ToString());
                 item.SubItems.Add(tenNamHoc);
                 item.SubItems.Add(tenLop);
                 item.SubItems.Add(tenMonHoc);
                 item.SubItems.Add(tenGiaoVien);
+                item.SubItems.Add(soTiet);
+                item.SubItems.Add(ngayPhanCong);
+
                 listPhancong.Items.Add(item);
             }
         }

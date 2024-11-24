@@ -13,6 +13,8 @@ namespace GUI_CSharp.DTO
         public string MaLop { get; set; }
         public string MaMonHoc { get; set; }
         public string MaGiaoVien { get; set; }
+        public int SoTiet { get; set; }
+        public DateTime NgayPhanCong { get; set; }
 
         public PhanCongDTO() { }
 

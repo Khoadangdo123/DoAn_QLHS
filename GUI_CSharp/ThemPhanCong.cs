@@ -68,7 +68,9 @@ namespace GUI_CSharp
             if (cbPhancongNamhoc.SelectedValue == null ||
                 cbPhancongGV.SelectedValue == null ||
                 cbPhancongMonhoc.SelectedValue == null ||
-                cbPhancongMalop.SelectedValue == null)
+                cbPhancongMalop.SelectedValue == null ||
+                string.IsNullOrEmpty(txSoTiet.Text)) 
+
             {
                 MessageBox.Show("Không được để trống !");
                 return;
@@ -79,9 +81,11 @@ namespace GUI_CSharp
                 string selectedMaGiaoVien = cbPhancongGV.SelectedValue.ToString();
                 string selectedMaMonHoc = cbPhancongMonhoc.SelectedValue.ToString();
                 string selectedMaLop = cbPhancongMalop.SelectedValue.ToString();
+                string selectedSoTiet = txSoTiet.Text;
+                DateTime selectedDate = dateTimePicker1.Value;
 
                 if (string.IsNullOrEmpty(selectedMaNamHoc) || string.IsNullOrEmpty(selectedMaGiaoVien) ||
-                    string.IsNullOrEmpty(selectedMaMonHoc) || string.IsNullOrEmpty(selectedMaLop))
+                    string.IsNullOrEmpty(selectedMaMonHoc) || string.IsNullOrEmpty(selectedMaLop) || string.IsNullOrEmpty(selectedSoTiet)) 
                 {
                     MessageBox.Show("Please select valid values for all fields.");
                     return;
@@ -92,7 +96,10 @@ namespace GUI_CSharp
                     MaGiaoVien = selectedMaGiaoVien,
                     MaMonHoc = selectedMaMonHoc,
                     MaLop = selectedMaLop,
-                    MaNamHoc = selectedMaNamHoc
+                    MaNamHoc = selectedMaNamHoc,
+                    SoTiet = int.Parse(selectedSoTiet),
+                    NgayPhanCong = selectedDate
+
                 };
 
                 bool result = phanCongBLL.InsertPhanCong(pc);
@@ -111,5 +118,19 @@ namespace GUI_CSharp
             }
         }
 
+        private void materialTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbPhancongGV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

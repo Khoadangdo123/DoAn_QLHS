@@ -87,6 +87,9 @@ namespace GUI_CSharp
             this.maLop_phanCong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.monHoc_phanCong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.giaoVien_phanCong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.soTiet_phanCong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ngay_phanCong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+
             this.cardActionGV = new MaterialSkin.Controls.MaterialCard();
             this.btnTimkiemGV = new MaterialSkin.Controls.MaterialButton();
             this.txTimkiemGV = new MaterialSkin.Controls.MaterialTextBox();
@@ -929,7 +932,9 @@ namespace GUI_CSharp
             this.namHoc_phanCong,
             this.maLop_phanCong,
             this.monHoc_phanCong,
-            this.giaoVien_phanCong});
+            this.giaoVien_phanCong,
+            this.soTiet_phanCong,
+            this.ngay_phanCong});
             this.listPhancong.Depth = 0;
             this.listPhancong.FullRowSelect = true;
             this.listPhancong.HideSelection = false;
@@ -975,6 +980,14 @@ namespace GUI_CSharp
             this.giaoVien_phanCong.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.giaoVien_phanCong.Width = 250;
             // 
+
+            this.soTiet_phanCong.Text = "Số Tiết";
+            this.soTiet_phanCong.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.soTiet_phanCong.Width = 100;
+
+            this.ngay_phanCong.Text = "Ngày Phân Công";
+            this.ngay_phanCong.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.ngay_phanCong.Width = 170;
             // cardActionGV
             // 
             this.cardActionGV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -3687,6 +3700,8 @@ namespace GUI_CSharp
         private System.Windows.Forms.ColumnHeader maLop_phanCong;
         private System.Windows.Forms.ColumnHeader monHoc_phanCong;
         private System.Windows.Forms.ColumnHeader giaoVien_phanCong;
+        private System.Windows.Forms.ColumnHeader ngay_phanCong;
+        private System.Windows.Forms.ColumnHeader soTiet_phanCong;
         private MaterialSkin.Controls.MaterialCard cardListHS;
         private MaterialSkin.Controls.MaterialListView listHS;
         private System.Windows.Forms.ColumnHeader maHS;
