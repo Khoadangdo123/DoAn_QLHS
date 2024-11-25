@@ -203,7 +203,7 @@ namespace GUI_CSharp
                 string tenMonHoc = diemMonBLL.LayDanhSachMonHoc().FirstOrDefault(mh => mh.Key == pc.MaMonHoc).Value;
                 string tenGiaoVien = giaoVienBLL.GetAllGiaoVien().FirstOrDefault(gv => gv.MaGiaoVien == pc.MaGiaoVien).TenGiaoVien;
                 string soTiet = pc.SoTiet.ToString();
-                string ngayPhanCong = pc.NgayPhanCong.ToShortDateString();
+                string ngayPhanCong = pc.NgayPhanCong;
 
                 ListViewItem item = new ListViewItem(pc.STT.ToString());
                 item.SubItems.Add(tenNamHoc);
@@ -442,7 +442,7 @@ namespace GUI_CSharp
 
         private void EditPhanCong()
         {
-            string sttString = listPhancong.SelectedItems[0].SubItems[0].Text; // Assuming the STT is in the first subitem
+            string sttString = listPhancong.SelectedItems[0].SubItems[0].Text;
             int stt;
             if (int.TryParse(sttString, out stt))
             {

@@ -69,6 +69,9 @@ namespace GUI_CSharp
             cbPhancongMalop.SelectedValue = phanCongDTO.MaLop;
             cbPhancongMonhoc.SelectedValue = phanCongDTO.MaMonHoc;
             cbPhancongGV.SelectedValue = phanCongDTO.MaGiaoVien;
+            txSoTiet.Text = phanCongDTO.SoTiet.ToString();
+            cbNgayPhanCong.SelectedItem = phanCongDTO.NgayPhanCong;
+
         }
         private void btnSua_Click(object sender, EventArgs e)
         {
@@ -79,6 +82,9 @@ namespace GUI_CSharp
                 string selectedMaGiaoVien = cbPhancongGV.SelectedValue.ToString();
                 string selectedMaMonHoc = cbPhancongMonhoc.SelectedValue.ToString();
                 string selectedMaLop = cbPhancongMalop.SelectedValue.ToString();
+                string selectedSoTiet = txSoTiet.Text;
+                string selectedNgayPhanCong = cbNgayPhanCong.SelectedItem.ToString();
+
 
                 PhanCongDTO phanCongDTO = new PhanCongDTO
                 {
@@ -86,7 +92,9 @@ namespace GUI_CSharp
                     MaNamHoc = selectedMaNamHoc,
                     MaGiaoVien = selectedMaGiaoVien,
                     MaMonHoc = selectedMaMonHoc,
-                    MaLop = selectedMaLop
+                    MaLop = selectedMaLop,
+                    SoTiet = int.Parse(selectedSoTiet),
+                    NgayPhanCong = selectedNgayPhanCong
                 };
 
                 bool result = phanCongBLL.UpdatePhanCong(phanCongDTO);
@@ -103,6 +111,11 @@ namespace GUI_CSharp
             {
                 MessageBox.Show($"Error: {ex.Message}");
             }
+        }
+
+        private void cbPhancongMalop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

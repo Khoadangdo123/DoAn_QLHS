@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.cardPhancong = new MaterialSkin.Controls.MaterialCard();
-            this.datePhanCongLable = new MaterialSkin.Controls.MaterialLabel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txSoTiet = new MaterialSkin.Controls.MaterialTextBox();
             this.btnThem = new MaterialSkin.Controls.MaterialButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,14 +38,14 @@
             this.cbPhancongMonhoc = new MaterialSkin.Controls.MaterialComboBox();
             this.txSttPhancong = new MaterialSkin.Controls.MaterialTextBox();
             this.dateTimePickerPhanCong = new System.Windows.Forms.DateTimePicker();
+            this.cbNgayPhanCong = new MaterialSkin.Controls.MaterialComboBox();
             this.cardPhancong.SuspendLayout();
             this.SuspendLayout();
             // 
             // cardPhancong
             // 
             this.cardPhancong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cardPhancong.Controls.Add(this.datePhanCongLable);
-            this.cardPhancong.Controls.Add(this.dateTimePicker1);
+            this.cardPhancong.Controls.Add(this.cbNgayPhanCong);
             this.cardPhancong.Controls.Add(this.txSoTiet);
             this.cardPhancong.Controls.Add(this.btnThem);
             this.cardPhancong.Controls.Add(this.label1);
@@ -65,30 +63,6 @@
             this.cardPhancong.Padding = new System.Windows.Forms.Padding(21, 22, 21, 22);
             this.cardPhancong.Size = new System.Drawing.Size(948, 1066);
             this.cardPhancong.TabIndex = 16;
-            // 
-            // datePhanCongLable
-            // 
-            this.datePhanCongLable.AutoSize = true;
-            this.datePhanCongLable.Depth = 0;
-            this.datePhanCongLable.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.datePhanCongLable.HighEmphasis = true;
-            this.datePhanCongLable.Location = new System.Drawing.Point(121, 808);
-            this.datePhanCongLable.MaximumSize = new System.Drawing.Size(1000, 500);
-            this.datePhanCongLable.MouseState = MaterialSkin.MouseState.HOVER;
-            this.datePhanCongLable.Name = "datePhanCongLable";
-            this.datePhanCongLable.Padding = new System.Windows.Forms.Padding(100);
-            this.datePhanCongLable.Size = new System.Drawing.Size(120, 19);
-            this.datePhanCongLable.TabIndex = 20;
-            this.datePhanCongLable.Text = "Ngày Phân Công";
-            this.datePhanCongLable.Click += new System.EventHandler(this.materialLabel1_Click);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(270, 801);
-            this.dateTimePicker1.MaximumSize = new System.Drawing.Size(300, 900);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(300, 26);
-            this.dateTimePicker1.TabIndex = 19;
             // 
             // txSoTiet
             // 
@@ -268,6 +242,40 @@
             this.dateTimePickerPhanCong.Size = new System.Drawing.Size(200, 26);
             this.dateTimePickerPhanCong.TabIndex = 0;
             // 
+            // cbNgayPhanCong
+            // 
+            this.cbNgayPhanCong.AutoResize = false;
+            this.cbNgayPhanCong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbNgayPhanCong.Depth = 0;
+            this.cbNgayPhanCong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cbNgayPhanCong.DropDownHeight = 174;
+            this.cbNgayPhanCong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNgayPhanCong.DropDownWidth = 121;
+            this.cbNgayPhanCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbNgayPhanCong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbNgayPhanCong.FormattingEnabled = true;
+            this.cbNgayPhanCong.Hint = "Ngày Đăng Ký";
+            this.cbNgayPhanCong.IntegralHeight = false;
+            this.cbNgayPhanCong.ItemHeight = 43;
+            this.cbNgayPhanCong.Items.AddRange(new object[] {
+            "Chủ nhật",
+            "Thứ 2",
+            "Thứ 3",
+            "Thứ 4 ",
+            "Thứ 5 ",
+            "Thứ 6 ",
+            "Thứ 7"});
+            this.cbNgayPhanCong.Location = new System.Drawing.Point(118, 790);
+            this.cbNgayPhanCong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbNgayPhanCong.MaxDropDownItems = 10;
+            this.cbNgayPhanCong.MouseState = MaterialSkin.MouseState.OUT;
+            this.cbNgayPhanCong.Name = "cbNgayPhanCong";
+            this.cbNgayPhanCong.Size = new System.Drawing.Size(688, 49);
+            this.cbNgayPhanCong.StartIndex = 0;
+            this.cbNgayPhanCong.TabIndex = 19;
+
+           
+            // 
             // ThemPhanCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -284,7 +292,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThemPhanCong";
             this.cardPhancong.ResumeLayout(false);
-            this.cardPhancong.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -301,7 +308,6 @@
         private MaterialSkin.Controls.MaterialButton btnThem;
         private MaterialSkin.Controls.MaterialTextBox txSoTiet;
         private System.Windows.Forms.DateTimePicker dateTimePickerPhanCong;
-        private MaterialSkin.Controls.MaterialLabel datePhanCongLable;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public MaterialSkin.Controls.MaterialComboBox cbNgayPhanCong;
     }
 }

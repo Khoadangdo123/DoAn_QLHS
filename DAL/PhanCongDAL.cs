@@ -27,7 +27,7 @@ namespace DAL
                             MaMonHoc = reader["MaMonHoc"].ToString(),
                             MaNamHoc = reader["MaNamHoc"].ToString(),
                             SoTiet = int.Parse(reader["SoTiet"].ToString()),
-                            NgayPhanCong = DateTime.Parse(reader["NgayPhanCong"].ToString())
+                            NgayPhanCong =  reader["NgayPhanCong"].ToString()
                         };
                         list.Add(pc);
                     }

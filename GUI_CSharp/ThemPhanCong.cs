@@ -66,11 +66,10 @@ namespace GUI_CSharp
         private void btnThem_Click(object sender, EventArgs e)
         {
             if (cbPhancongNamhoc.SelectedValue == null ||
-                cbPhancongGV.SelectedValue == null ||
-                cbPhancongMonhoc.SelectedValue == null ||
-                cbPhancongMalop.SelectedValue == null ||
-                string.IsNullOrEmpty(txSoTiet.Text)) 
-
+        cbPhancongGV.SelectedValue == null ||
+        cbPhancongMonhoc.SelectedValue == null ||
+        cbPhancongMalop.SelectedValue == null ||
+        string.IsNullOrEmpty(txSoTiet.Text))
             {
                 MessageBox.Show("Không được để trống !");
                 return;
@@ -82,10 +81,11 @@ namespace GUI_CSharp
                 string selectedMaMonHoc = cbPhancongMonhoc.SelectedValue.ToString();
                 string selectedMaLop = cbPhancongMalop.SelectedValue.ToString();
                 string selectedSoTiet = txSoTiet.Text;
-                DateTime selectedDate = dateTimePicker1.Value;
+                string selectedNgayPhanCong = cbNgayPhanCong.SelectedItem?.ToString();
 
                 if (string.IsNullOrEmpty(selectedMaNamHoc) || string.IsNullOrEmpty(selectedMaGiaoVien) ||
-                    string.IsNullOrEmpty(selectedMaMonHoc) || string.IsNullOrEmpty(selectedMaLop) || string.IsNullOrEmpty(selectedSoTiet)) 
+           string.IsNullOrEmpty(selectedMaMonHoc) || string.IsNullOrEmpty(selectedMaLop) || string.IsNullOrEmpty(selectedSoTiet) ||
+           string.IsNullOrEmpty(selectedNgayPhanCong))
                 {
                     MessageBox.Show("Please select valid values for all fields.");
                     return;
@@ -98,7 +98,7 @@ namespace GUI_CSharp
                     MaLop = selectedMaLop,
                     MaNamHoc = selectedMaNamHoc,
                     SoTiet = int.Parse(selectedSoTiet),
-                    NgayPhanCong = selectedDate
+                    NgayPhanCong = selectedNgayPhanCong
 
                 };
 
